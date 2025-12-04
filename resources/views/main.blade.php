@@ -28,11 +28,11 @@
                 </h1>
                 <nav class="flex relative justify-center">
                     <ul class="flex gap-2 w-fit">
-                        <x-nav-link href="/">Over mij</x-nav-link>
-                        <x-nav-link href="/">Vaardigheden</x-nav-link>
-                        <x-nav-link href="/">Ervaring</x-nav-link>
-                        <x-nav-link href="/">Projecten</x-nav-link>
-                        <x-nav-link href="/">Contact</x-nav-link>
+                        <x-nav-link href="/" color="bg-red-500">Over mij</x-nav-link>
+                        <x-nav-link href="/" color="bg-sky-500">Vaardigheden</x-nav-link>
+                        <x-nav-link href="/" color="bg-yellow-500">Ervaring</x-nav-link>
+                        <x-nav-link href="/" color="bg-orange-500">Projecten</x-nav-link>
+                        <x-nav-link href="/" color="bg-lime-500">Contact</x-nav-link>
                     </ul>
                     <x-theme-toggle/>  
                 </nav>
