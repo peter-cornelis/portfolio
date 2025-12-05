@@ -1,7 +1,5 @@
-@livewireScripts
-
 <button 
-    class="absolute top-2.5 right-2 text-[20px]! text-white transition-all duration-200 material-symbols-outlined"
+    class="absolute top-1 right-0 text-[20px]! text-white p-2 rounded-full ring-2 ring-transparent hover:ring-white/15 active:ring-white/15 transition-all duration-300 material-symbols-outlined"
     x-data="{ dark: localStorage.getItem('theme') === 'dark', switching: false }"
     x-init="document.documentElement.classList.toggle('dark', dark);
             $watch('dark', val => {

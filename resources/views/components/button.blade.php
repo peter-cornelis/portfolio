@@ -5,7 +5,7 @@
     @mouseleave="x = $event.offsetX; y = $event.offsetY"
 >
     <span 
-        class="absolute w-96 h-32 rounded-full bg-white/15 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-transform duration-700"
+        class="absolute w-96 h-32 rounded-full bg-white/15 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-transform duration-700 pointer-events-none"
         :style="{ left: x + 'px', top: y + 'px' }"
     ></span>
     <span class="relative z-10">{{ $slot }}</span>

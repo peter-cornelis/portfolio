@@ -20,12 +20,11 @@
         @livewireScripts
 
     </head>
-    <body class="min-h-screen bg-[#110c1e] bg-top bg-no-repeat bg-size-[100vw_380px] "
-        style="background-image: url('{{ Vite::asset('resources/images/layered-waves-haikei.svg') }}')">
-        <header class="px-8 py-4">
+    <body class="bg-mainLight dark:bg-mainDark">
+        <header class="p-4 bg-mainDark dark:bg-black/30 shadow/30">
             <div class="grid grid-cols-[auto_1fr] max-w-7xl mx-auto">
-                <h1 class="text-red text-xl font-bold my-auto">
-                    Peter Cornelis
+                <h1 class="text-lg font-bold text-mainLight my-auto">
+                    Peter's portfolio
                 </h1>
                 <nav class="flex relative justify-center">
                     <ul class="flex gap-2 w-fit">
@@ -41,11 +40,11 @@
         </header>
 
         <main class="max-w-6xl mx-auto">
-            <section class="mt-10">
-                <h2 class="text-2xl text-mainLight text-center py-2">Over mij</h2>
-                <img src="{{ Vite::asset('resources/images/profiel-15.avif') }}" alt="test" class="rounded-full ring-4 ring-red shadow-xl/80">
-            </section>
+            <x-section>
+                Test
+            </x-section>
         </main>
+
         <footer>
 
         </footer>
