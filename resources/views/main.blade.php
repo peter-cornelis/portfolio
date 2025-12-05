@@ -21,18 +21,18 @@
 
     </head>
     <body class="bg-mainLight dark:bg-mainDark">
-        <header class="p-4 bg-black/30 shadow/30">
+        <header class="p-4 bg-mainDark dark:bg-black/30 shadow/30">
             <div class="grid grid-cols-[auto_1fr] max-w-7xl mx-auto">
-                <h1 class="text-lg font-bold text-mainDark dark:text-mainLight my-auto">
+                <h1 class="text-lg font-bold text-mainLight my-auto">
                     Peter's portfolio
                 </h1>
                 <nav class="flex relative justify-center">
                     <ul class="flex gap-2 w-fit">
-                        <x-nav-link href="/" color="bg-red-500">Over mij</x-nav-link>
-                        <x-nav-link href="/" color="bg-sky-500">Vaardigheden</x-nav-link>
-                        <x-nav-link href="/" color="bg-yellow-500">Ervaring</x-nav-link>
-                        <x-nav-link href="/" color="bg-orange-500">Projecten</x-nav-link>
-                        <x-nav-link href="/" color="bg-lime-500">Contact</x-nav-link>
+                        <x-nav-link href="/" color="bg-green">Over mij</x-nav-link>
+                        <x-nav-link href="/" color="bg-purple">Vaardigheden</x-nav-link>
+                        <x-nav-link href="/" color="bg-red">Ervaring</x-nav-link>
+                        <x-nav-link href="/" color="bg-blue">Projecten</x-nav-link>
+                        <x-nav-link href="/" color="bg-pinkish">Contact</x-nav-link>
                     </ul>
                     <x-theme-toggle/>  
                 </nav>
