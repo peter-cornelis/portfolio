@@ -14,4 +14,17 @@
     --color-purple: #665fb3;
     --color-blue: #4271B3;
     --color-pinkish: #992665;
+
+}
+
+@layer base {
+    h1 {
+        @apply text-red text-2xl font-bold my-auto text-shadow-lg text-shadow-purple/15;
+    }
+    h2 {
+        @apply text-6xl text-mainLight;
+    }
+    h3 {
+        @apply text-3xl text-mainLight;
+    }
 }
