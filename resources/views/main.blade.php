@@ -13,15 +13,14 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,300,1,-25&icon_names=dark_mode,light_mode,minimize">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,300,1,-25&icon_names=brightness_empty,dark_mode">
 
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireScripts
 
     </head>
-    <body class="min-h-screen bg-[#110c1e] bg-top bg-no-repeat bg-size-[100vw_380px] "
-        style="background-image: url('{{ Vite::asset('resources/images/layered-waves-haikei.svg') }}')">
+    <body class="min-h-screen bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_340px] bg-[url('/images/light-waves.svg')] dark:bg-[url('/images/dark-waves.svg')]">
         <header class="px-8 py-4">
             <div class="grid grid-cols-[auto_1fr] max-w-7xl mx-auto">
                 <h1>
@@ -41,20 +40,37 @@
         </header>
 
         <main class="max-w-6xl mx-auto">
-            <section class="mt-18 grid grid-cols-[auto_1fr] grid-rows-2">
-                <img src="{{ Vite::asset('resources/images/profiel-15.avif') }}" alt="test" class="rounded-full border-6 border-red shadow-lg/70 row-span-2 mr-12">
-                <h2 class="mt-24">Hey, ik ben Peter</h2>
-                <p  class="text-mainLight text-xl mt-6">
+            <section class="px-4 mt-16 grid grid-cols-[auto_1fr] grid-rows-2 gap-6">
+                <img src="images/profiel-15.avif" alt="test" class="rounded-full border-6 border-red shadow-lg/70 row-span-3 mr-12">
+                <h2 class="mt-20">Hey, ik ben Peter</h2>
+                <p  class="text-lg">
                     Een Full-Stack PHP developer & liefhebber!
                     Lorem ipsum dolor sit amet. Sit dignissimos eveniet ut consequatur architecto est inventore voluptatem eos Quis saepe in voluptatum dolorem qui corporis autem. Sed voluptatem atque nam commodi neque non eaque laboriosam sed perferendis incidunt qui deleniti cupiditate et necessitatibus corporis.
                 </p>
+                <ul class="flex gap-4">
+                    <li>
+                        <a href="" target="_blank">
+                            <x-svgs.linkedin/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <x-svgs.github/>                      
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <x-svgs.article-person/>
+                        </a>
+                    </li>
+                </ul>
             </section>
 
-            <section class="grid grid-cols-2 mt-16">
+            <section class="grid grid-cols-[45%_55%] mt-16 px-4 gap-10">
                 <h2 class="text-center col-span-2">Vaardigheden</h2>
-                <article class="w-fit py-8 ml-auto mr-10">
-                    <h3 class="text-center pb-4">Computer Vaardigheden</h3>
-                    <ul class="w-fit ml-4">
+                <article class="w-fit ml-auto mr-10">
+                    <h3 class="text-center">Computer Vaardigheden</h3>
+                    <ul class="w-fit">
                         <x-star-rating :filled='3'>HTML</x-star-rating>
                         <x-star-rating :filled='3'>CSS</x-star-rating>
                         <x-star-rating :filled='3'>MySQL</x-star-rating>
@@ -62,9 +78,9 @@
                         <x-star-rating :filled='3'>PHP</x-star-rating>
                     </ul>
                 </article>
-                <article class="grid grid-cols-2 w-fit py-8 ml-auto mr-10">
+                <article class="grid grid-cols-2 w-fit gap-8 ml-auto ">
                     <div>
-                        <h3 class="pb-4">Kwaliteitsgericht</h3>
+                        <h3>Kwaliteitsgericht</h3>
                         <p>Werk afleveren om trots op te zijn, daar streef ik elke dag voor.</p>
                     </div>
                     <div>
@@ -77,20 +93,57 @@
                     </div>
                     <div>
                         <h3>Talenkennis</h3>
-                        <ul>
-                            <li>Nederlands moedertaal</li>
-                            <li>Engels goed</li>
-                            <li>Frans beperkt</li>
+                        <ul class="dark:text-mainLight text-mainDark w-fit">
+                            <li class="grid grid-cols-2 gap-8 text-left">
+                                <span class="font-bold text-right">Nederlands</span>
+                                moedertaal
+                            </li>
+                            <li class="grid grid-cols-2 gap-8 text-left">
+                                <span class="font-bold text-right">Engels</span>
+                                goed
+                            </li>
+                            <li class="grid grid-cols-2 gap-8 text-left">
+                                <span class="font-bold text-right">Frans</span>
+                                beperkt
+                            </li>
                         </ul>
                     </div>
                 </article>
             </section>
 
-            <section class="mt-16">
+            <section class="mt-16 px-4">
                 <h2 class="text-center">Ervaring</h2>
-                <div>
-                    <span></span>
-                </div>
+                <ol class="relative border-l border-mainDark/20 dark:border-mainLight/20 ml-6">                  
+                    <x-timeline-item 
+                        start="2025" 
+                        end="heden" 
+                        at="vdab"
+                    >
+                        full stack developer 
+                    </x-timeline-item>
+                    <x-timeline-item 
+                        start="2015" 
+                        end="2024" 
+                        at="Codima BV"
+                        :work="true"
+                    >
+                        PC-Technicus 
+                    </x-timeline-item>
+                    <x-timeline-item 
+                        start="2007" 
+                        end="2012" 
+                        at="Colora Gent"
+                        :work="true"
+                    >
+                        Winkelbediende  
+                    </x-timeline-item>
+                    <x-timeline-item 
+                        end="2006" 
+                        at="Sint-Vincentius Deinze"
+                    >
+                        7e Kantooradministratie en gegevensbeheer 
+                    </x-timeline-item>
+                </ol>
             </section>
         </main>
         <footer>
