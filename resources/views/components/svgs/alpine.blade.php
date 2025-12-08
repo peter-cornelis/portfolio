@@ -1,4 +1,4 @@
-<svg class="h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-    <path fill="#77c1d2" fill-rule="evenodd" d="M98.444 35.562 126 62.997 98.444 90.432 70.889 62.997z" clip-rule="evenodd"/>
-    <path fill="#2d3441" fill-rule="evenodd" d="m29.556 35.562 57.126 56.876H31.571L2 62.997z" clip-rule="evenodd"/>
+<svg class="h-12 w-16" alt="alpine.js" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 96">
+    <path fill="currentColor" fill-opacity=".7" d="M96.2 21 122 46.7 96.2 72.3 70.4 46.7Z"/>
+    <path fill="currentColor" fill-rule="evenodd" d="m31.8 21 53.4 53.2H33.7L6 46.7Z"/>
 </svg>
