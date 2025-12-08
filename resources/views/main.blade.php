@@ -31,7 +31,7 @@
                 </h1>
                 <nav class="flex relative justify-center">
                     <ul class="flex gap-2 w-fit">
-                        <x-nav-link href="/">Over mij</x-nav-link>
+                        <x-nav-link href="#">Over mij</x-nav-link>
                         <x-nav-link href="#skills">Vaardigheden</x-nav-link>
                         <x-nav-link href="#experience">Ervaring</x-nav-link>
                         <x-nav-link href="#projects">Projecten</x-nav-link>
@@ -117,7 +117,7 @@
                         </ul>
                     </div>
                 </article>
-                <x-slider class="max-w-xl col-span-2 mx-auto"/>
+                <x-slider class="w-lg col-span-2 mx-auto"/>
             </section>
 
             <section id="experience" class="mt-16 px-4">

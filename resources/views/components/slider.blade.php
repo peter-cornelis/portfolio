@@ -1,47 +1,53 @@
-<div {{ $attributes->merge(['class' => 'flex h-16 w-xs overflow-hidden']) }}>
-    <ul class="flex animate-scroll my-auto">
-        <li  class="p-2">
+<div {{ $attributes->merge(['class' => 'flex h-16 overflow-hidden']) }}>
+    <ul class="flex animate-scroll px-3 my-auto gap-6">
+        <li>
             <x-svgs.html/>
         </li>
-        <li class="p-2">
+        <li>
             <x-svgs.css/>
         </li>
-        <li class="p-2">
+        <li>
             <x-svgs.javascript/>
         </li>
-        <li class="p-2">
+        <li>
             <x-svgs.php/>
         </li>
-        <li class="p-2">
+        <li>
+            <x-svgs.laravel/>
+        </li>
+        <li>
             <x-svgs.tailwind/>
         </li>
-        <li class="p-2">
+        <li>
             <x-svgs.alpine/>
         </li>
-        <li class="p-2">
+        <li>
             <x-svgs.livewire/>
         </li>
     </ul>
-    <ul class="flex animate-scroll my-auto" aria-hidden="true">
-        <li  class="p-2">
+    <ul class="flex animate-scroll px-3 my-auto gap-6" aria-hidden="true">
+        <li>
             <x-svgs.html/>
         </li>
-        <li class="p-2">
+        <li>
             <x-svgs.css/>
         </li>
-        <li class="p-2">
+        <li>
             <x-svgs.javascript/>
         </li>
-        <li class="p-2">
+        <li>
             <x-svgs.php/>
         </li>
-        <li class="p-2">
+        <li>
+            <x-svgs.laravel/>
+        </li>
+        <li>
             <x-svgs.tailwind/>
         </li>
-        <li class="p-2">
+        <li>
             <x-svgs.alpine/>
         </li>
-        <li class="p-2">
+        <li>
             <x-svgs.livewire/>
         </li>
     </ul>
