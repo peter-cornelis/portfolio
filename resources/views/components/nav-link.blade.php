@@ -7,7 +7,7 @@
     @mouseleave="x = $event.offsetX; y = $event.offsetY"
     >
     <span 
-        class="absolute w-96 h-24 rounded-full bg-white/3 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-transform duration-800"
+        class="absolute w-96 h-48 rounded-full bg-white/7 -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-transform duration-700"
         :style="{ left: x + 'px', top: y + 'px' }"
     ></span>
     <a href="{{ $href }}" class="{{ $active ? 'underline' : 'relative z-10 text-lg text-mainLight' }}">{{ $slot }}</a>

@@ -1,3 +1,3 @@
-<svg aria-hidden="true" class="w-8 text-mainDark dark:text-mainLight/90 dark:hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-    <path d="M280-600h400v-80H280v80Zm-80 480q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v258q-23-45-66-71.5T680-600q-45 0-84 21t-65 59H280v80h221q-2 20 0 40t9 40H280v80h157q-19 22-28 48.5t-9 55.5v56H200Zm280 0v-56q0-24 12.5-44.5T528-250q36-15 74.5-22.5T680-280q39 0 77.5 7.5T832-250q23 9 35.5 29.5T880-176v56H480Zm200-200q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Z"/>
+<svg aria-hidden="true" class="absolute inline top-3 left-4 w-7 text-mainDark/90 duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+    <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/>
 </svg>

@@ -11,8 +11,9 @@
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,300,1,-25&icon_names=brightness_empty,dark_mode">
 
         <!-- Styles / Scripts -->
@@ -20,7 +21,9 @@
         @livewireScripts
 
     </head>
-    <body class="min-h-screen bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_340px] bg-[url('/images/light-waves.svg')] dark:bg-[url('/images/dark-waves.svg')]">
+    <body class="min-h-screen bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_320px] transition-all duration-500"
+        style="background-image: var(--waves-bg)"
+    >
         <header class="px-8 py-4">
             <div class="grid grid-cols-[auto_1fr] max-w-7xl mx-auto">
                 <h1>
@@ -33,8 +36,8 @@
                         <x-nav-link href="/">Ervaring</x-nav-link>
                         <x-nav-link href="/">Projecten</x-nav-link>
                         <x-nav-link href="/">Contact</x-nav-link>
-                    </ul>
-                    <x-theme-toggle/>  
+                        <x-theme-toggle/> 
+                    </ul> 
                 </nav>
             </div>
         </header>
@@ -44,10 +47,9 @@
                 <img src="images/profiel-15.avif" alt="test" class="rounded-full border-6 border-red shadow-lg/70 row-span-3 mr-12">
                 <h2 class="mt-20">Hey, ik ben Peter</h2>
                 <p  class="text-lg">
-                    Een Full-Stack PHP developer & liefhebber!
                     Lorem ipsum dolor sit amet. Sit dignissimos eveniet ut consequatur architecto est inventore voluptatem eos Quis saepe in voluptatum dolorem qui corporis autem. Sed voluptatem atque nam commodi neque non eaque laboriosam sed perferendis incidunt qui deleniti cupiditate et necessitatibus corporis.
                 </p>
-                <ul class="flex gap-4">
+                <ul class="flex gap-4 ml-auto mr-10">
                     <li>
                         <a href="" target="_blank">
                             <x-svgs.linkedin/>
@@ -58,12 +60,17 @@
                             <x-svgs.github/>                      
                         </a>
                     </li>
-                    <li>
-                        <a href="" target="_blank">
-                            <x-svgs.article-person/>
-                        </a>
-                    </li>
                 </ul>
+                <span class="subgrid col-span-2 mt-16 mx-auto">
+                    <button class="relative font-semibold bg-mainLight/60 py-3 pl-12 pr-4 mx-2 rounded-xl items-center">
+                        <x-svgs.article-person/>
+                        <span>Curriculum Vitae</span>
+                    </button>
+                    <button class="relative font-semibold bg-mainLight/60 py-3 pl-12 pr-4 mx-2 rounded-xl items-center">
+                        <x-svgs.conversation/>
+                        <span>Chat</span>
+                    </button>
+                </span>
             </section>
 
             <section class="grid grid-cols-[45%_55%] mt-16 px-4 gap-10">
@@ -145,9 +152,22 @@
                     </x-timeline-item>
                 </ol>
             </section>
+            <section>
+                <h2 class="text-center">Contact</h2>
+                <form action="">
+                    @csrf
+                    <label for="">
+                        <input type="text">
+                    </label>
+                    <label for="">
+                        <input type="email" name="" id="">
+                    </label>
+                    <input type="submit" value="Verzenden">
+                </form>
+            </section>
         </main>
-        <footer>
-
+        <footer class="text-center pb-2 pt-12">
+            <span class="text-mainLight/50 font-normal">Peter Cornelis 2025</span>
         </footer>
     </body>
 </html>
