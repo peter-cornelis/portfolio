@@ -44,7 +44,7 @@
 
         <main class="max-w-6xl mx-auto">
             <section class="grid grid-cols-[auto_1fr] grid-rows-3 gap-6 p-4 mt-28">
-                <img src="images/profiel-15.avif" alt="test" class="rounded-full border-6 border-red shadow-lg/40 row-span-3 mr-12">
+                <img src="images/profiel-15.avif" loading="lazy" alt="Peter Cornelis" class="rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/40 row-span-3 mr-12">
                 <h2 class="mt-14">Hey, ik ben Peter!</h2>
                 <p  class="text-lg">
                     Full-stack PHP ontwikkelaar en sinds kleins af fervent IT enthousiast.
@@ -52,18 +52,18 @@
                 </p>
                 <ul class="flex gap-4 ml-auto mr-10">
                     <li>
-                        <a href="" target="_blank">
+                        <a href="https://www.linkedin.com/in/peter-cornelis-b4086237a/" aria-label="LinkedIn" target="_blank">
                             <x-svgs.linkedin/>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/peter-cornelis" target="_blank">
+                        <a href="https://github.com/peter-cornelis" aria-label="GitHub" target="_blank">
                             <x-svgs.github/>                      
                         </a>
                     </li>
                 </ul>
                 <span class="col-span-2 text-mainDark/90 mx-auto">
-                    <a href="assets/test.pdf" target="blank" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 mx-2 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
+                    <a href="assets/test.pdf" target="_blank" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 mx-2 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
                         <x-svgs.download/>
                         <span>Curriculum Vitae</span>
                     </a>
@@ -117,7 +117,7 @@
                         </ul>
                     </div>
                 </article>
-                <x-slider class="w-lg col-span-2 mx-auto mt-4"/>
+                <x-slider class="w-xl col-span-2 mx-auto mt-4"/>
             </section>
 
             <section id="experience" class="mt-16 px-4 scroll-mt-16">
@@ -170,7 +170,7 @@
                     <x-forms-input type="email" name="email" id="email"/>
                     <x-forms-label for="message">Bericht</x-forms-label>
                     <x-forms-textarea name="message" id="message" />
-                    <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border-t border-white/20 transition-300">
+                    <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border-t border-white/20 duration-300">
                 </form>
                 <article class="text-mainLight bg-red py-4 px-6 mt-14 mb-auto rounded-xl shadow shadow-black/40 border-t border-white/20">
                     <h3>Contactgegevens</h3>
@@ -181,12 +181,12 @@
                     </address>
                     <ul class="flex w-fit gap-4 mt-6 mx-auto">
                         <li>
-                            <a href="" target="_blank">
+                            <a href="https://www.linkedin.com/in/peter-cornelis-b4086237a/" aria-label="LinkedIn" target="_blank">
                                 <x-svgs.linkedin/>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/peter-cornelis" target="_blank">
+                            <a href="https://github.com/peter-cornelis" aria-label="GitHub" target="_blank">
                                 <x-svgs.github/>                      
                             </a>
                         </li>
