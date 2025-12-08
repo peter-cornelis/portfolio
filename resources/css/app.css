@@ -14,7 +14,13 @@
     --color-purple: #665fb3;
     --color-blue: #4271B3;
     --color-pinkish: #992665;
+    
+    --animate-scroll: scroll 25s linear infinite;
+}
 
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% {transform: translateX(-100%)}
 }
 
 @layer base {
@@ -28,12 +34,9 @@
         @apply text-red text-2xl font-bold text-shadow-xs text-shadow-black/90 my-auto;
     }
     h2 {
-        @apply text-6xl dark:text-mainLight text-mainDark;
+        @apply text-6xl;
     }
     h3 {
-        @apply text-3xl dark:text-mainLight text-mainDark pb-4;
-    }
-    p {
-        @apply  dark:text-mainLight text-mainDark;
+        @apply text-3xl pb-4;
     }
 }

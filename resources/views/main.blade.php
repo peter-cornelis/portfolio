@@ -21,21 +21,21 @@
         @livewireScripts
 
     </head>
-    <body class="min-h-screen bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_320px] transition-all duration-500"
+    <body class="min-h-screen text-mainDark dark:text-mainLight bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_320px] transition-all duration-500"
         style="background-image: var(--waves-bg)"
     >
         <header class="px-8 py-4">
-            <div class="grid grid-cols-[auto_1fr] max-w-7xl mx-auto">
+            <div class="fixed z-100 left-0 top-0 grid grid-cols-[auto_1fr] w-full px-8 py-1 mx-auto bg-mainDark/95 shadow-lg/40">
                 <h1>
                     Peter Cornelis
                 </h1>
                 <nav class="flex relative justify-center">
                     <ul class="flex gap-2 w-fit">
                         <x-nav-link href="/">Over mij</x-nav-link>
-                        <x-nav-link href="/">Vaardigheden</x-nav-link>
-                        <x-nav-link href="/">Ervaring</x-nav-link>
-                        <x-nav-link href="/">Projecten</x-nav-link>
-                        <x-nav-link href="/">Contact</x-nav-link>
+                        <x-nav-link href="#skills">Vaardigheden</x-nav-link>
+                        <x-nav-link href="#experience">Ervaring</x-nav-link>
+                        <x-nav-link href="#projects">Projecten</x-nav-link>
+                        <x-nav-link href="#contact">Contact</x-nav-link>
                         <x-theme-toggle/> 
                     </ul> 
                 </nav>
@@ -43,11 +43,12 @@
         </header>
 
         <main class="max-w-6xl mx-auto">
-            <section class="px-4 mt-16 grid grid-cols-[auto_1fr] grid-rows-2 gap-6">
+            <section class="grid grid-cols-[auto_1fr] grid-rows-3 gap-6 p-4 mt-28">
                 <img src="images/profiel-15.avif" alt="test" class="rounded-full border-6 border-red shadow-lg/70 row-span-3 mr-12">
-                <h2 class="mt-20">Hey, ik ben Peter</h2>
+                <h2 class="mt-14">Hey, ik ben Peter!</h2>
                 <p  class="text-lg">
-                    Lorem ipsum dolor sit amet. Sit dignissimos eveniet ut consequatur architecto est inventore voluptatem eos Quis saepe in voluptatum dolorem qui corporis autem. Sed voluptatem atque nam commodi neque non eaque laboriosam sed perferendis incidunt qui deleniti cupiditate et necessitatibus corporis.
+                    Full-stack PHP ontwikkelaar en sinds kleins af fervent IT enthousiast.
+                    Verder mag ik me ook een fiere vader noemen van twee jonge spruiten.
                 </p>
                 <ul class="flex gap-4 ml-auto mr-10">
                     <li>
@@ -56,25 +57,25 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" target="_blank">
+                        <a href="https://github.com/peter-cornelis" target="_blank">
                             <x-svgs.github/>                      
                         </a>
                     </li>
                 </ul>
-                <span class="subgrid col-span-2 mt-16 mx-auto">
-                    <button class="relative font-semibold bg-mainLight/60 py-3 pl-12 pr-4 mx-2 rounded-xl items-center">
-                        <x-svgs.article-person/>
+                <span class="col-span-2 text-mainDark/90 mx-auto">
+                    <a href="assets/test.pdf" target="blank" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 mx-2 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
+                        <x-svgs.download/>
                         <span>Curriculum Vitae</span>
-                    </button>
-                    <button class="relative font-semibold bg-mainLight/60 py-3 pl-12 pr-4 mx-2 rounded-xl items-center">
+                    </a>
+                    <button class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 mx-2 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300">
                         <x-svgs.conversation/>
                         <span>Chat</span>
                     </button>
                 </span>
             </section>
 
-            <section class="grid grid-cols-[45%_55%] mt-16 px-4 gap-10">
-                <h2 class="text-center col-span-2">Vaardigheden</h2>
+            <section id="skills" class="grid grid-cols-[45%_55%] mt-8 p-4 gap-16">
+                <h2 class="text-center col-span-2 p-8">Vaardigheden</h2>
                 <article class="w-fit ml-auto mr-10">
                     <h3 class="text-center">Computer Vaardigheden</h3>
                     <ul class="w-fit">
@@ -100,7 +101,7 @@
                     </div>
                     <div>
                         <h3>Talenkennis</h3>
-                        <ul class="dark:text-mainLight text-mainDark w-fit">
+                        <ul class="w-fit">
                             <li class="grid grid-cols-2 gap-8 text-left">
                                 <span class="font-bold text-right">Nederlands</span>
                                 moedertaal
@@ -116,58 +117,85 @@
                         </ul>
                     </div>
                 </article>
+                <x-slider class="max-w-xl col-span-2 mx-auto"/>
             </section>
 
-            <section class="mt-16 px-4">
-                <h2 class="text-center">Ervaring</h2>
-                <ol class="relative border-l border-mainDark/20 dark:border-mainLight/20 ml-6">                  
-                    <x-timeline-item 
-                        start="2025" 
-                        end="heden" 
-                        at="vdab"
-                    >
-                        full stack developer 
-                    </x-timeline-item>
-                    <x-timeline-item 
-                        start="2015" 
-                        end="2024" 
-                        at="Codima BV"
-                        :work="true"
-                    >
-                        PC-Technicus 
-                    </x-timeline-item>
-                    <x-timeline-item 
-                        start="2007" 
-                        end="2012" 
-                        at="Colora Gent"
-                        :work="true"
-                    >
-                        Winkelbediende  
-                    </x-timeline-item>
-                    <x-timeline-item 
-                        end="2006" 
-                        at="Sint-Vincentius Deinze"
-                    >
-                        7e Kantooradministratie en gegevensbeheer 
-                    </x-timeline-item>
-                </ol>
+            <section id="experience" class="mt-16 px-4">
+                <h2 class="text-center mb-16 p-8">Ervaring</h2>
+                <div class="w-fit mx-auto">
+                    <ol class="relative w-fit border-l border-mainDark/20 dark:border-mainLight/20 ml-6">                  
+                        <x-timeline-item 
+                            start="2025" 
+                            end="heden" 
+                            at="vdab"
+                        >
+                            full stack developer 
+                        </x-timeline-item>
+                        <x-timeline-item 
+                            start="2015" 
+                            end="2024" 
+                            at="Codima BV"
+                            :work="true"
+                        >
+                            PC-Technicus 
+                        </x-timeline-item>
+                        <x-timeline-item 
+                            start="2007" 
+                            end="2012" 
+                            at="Colora Gent"
+                            :work="true"
+                        >
+                            Winkelbediende  
+                        </x-timeline-item>
+                        <x-timeline-item 
+                            end="2006" 
+                            at="Sint-Vincentius Deinze"
+                        >
+                            7e Kantooradministratie en gegevensbeheer 
+                        </x-timeline-item>
+                    </ol>
+                </div>
             </section>
-            <section>
-                <h2 class="text-center">Contact</h2>
-                <form action="">
+            <section id="prjects" class="grid grid-cols-[1fr_auto] mt-16 px-4">
+                <h2 class="text-center col-span-2 p-4">Projecten</h2>
+
+            </section>
+            <section id="contact" class="grid grid-cols-[1fr_auto] mt-16 px-4">
+                <h2 class="text-center col-span-2 p-4">Contact</h2>
+                <form action="" class="w-xl mx-auto my-6">
                     @csrf
-                    <label for="">
-                        <input type="text">
-                    </label>
-                    <label for="">
-                        <input type="email" name="" id="">
-                    </label>
-                    <input type="submit" value="Verzenden">
+                    <x-forms-label for="name">Naam</x-forms-label>
+                    <x-forms-input name="name" id="name"/>
+                    <x-forms-label for="name">E-mail</x-forms-label>
+                    <x-forms-input type="email" name="email" id="email"/>
+                    <x-forms-label for="name">Bericht</x-forms-label>
+                    <x-forms-textarea name="message" id="message" />
+                    <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border-t border-white/20 transition-300">
                 </form>
+                <article class="text-mainLight bg-red py-4 px-6 mt-14 mb-auto rounded-xl shadow shadow-black/40 border-t border-white/20">
+                    <h3>Contactgegevens</h3>
+                    <address>
+                        Honoré Borgersstraat 16, <br>
+                        8400 Oostende <br>
+                        BELGIE
+                    </address>
+                    <ul class="flex w-fit gap-4 mt-6 mx-auto">
+                        <li>
+                            <a href="" target="_blank">
+                                <x-svgs.linkedin/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/peter-cornelis" target="_blank">
+                                <x-svgs.github/>                      
+                            </a>
+                        </li>
+                    </ul>
+                </article>
             </section>
         </main>
-        <footer class="text-center pb-2 pt-12">
-            <span class="text-mainLight/50 font-normal">Peter Cornelis 2025</span>
+        <footer class="text-center pb-2 pt-6">
+            <span class="opacity-60">Peter Cornelis 2025</span>
         </footer>
     </body>
 </html>
