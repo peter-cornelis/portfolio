@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="scroll-smooth" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Peter Cornelis - Portfolio</title>
 
         <link rel="icon" href="/favicon.ico" sizes="any">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -44,7 +44,7 @@
 
         <main class="max-w-6xl mx-auto">
             <section class="grid grid-cols-[auto_1fr] grid-rows-3 gap-6 p-4 mt-28">
-                <img src="images/profiel-15.avif" alt="test" class="rounded-full border-6 border-red shadow-lg/70 row-span-3 mr-12">
+                <img src="images/profiel-15.avif" alt="test" class="rounded-full border-6 border-red shadow-lg/40 row-span-3 mr-12">
                 <h2 class="mt-14">Hey, ik ben Peter!</h2>
                 <p  class="text-lg">
                     Full-stack PHP ontwikkelaar en sinds kleins af fervent IT enthousiast.
@@ -74,7 +74,7 @@
                 </span>
             </section>
 
-            <section id="skills" class="grid grid-cols-[45%_55%] mt-8 p-4 gap-16">
+            <section id="skills" class="grid grid-cols-[45%_55%] mt-8 p-4 gap-16 scroll-mt-16">
                 <h2 class="text-center col-span-2 p-8">Vaardigheden</h2>
                 <article class="w-fit ml-auto mr-10">
                     <h3 class="text-center">Computer Vaardigheden</h3>
@@ -117,10 +117,10 @@
                         </ul>
                     </div>
                 </article>
-                <x-slider class="w-lg col-span-2 mx-auto"/>
+                <x-slider class="w-lg col-span-2 mx-auto mt-4"/>
             </section>
 
-            <section id="experience" class="mt-16 px-4">
+            <section id="experience" class="mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center mb-16 p-8">Ervaring</h2>
                 <div class="w-fit mx-auto">
                     <ol class="relative w-fit border-l border-mainDark/20 dark:border-mainLight/20 ml-6">                  
@@ -156,19 +156,19 @@
                     </ol>
                 </div>
             </section>
-            <section id="prjects" class="grid grid-cols-[1fr_auto] mt-16 px-4">
+            <section id="projects" class="grid grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center col-span-2 p-4">Projecten</h2>
 
             </section>
-            <section id="contact" class="grid grid-cols-[1fr_auto] mt-16 px-4">
+            <section id="contact" class="grid grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center col-span-2 p-4">Contact</h2>
                 <form action="" class="w-xl mx-auto my-6">
                     @csrf
                     <x-forms-label for="name">Naam</x-forms-label>
                     <x-forms-input name="name" id="name"/>
-                    <x-forms-label for="name">E-mail</x-forms-label>
+                    <x-forms-label for="email">E-mail</x-forms-label>
                     <x-forms-input type="email" name="email" id="email"/>
-                    <x-forms-label for="name">Bericht</x-forms-label>
+                    <x-forms-label for="message">Bericht</x-forms-label>
                     <x-forms-textarea name="message" id="message" />
                     <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border-t border-white/20 transition-300">
                 </form>
