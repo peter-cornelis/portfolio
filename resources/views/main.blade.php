@@ -25,7 +25,12 @@
         style="background-image: var(--waves-bg)"
     >
         <header class="px-8 py-4">
-            <div class="fixed z-100 left-0 top-0 grid grid-cols-[auto_1fr] w-full px-8 py-1 mx-auto bg-mainDark/95 shadow-lg/40">
+            <div 
+                x-data="{ onTop: true }"
+                @scroll.window= "onTop = window.pageYOffset < 10"
+                class="fixed z-100 left-0 top-0 grid grid-cols-[auto_1fr] w-full px-8 py-1 mx-auto"
+                :class=" onTop ? '' : 'bg-mainDark/95 shadow-lg/40'"
+            >
                 <h1>
                     Peter Cornelis
                 </h1>
@@ -42,7 +47,7 @@
             </div>
         </header>
 
-        <main class="max-w-6xl mx-auto">
+        <main class="max-w-7xl mx-auto">
             <section class="grid grid-cols-[auto_1fr] grid-rows-3 gap-6 p-4 mt-28">
                 <img src="images/profiel-15.avif" loading="lazy" alt="Peter Cornelis" class="rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/30 row-span-3 mr-12">
                 <h2 class="mt-14">Hey, ik ben Peter!</h2>
@@ -53,12 +58,12 @@
                 <ul class="flex gap-4 ml-auto mr-10">
                     <li>
                         <a href="https://www.linkedin.com/in/peter-cornelis-b4086237a/" aria-label="LinkedIn" target="_blank">
-                            <x-svgs.linkedin/>
+                            <x-svgs.linkedin class="opacity-75 hover:opacity-100 duration-300"/>
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/peter-cornelis" aria-label="GitHub" target="_blank">
-                            <x-svgs.github/>                      
+                            <x-svgs.github class="opacity-75 hover:opacity-100 duration-300"/>                      
                         </a>
                     </li>
                 </ul>
@@ -110,91 +115,194 @@
                                 <span class="font-bold text-right">Engels</span>
                                 goed
                             </li>
-                            <li class="grid grid-cols-2 gap-8 text-left">
-                                <span class="font-bold text-right">Frans</span>
-                                beperkt
-                            </li>
                         </ul>
                     </div>
                 </article>
-                <x-slider class="w-xl col-span-2 mx-auto mt-4"/>
+                <x-slider/>
             </section>
 
             <section id="experience" class="mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center mb-16 p-8">Ervaring</h2>
                 <div class="w-fit mx-auto">
                     <ol class="relative w-fit border-l border-mainDark/20 dark:border-mainLight/20 ml-6">                  
-                        <x-timeline-item 
-                            start="2025" 
-                            end="heden" 
-                            at="vdab"
-                        >
+                        <x-timeline-item start="2025" end="heden" at="vdab">
                             full stack developer 
                         </x-timeline-item>
-                        <x-timeline-item 
-                            start="2015" 
-                            end="2024" 
-                            at="Codima BV"
-                            :work="true"
-                        >
+                        <x-timeline-item start="2015" end="2024" at="Codima BV" :work="true">
                             PC-Technicus 
                         </x-timeline-item>
-                        <x-timeline-item 
-                            start="2007" 
-                            end="2012" 
-                            at="Colora Gent"
-                            :work="true"
-                        >
+                        <x-timeline-item start="2007" end="2012" at="Colora Gent" :work="true">
                             Winkelbediende  
                         </x-timeline-item>
-                        <x-timeline-item 
-                            end="2006" 
-                            at="Sint-Vincentius Deinze"
-                        >
+                        <x-timeline-item end="2006" at="Sint-Vincentius Deinze">
                             7e Kantooradministratie en gegevensbeheer 
                         </x-timeline-item>
                     </ol>
                 </div>
             </section>
-            <section id="projects" class="grid grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
+
+            <section id="projects" class="mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center col-span-2 mb-16 p-8">Projecten</h2>
-                <article class="w-xs bg-mainDark/10 dark:bg-mainLight/10 rounded-xl shadow-lg/20 border-t border-white/20">
-                    <img src="images/rally.webp" alt="Stock Market Rally" class="w-xs rounded-t-xl mask-b-from-20%">
-                    <h3 class="text-center py-4">Stock Market Rally</h3>
-                    <p class="px-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
-                    </p>
-                    <ul class="flex justify-evenly mt-2">
-                        <li title="html">
-                            <x-svgs.html class="w-6" title="HTML"/>
-                        </li>
-                        <li title="Laravel">
-                            <x-svgs.laravel class="w-6"/>
-                        </li>
-                        <li title="Tailwind">
-                            <x-svgs.tailwind class="w-6"/>
-                        </li>
-                        <li title="mySQL">
-                            <x-svgs.mysql class="w-10"/>
-                        </li>
-                    </ul>
-                    <nav>
-                        <ul class="grid grid-cols-2 mt-4">
-                            <li>
-                                <a href="https://rally.petercornelis.be/" 
-                                    class="block text-center text-mainLight font-semibold bg-green hover:bg-green/80 py-3 rounded-bl-xl border-t first:border-r border-white/20 duration-300">
-                                Website
-                            </a>
+                <div class="grid grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-12">
+
+                    <x-project header="Portfolio 2.0" src="images/reisbureau.webp" alt="Latest porfolio">
+                        <p class="px-4 line-clamp-5">
+                            Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
+                        </p>
+                        <ul class="flex justify-evenly mt-2">
+                            <li title="HTML">
+                                <x-svgs.html class="w-6" title="HTML"/>
                             </li>
-                            <li>
-                                <a href="https://rally.petercornelis.be/"
-                                    class="block text-center text-mainLight font-semibold bg-green hover:bg-green/80 py-3 rounded-br-xl border-t border-white/20 duration-300">
-                                    Repository
-                                </a>
+                            <li title="laravel">
+                                <x-svgs.laravel class="w-6"/>
+                            </li>
+                            <li title="Tailwind">
+                                <x-svgs.tailwind class="w-6"/>
+                            </li>
+                            <li title="Alpine.JS">
+                                <x-svgs.alpine class="w-6"/>
+                            </li>
+                            <li title="Livewire">
+                                <x-svgs.livewire class="w-6"/>
                             </li>
                         </ul>
-                    </nav>
-                </article>
+                        <nav>
+                            <ul class="mt-4">
+                                <x-projects-link href="https://rally.petercornelis.be/">
+                                    <x-svgs.github class="relative -top-0.5 inline h-8 -my-2"/>
+                                </x-projects-link>
+                            </ul>
+                        </nav>
+                    </x-project>
+
+                    <x-project header="Stock Market Rally" src="images/rally.webp" alt="Stock Market Rally">
+                        <p class="text-md px-4 line-clamp-5">
+                            Eenvoudig beursspel, met dagelijkse koers & statistiek updates via de FMP API.
+                            Verder wordt AI gebruikt om zoekacties te verslimmen en elk aandeel van een up to date koop of verkoop advies te voorzien. 
+                        </p>
+                        <ul class="flex justify-evenly mt-2">
+                            <li title="HTML">
+                                <x-svgs.html class="w-6" title="HTML"/>
+                            </li>
+                            <li title="Laravel">
+                                <x-svgs.laravel class="w-6"/>
+                            </li>
+                            <li title="Tailwind">
+                                <x-svgs.tailwind class="w-6"/>
+                            </li>
+                            <li title="JavaScript">
+                                <x-svgs.javascript class="w-6"/>
+                            </li>
+                            <li title="mySQL">
+                                <x-svgs.mysql class="w-10"/>
+                            </li>
+                        </ul>
+                        <nav>
+                            <ul class="grid grid-cols-2 mt-4">
+                                <x-projects-link href="https://rally.petercornelis.be/">Live Demo</x-projects-link>
+                                <x-projects-link href="https://rally.petercornelis.be/">
+                                    <x-svgs.github class="relative -top-0.5 inline h-8 -my-2"/>
+                                </x-projects-link>
+                            </ul>
+                        </nav>
+                    </x-project>
+
+                    <x-project header="Movie Maxx" src="images/movie.webp" alt="illustratie film inventaris">
+                        <p class="px-4">
+                            Lorem ipsum dolor sit amet, consectetur adip iscing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
+                        </p>
+                        <ul class="flex justify-evenly mt-2">
+                            <li title="HTML">
+                                <x-svgs.html class="w-6" title="HTML"/>
+                            </li>
+                            <li title="Laravel">
+                                <x-svgs.laravel class="w-6"/>
+                            </li>
+                            <li title="CSS">
+                                <x-svgs.css class="w-6"/>
+                            </li>
+                            <li title="mySQL">
+                                <x-svgs.mysql class="w-10"/>
+                            </li>
+                        </ul>
+                        <nav>
+                            <ul class="mt-4">
+                                <x-projects-link href="https://rally.petercornelis.be/">
+                                    <x-svgs.github class="relative -top-0.5 inline h-8 -my-2"/>
+                                </x-projects-link>
+                            </ul>
+                        </nav>
+                    </x-project>
+                    
+                    <x-project header="Portfolio 1.0" src="images/portfolio1.webp" alt="illustratie vorige portfolio">
+                        <p class="px-4">
+                            Lorem ipsum dolor sit amet, consectetur adip iscing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
+                        </p>
+                        <ul class="flex justify-evenly mt-2">
+                            <li title="HTML">
+                                <x-svgs.html class="w-6" title="HTML"/>
+                            </li>
+                            <li title="CSS">
+                                <x-svgs.css class="w-6"/>
+                            </li>
+                            <li title="JavaScript">
+                                <x-svgs.javascript class="w-6"/>
+                            </li>
+                        </ul>
+                        <ul class="grid grid-cols-2 mt-4">
+                            <x-projects-link href="https://rally.petercornelis.be/">Website</x-projects-link>
+                            <x-projects-link href="https://rally.petercornelis.be/">
+                                <x-svgs.github class="relative -top-0.5 inline h-8 -my-2"/>
+                            </x-projects-link>
+                        </ul>
+                    </x-project>
+
+                    <x-project header="Pizzeria Gepetto" src="images/pizza.webp" alt="webshop illustratie">
+                        <p class="px-4">
+                            Lorem ipsum dolor sit amet, consectetur adip iscing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
+                        </p>
+                        <ul class="flex justify-evenly mt-2">
+                            <li title="HTML">
+                                <x-svgs.html class="w-6" title="HTML"/>
+                            </li>
+                            <li title="CSS">
+                                <x-svgs.css class="w-6"/>
+                            </li>
+                            <li title="PHP">
+                                <x-svgs.php class="w-6"/>
+                            </li>
+                            <li title="mySQL">
+                                <x-svgs.mysql class="w-10"/>
+                            </li>
+                        </ul>
+                        <x-projects-onreq/>
+                    </x-project>
+
+                    <x-project header="Soda Delight" src="images/automaat.webp" alt="drankautomaat illustratie">
+                        <p class="px-4">
+                            Lorem ipsum dolor sit amet, consectetur adipis cing elit. Nulla et facilisis libero, vel acc umsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
+                        </p>
+                        <ul class="flex justify-evenly mt-2">
+                            <li title="HTML">
+                                <x-svgs.html class="w-6" title="HTML"/>
+                            </li>
+                            <li title="CSS">
+                                <x-svgs.css class="w-6"/>
+                            </li>
+                            <li title="PHP">
+                                <x-svgs.php class="w-6"/>
+                            </li>
+                            <li title="mySQL">
+                                <x-svgs.mysql class="w-10"/>
+                            </li>
+                        </ul>
+                        <ul class="mt-4">
+                            <x-projects-link href="https://rally.petercornelis.be/">
+                                <x-svgs.github class="relative -top-0.5 inline h-8 -my-2"/>
+                            </x-projects-link>
+                        </ul>
+                    </x-project>
+                </div>
             </section>
             <section id="contact" class="grid grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center col-span-2 mb-10 p-8">Contact</h2>
@@ -206,7 +314,7 @@
                     <x-forms-input type="email" name="email" id="email"/>
                     <x-forms-label for="message">Bericht</x-forms-label>
                     <x-forms-textarea name="message" id="message" />
-                    <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border-t border-white/20 duration-300">
+                    <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border-t border-white/20 duration-300">
                 </form>
                 <article class="text-mainLight bg-red py-4 px-6 mt-14 mb-auto rounded-xl shadow shadow-black/40 border-t border-white/20">
                     <h3>Contactgegevens</h3>
@@ -218,20 +326,20 @@
                     <ul class="flex w-fit gap-4 mt-6 mx-auto">
                         <li>
                             <a href="https://www.linkedin.com/in/peter-cornelis-b4086237a/" aria-label="LinkedIn" target="_blank">
-                                <x-svgs.linkedin/>
+                                <x-svgs.linkedin class="opacity-75 hover:opacity-100 duration-300"/>
                             </a>
                         </li>
                         <li>
                             <a href="https://github.com/peter-cornelis" aria-label="GitHub" target="_blank">
-                                <x-svgs.github/>                      
+                                <x-svgs.github class="opacity-75 hover:opacity-100 duration-300"/>                      
                             </a>
                         </li>
                     </ul>
                 </article>
             </section>
         </main>
-        <footer class="text-center pb-2 pt-6">
-            <span class="opacity-60">Peter Cornelis 2025</span>
+        <footer class="text-center p-6 mt-10">
+            <span class="opacity-60">&copy; 2025 Peter Cornelis</span>
         </footer>
     </body>
 </html>
