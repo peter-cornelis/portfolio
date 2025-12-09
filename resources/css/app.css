@@ -8,12 +8,11 @@
     --font-sans: 'open-sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
     --color-mainDark: #110c1e;
-    --color-mainLight: #e3e1e8;
-    --color-green: #1B7E71;
-    --color-red: #901948;
+    --color-mainLight: #eceaef;
+    --color-green: #0d8f80;
+    --color-red: #99174a;
     --color-purple: #665fb3;
     --color-blue: #4271B3;
-    --color-pinkish: #992665;
     
     --animate-scroll: scroll 30s linear infinite;
 }

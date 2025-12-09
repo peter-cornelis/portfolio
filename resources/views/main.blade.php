@@ -44,7 +44,7 @@
 
         <main class="max-w-6xl mx-auto">
             <section class="grid grid-cols-[auto_1fr] grid-rows-3 gap-6 p-4 mt-28">
-                <img src="images/profiel-15.avif" loading="lazy" alt="Peter Cornelis" class="rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/40 row-span-3 mr-12">
+                <img src="images/profiel-15.avif" loading="lazy" alt="Peter Cornelis" class="rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/30 row-span-3 mr-12">
                 <h2 class="mt-14">Hey, ik ben Peter!</h2>
                 <p  class="text-lg">
                     Full-stack PHP ontwikkelaar en sinds kleins af fervent IT enthousiast.
@@ -157,11 +157,47 @@
                 </div>
             </section>
             <section id="projects" class="grid grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
-                <h2 class="text-center col-span-2 p-4">Projecten</h2>
-
+                <h2 class="text-center col-span-2 mb-16 p-8">Projecten</h2>
+                <article class="w-xs bg-mainDark/10 dark:bg-mainLight/10 rounded-xl shadow-lg/20 border-t border-white/20">
+                    <img src="images/rally.webp" alt="Stock Market Rally" class="w-xs rounded-t-xl mask-b-from-20%">
+                    <h3 class="text-center py-4">Stock Market Rally</h3>
+                    <p class="px-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
+                    </p>
+                    <ul class="flex justify-evenly mt-2">
+                        <li title="html">
+                            <x-svgs.html class="w-6" title="HTML"/>
+                        </li>
+                        <li title="Laravel">
+                            <x-svgs.laravel class="w-6"/>
+                        </li>
+                        <li title="Tailwind">
+                            <x-svgs.tailwind class="w-6"/>
+                        </li>
+                        <li title="mySQL">
+                            <x-svgs.mysql class="w-10"/>
+                        </li>
+                    </ul>
+                    <nav>
+                        <ul class="grid grid-cols-2 mt-4">
+                            <li>
+                                <a href="https://rally.petercornelis.be/" 
+                                    class="block text-center text-mainLight font-semibold bg-green hover:bg-green/80 py-3 rounded-bl-xl border-t first:border-r border-white/20 duration-300">
+                                Website
+                            </a>
+                            </li>
+                            <li>
+                                <a href="https://rally.petercornelis.be/"
+                                    class="block text-center text-mainLight font-semibold bg-green hover:bg-green/80 py-3 rounded-br-xl border-t border-white/20 duration-300">
+                                    Repository
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </article>
             </section>
             <section id="contact" class="grid grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
-                <h2 class="text-center col-span-2 p-4">Contact</h2>
+                <h2 class="text-center col-span-2 mb-10 p-8">Contact</h2>
                 <form action="" class="w-xl mx-auto my-6">
                     @csrf
                     <x-forms-label for="name">Naam</x-forms-label>
