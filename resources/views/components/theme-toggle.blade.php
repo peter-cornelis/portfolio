@@ -1,5 +1,5 @@
 <button 
-    class="absolute top-1.5 right-0 text-mainLight p-1 rounded-full transition-all duration-300 material-symbols-outlined"
+    class="absolute top-1.5 right-0 text-mainLight p-1 rounded-full transition-all duration-300 cursor-pointer material-symbols-outlined"
     x-data="{ dark: localStorage.getItem('theme') === 'dark', switching: false }"
     x-init="document.documentElement.classList.toggle('dark', dark);
             $watch('dark', val => {

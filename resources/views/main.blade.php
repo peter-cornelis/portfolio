@@ -314,7 +314,7 @@
                     <x-forms-input type="email" name="email" id="email"/>
                     <x-forms-label for="message">Bericht</x-forms-label>
                     <x-forms-textarea name="message" id="message" />
-                    <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border-t border-white/20 duration-300">
+                    <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border-t border-white/20 duration-300 cursor-pointer">
                 </form>
                 <article class="text-mainLight bg-red py-4 px-6 mt-14 mb-auto rounded-xl shadow shadow-black/40 border-t border-white/20">
                     <h3>Contactgegevens</h3>
