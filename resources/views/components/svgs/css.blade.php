@@ -1,3 +1,3 @@
-<svg {{ $attributes->merge(['class' => 'h-12']) }} alt="css" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3.84 3.84">
+<svg {{ $attributes->merge(['class' => 'h-12']) }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3.84 3.84">
     <path fill="currentColor" d="M2.843.858H.997l.03.367h1.418l-.036.38h-.93l.034.36h.865l-.05.493-.408.113-.414-.113-.026-.296h-.366l.04.54.766.238.752-.214.17-1.868ZM.45.24h2.94l-.267 3.019-1.206.341-1.2-.341Z"/>
 </svg>

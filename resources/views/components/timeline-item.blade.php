@@ -1,6 +1,7 @@
 @props(['start' => null, 'end', 'at', 'work' => false])
 
-<li class="mx-10">            
+<li class="mx-10">
+                
     <span class="absolute flex items-center justify-center w-10 h-10 bg-mainLight dark:bg-mainDark rounded-full -start-5 ring hover:ring-2 ring-red">
         @if($work)
             <x-svgs.work />

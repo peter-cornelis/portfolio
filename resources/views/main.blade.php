@@ -150,28 +150,30 @@
                             Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
                         </p>
                         <ul class="flex justify-evenly mt-2">
-                            <li title="HTML">
-                                <x-svgs.html class="w-6" title="HTML"/>
+                            <li>
+                                <x-tooltip tip="HTML" :arrow="true"><x-svgs.html class="w-6"/></x-tooltip>
                             </li>
-                            <li title="laravel">
-                                <x-svgs.laravel class="w-6"/>
+                            <li>
+                                <x-tooltip tip="laravel" :arrow="true"><x-svgs.laravel class="w-6"/></x-tooltip>
                             </li>
-                            <li title="Tailwind">
-                                <x-svgs.tailwind class="w-6"/>
+                            <li>
+                                <x-tooltip tip="Tailwind" :arrow="true"><x-svgs.tailwind class="w-6"/></x-tooltip>
                             </li>
-                            <li title="Alpine.JS">
-                                <x-svgs.alpine class="w-6"/>
+                            <li>
+                                <x-tooltip tip="Alpine.JS" :arrow="true"><x-svgs.alpine class="w-6"/></x-tooltip>
                             </li>
-                            <li title="Livewire">
-                                <x-svgs.livewire class="w-6"/>
+                            <li>
+                                <x-tooltip tip="Livewire" :arrow="true"><x-svgs.livewire class="w-6"/></x-tooltip>
                             </li>
                         </ul>
                         <nav>
                             <ul class="mt-4">
-                                <x-projects-link href="https://rally.petercornelis.be/">
-                                    <x-svgs.github class="relative -top-0.5 inline h-8 -my-2"/>
+                                <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
+                                    <x-tooltip tip="Link naar github repository" class="block py-2">
+                                        <x-svgs.github class="relative -top-0.5 inline h-8 "/>
+                                    </x-tooltip>
                                 </x-projects-link>
-                            </ul>
+                            </ul>                        
                         </nav>
                     </x-project>
 
@@ -181,27 +183,29 @@
                             Verder wordt AI gebruikt om zoekacties te verslimmen en elk aandeel van een up to date koop of verkoop advies te voorzien. 
                         </p>
                         <ul class="flex justify-evenly mt-2">
-                            <li title="HTML">
-                                <x-svgs.html class="w-6" title="HTML"/>
+                            <li>
+                                <x-tooltip tip="HTML" :arrow="true"><x-svgs.html class="w-6"/></x-tooltip>
                             </li>
-                            <li title="Laravel">
-                                <x-svgs.laravel class="w-6"/>
+                            <li>
+                                <x-tooltip tip="laravel" :arrow="true"><x-svgs.laravel class="w-6"/></x-tooltip>
                             </li>
-                            <li title="Tailwind">
-                                <x-svgs.tailwind class="w-6"/>
+                            <li>
+                                <x-tooltip tip="Tailwind" :arrow="true"><x-svgs.tailwind class="w-6"/></x-tooltip>
                             </li>
-                            <li title="JavaScript">
-                                <x-svgs.javascript class="w-6"/>
+                            <li>
+                                <x-tooltip tip="JavaScript" :arrow="true"><x-svgs.javascript class="w-6"/></x-tooltip>
                             </li>
-                            <li title="mySQL">
-                                <x-svgs.mysql class="w-10"/>
+                            <li>
+                                <x-tooltip tip="MySQL" :arrow="true"><x-svgs.mysql class="w-10"/></x-tooltip>
                             </li>
                         </ul>
                         <nav>
                             <ul class="grid grid-cols-2 mt-4">
                                 <x-projects-link href="https://rally.petercornelis.be/">Live Demo</x-projects-link>
-                                <x-projects-link href="https://rally.petercornelis.be/">
-                                    <x-svgs.github class="relative -top-0.5 inline h-8 -my-2"/>
+                                <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
+                                    <x-tooltip tip="Link naar github repository" class="block py-2">
+                                        <x-svgs.github class="relative -top-0.5 inline h-8 "/>
+                                    </x-tooltip>
                                 </x-projects-link>
                             </ul>
                         </nav>
@@ -212,23 +216,25 @@
                             Lorem ipsum dolor sit amet, consectetur adip iscing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
                         </p>
                         <ul class="flex justify-evenly mt-2">
-                            <li title="HTML">
-                                <x-svgs.html class="w-6" title="HTML"/>
+                            <li>
+                                <x-tooltip tip="HTML" :arrow="true"><x-svgs.html class="w-6"/></x-tooltip>
                             </li>
-                            <li title="Laravel">
-                                <x-svgs.laravel class="w-6"/>
+                            <li>
+                                <x-tooltip tip="laravel" :arrow="true"><x-svgs.laravel class="w-6"/></x-tooltip>
                             </li>
-                            <li title="CSS">
-                                <x-svgs.css class="w-6"/>
+                            <li>
+                                <x-tooltip tip="CSS" :arrow="true"><x-svgs.css class="w-6"/></x-tooltip>
                             </li>
-                            <li title="mySQL">
-                                <x-svgs.mysql class="w-10"/>
+                            <li>
+                                <x-tooltip tip="MySQL" :arrow="true"><x-svgs.mysql class="w-10"/></x-tooltip>
                             </li>
                         </ul>
                         <nav>
                             <ul class="mt-4">
-                                <x-projects-link href="https://rally.petercornelis.be/">
-                                    <x-svgs.github class="relative -top-0.5 inline h-8 -my-2"/>
+                                <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
+                                    <x-tooltip tip="Link naar github repository" class="block py-2">
+                                        <x-svgs.github class="relative -top-0.5 inline h-8 "/>
+                                    </x-tooltip>
                                 </x-projects-link>
                             </ul>
                         </nav>
@@ -239,20 +245,22 @@
                             Lorem ipsum dolor sit amet, consectetur adip iscing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
                         </p>
                         <ul class="flex justify-evenly mt-2">
-                            <li title="HTML">
-                                <x-svgs.html class="w-6" title="HTML"/>
+                            <li>
+                                <x-tooltip tip="HTML" :arrow="true"><x-svgs.html class="w-6"/></x-tooltip>
                             </li>
-                            <li title="CSS">
-                                <x-svgs.css class="w-6"/>
+                            <li>
+                                <x-tooltip tip="CSS" :arrow="true"><x-svgs.css class="w-6"/></x-tooltip>
                             </li>
-                            <li title="JavaScript">
-                                <x-svgs.javascript class="w-6"/>
+                            <li>
+                                <x-tooltip tip="JavaScript" :arrow="true"><x-svgs.javascript class="w-6"/></x-tooltip>
                             </li>
                         </ul>
                         <ul class="grid grid-cols-2 mt-4">
                             <x-projects-link href="https://rally.petercornelis.be/">Website</x-projects-link>
-                            <x-projects-link href="https://rally.petercornelis.be/">
-                                <x-svgs.github class="relative -top-0.5 inline h-8 -my-2"/>
+                            <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
+                                <x-tooltip tip="Link naar github repository" class="block py-2">
+                                    <x-svgs.github class="relative -top-0.5 inline h-8 "/>
+                                </x-tooltip>
                             </x-projects-link>
                         </ul>
                     </x-project>
@@ -262,17 +270,17 @@
                             Lorem ipsum dolor sit amet, consectetur adip iscing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
                         </p>
                         <ul class="flex justify-evenly mt-2">
-                            <li title="HTML">
-                                <x-svgs.html class="w-6" title="HTML"/>
+                            <li>
+                                <x-tooltip tip="HTML" :arrow="true"><x-svgs.html class="w-6"/></x-tooltip>
                             </li>
-                            <li title="CSS">
-                                <x-svgs.css class="w-6"/>
+                            <li>
+                                <x-tooltip tip="CSS" :arrow="true"><x-svgs.css class="w-6"/></x-tooltip>
                             </li>
-                            <li title="PHP">
-                                <x-svgs.php class="w-6"/>
+                            <li>
+                                <x-tooltip tip="PHP" :arrow="true"><x-svgs.php class="w-6"/></x-tooltip>
                             </li>
-                            <li title="mySQL">
-                                <x-svgs.mysql class="w-10"/>
+                            <li>
+                                <x-tooltip tip="MySQL" :arrow="true"><x-svgs.mysql class="w-10"/></x-tooltip>
                             </li>
                         </ul>
                         <x-projects-onreq/>
@@ -283,22 +291,24 @@
                             Lorem ipsum dolor sit amet, consectetur adipis cing elit. Nulla et facilisis libero, vel acc umsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
                         </p>
                         <ul class="flex justify-evenly mt-2">
-                            <li title="HTML">
-                                <x-svgs.html class="w-6" title="HTML"/>
+                            <li>
+                                <x-tooltip tip="HTML" :arrow="true"><x-svgs.html class="w-6"/></x-tooltip>
                             </li>
-                            <li title="CSS">
-                                <x-svgs.css class="w-6"/>
+                            <li>
+                                <x-tooltip tip="CSS" :arrow="true"><x-svgs.css class="w-6"/></x-tooltip>
                             </li>
-                            <li title="PHP">
-                                <x-svgs.php class="w-6"/>
+                            <li>
+                                <x-tooltip tip="PHP" :arrow="true"><x-svgs.php class="w-6"/></x-tooltip>
                             </li>
-                            <li title="mySQL">
-                                <x-svgs.mysql class="w-10"/>
+                            <li>
+                                <x-tooltip tip="MySQL" :arrow="true"><x-svgs.mysql class="w-10"/></x-tooltip>
                             </li>
                         </ul>
                         <ul class="mt-4">
-                            <x-projects-link href="https://rally.petercornelis.be/">
-                                <x-svgs.github class="relative -top-0.5 inline h-8 -my-2"/>
+                            <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
+                                <x-tooltip tip="Link naar github repository" class="block py-2">
+                                    <x-svgs.github class="relative -top-0.5 inline h-8 "/>
+                                </x-tooltip>
                             </x-projects-link>
                         </ul>
                     </x-project>
@@ -306,7 +316,7 @@
             </section>
             <section id="contact" class="grid grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center col-span-2 mb-10 p-8">Contact</h2>
-                <form action="" class="w-xl mx-auto my-6">
+                <form action="/mail" method="POST" class="w-xl mx-auto my-6">
                     @csrf
                     <x-forms-label for="name">Naam</x-forms-label>
                     <x-forms-input name="name" id="name"/>
@@ -321,7 +331,7 @@
                     <address>
                         Honoré Borgersstraat 16, <br>
                         8400 Oostende <br>
-                        BELGIE
+                        BELGIË
                     </address>
                     <ul class="flex w-fit gap-4 mt-6 mx-auto">
                         <li>
@@ -338,7 +348,7 @@
                 </article>
             </section>
         </main>
-        <footer class="text-center p-6 mt-10">
+        <footer class="text-center p-6 mt-10 inset-shadow-sm inset-shadow-black/10 dark:inset-shadow-white/5 border-t border-mainDark/20 dark:border-mainLight/20">
             <span class="opacity-60">&copy; 2025 Peter Cornelis</span>
         </footer>
     </body>
