@@ -18,7 +18,6 @@
 
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @livewireScripts
 
     </head>
     <body class="min-h-screen text-mainDark dark:text-mainLight bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_320px] transition-all duration-500"
@@ -44,8 +43,9 @@
                         </li> 
                     </ul> 
                     <!--Mobile Navigation-->
-                    <button popovertarget="mobile-menu" class="lg:hidden text-lg text-mainLight/80 hover:text-mainLight my-auto px-2 ml-auto rounded cursor-pointer transition-colors duration-200">
-                        <x-svgs.menu class="w-12"/>
+                    <button popovertarget="mobile-menu" class="lg:hidden text-mainLight/80 bg-mainLight/10 hover:bg-mainLight/20 font-semibold px-2 py-1 ml-auto my-2 rounded shadow/90 hover:shadow-lg/70 cursor-pointer transition-colors duration-200">
+                        Menu
+                        <x-svgs.menu class="w-6 inline"/>
                     </button>
                     <div id="mobile-menu" popover class="lg:hidden top-14 sm:right-4 bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30">
                         <ul class="border-t border-t-black/10">
@@ -63,11 +63,11 @@
             </div>
         </header>
 
-        <main class="max-w-7xl mx-auto">
+        <main class="max-w-7xl mx-auto px-4">
             <section class="grid grid-rows-5 lg:grid-cols-[auto_1fr] lg:grid-rows-3 gap-6 p-4 mt-12 lg:mt-28">
                 <img src="images/profiel-15.avif" loading="lazy" alt="Peter Cornelis" class="mx-auto rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/30 row-span-3 lg:mr-12">
-                <h2 class="lg:mt-14">Hey, <span class="max-lg:block">ik ben Peter!</span></h2>
-                <p  class="text-lg">
+                <h2 class="lg:mt-14 lg:pr-0">Hey, <span class="max-lg:block">ik ben Peter!</span></h2>
+                <p  class="text-lg lg:pr-0">
                     Full-stack PHP ontwikkelaar en sinds kleins af fervent IT enthousiast.
                     Verder mag ik me ook een fiere vader noemen van twee jonge spruiten.
                 </p>
@@ -88,16 +88,29 @@
                         <x-svgs.download/>
                         <span>Curriculum Vitae</span>
                     </a>
-                    <button class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 mx-2 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300">
+                    <button popovertarget="ai-chat" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 mx-2 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300">
                         <x-svgs.conversation/>
                         <span>Chat</span>
                     </button>
+                    <div id="ai-chat" popover class="dark:text-mainLight top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:max-w-xl dark:bg-grey w-full py-4 px-6 sm:rounded-xl shadow/40 border-t border-t-white/10">
+                        <!--Typing effect to be added-->
+                        <h2>Ai Chat</h2>
+                        <p class="py-2 px-4 my-6 border-2 border-purple rounded-xl">
+                            Hey, ik ben hier om al je vragen over Peter zo goed mogelijk te beantwoorden.
+                        </p>
+                        <form action="/chat">
+                            <x-forms-label for="question">Stel een vraag</x-forms-label>
+                            <x-forms-input name="question" id="question"/>
+                            <input type="submit" value="Verzenden" class="block text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 mx-auto uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border border-black/15 border-t-white/20 duration-300 cursor-pointer">
+
+                        </form>
+                    </div>
                 </div>
             </section>
 
             <section id="skills" class="grid grid-cols-1 xl:grid-cols-[35%_55%] mt-8 p-4 gap-16 scroll-mt-16">
                 <h2 class="text-center xl:col-span-2 p-8">Vaardigheden</h2>
-                <article class="w-fit ml-auto mr-10">
+                <article class="w-fit mx-auto">
                     <h3 class="text-center">Computer Vaardigheden</h3>
                     <ul class="w-fit">
                         <x-star-rating :filled='3'>HTML</x-star-rating>
@@ -107,7 +120,7 @@
                         <x-star-rating :filled='3'>PHP</x-star-rating>
                     </ul>
                 </article>
-                <article class="grid grid-cols-1 xl:grid-cols-2 w-fit gap-8 ml-auto ">
+                <article class="grid grid-cols-1 sm:grid-cols-2 w-fit gap-8 ml-auto ">
                     <div>
                         <h3>Kwaliteitsgericht</h3>
                         <p>Werk afleveren om trots op te zijn, daar streef ik elke dag voor.</p>
@@ -140,7 +153,7 @@
             <section id="experience" class="mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center mb-16 p-8">Ervaring</h2>
                 <div class="w-fit mx-auto">
-                    <ol class="relative w-fit border-l border-mainDark/20 dark:border-mainLight/20 ml-6">                  
+                    <ol class="relative w-fit ml-8 border-l border-mainDark/20 dark:border-mainLight/20">                  
                         <x-timeline-item start="2025" end="heden" at="vdab">
                             full stack developer 
                         </x-timeline-item>
@@ -340,9 +353,9 @@
                     <x-forms-input type="email" name="email" id="email"/>
                     <x-forms-label for="message">Bericht</x-forms-label>
                     <x-forms-textarea name="message" id="message" />
-                    <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border-t border-white/20 duration-300 cursor-pointer">
+                    <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border border-black/15 border-t-white/20 duration-300 cursor-pointer">
                 </form>
-                <article class="grid max-lg:row-start-2 max-lg:grid-cols-2 text-mainLight bg-red w-full max-lg:mx-auto py-4 px-6 mt-6 lg:mt-14 mb-auto rounded-xl shadow shadow-black/40 border-t border-white/20">
+                <article class="grid max-lg:row-start-2 max-lg:grid-cols-2 text-mainLight bg-red w-full max-lg:mx-auto py-4 px-6 mt-6 lg:mt-14 mb-auto rounded-xl shadow shadow-black/40 border border-black/15 border-t-white/20">
                     <h3 class="max-lg: col-start-1">Contactgegevens</h3>
                     <address class="lg:w-48 col-start-1">
                         Honoré Borgersstraat 16,
@@ -367,5 +380,7 @@
         <footer class="text-center p-6 mt-10 inset-shadow-sm inset-shadow-black/10 dark:inset-shadow-white/5 border-t border-mainDark/20 dark:border-mainLight/20">
             <span class="opacity-60">&copy; 2025 Peter Cornelis</span>
         </footer>
+        <!--Initiate Animation Scripts-->
+        @livewireScripts
     </body>
 </html>

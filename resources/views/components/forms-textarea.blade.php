@@ -3,7 +3,7 @@
 <textarea 
     name="{{ $name }}" 
     id="{{ $id }}" 
-    class="block w-full text-mainDark bg-white/40 dark:bg-mainLight py-2 px-3 my-2 rounded-xl ring-2 ring-red"
+    class="block w-full text-mainDark dark:text-mainLight bg-white/40 dark:bg-white/15 py-2 px-3 my-2 border border-black/5 dark:border-black/30 border-t-white dark:border-t-white/10 rounded-xl shadow/50"
     rows="8"
     required
 ></textarea>
