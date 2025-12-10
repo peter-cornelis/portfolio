@@ -47,17 +47,19 @@
                         Menu
                         <x-svgs.menu class="w-6 inline"/>
                     </button>
-                    <div id="mobile-menu" popover class="lg:hidden top-14 sm:right-4 bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30">
+                    <div 
+                        id="mobile-menu" popover class="lg:hidden top-14.5 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30">
                         <ul class="border-t border-t-black/10">
                             <x-mobile-nav-link href="#">Over mij</x-mobile-nav-link>
                             <x-mobile-nav-link href="#skills">Vaardigheden</x-mobile-nav-link>
                             <x-mobile-nav-link href="#experience">Ervaring</x-mobile-nav-link>
                             <x-mobile-nav-link href="#projects">Projecten</x-mobile-nav-link>
                             <x-mobile-nav-link href="#contact">Contact</x-mobile-nav-link>
-                            <li class="flex justify-center py-3 px-8 border-t border-t-white/10">
-                                <x-theme-toggle/> 
-                            </li>
                         </ul>
+                        <div class="flex justify-center py-3 px-8 border-t border-t-white/10">
+                            <x-theme-toggle/>
+                            <x-close-button class="text-mainLight" target="mobile-menu"/>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -92,7 +94,7 @@
                         <x-svgs.conversation/>
                         <span>Chat</span>
                     </button>
-                    <div id="ai-chat" popover class="dark:text-mainLight top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:max-w-xl dark:bg-grey w-full py-4 px-6 sm:rounded-xl shadow/40 border-t border-t-white/10">
+                    <div id="ai-chat" popover class="relative dark:text-mainLight top-1/4 sm:left-1/2 sm:-translate-x-1/2 sm:max-w-xl dark:bg-grey w-full py-4 px-6 sm:rounded-xl shadow/40 border-t border-t-white/10">
                         <!--Typing effect to be added-->
                         <h2>Ai Chat</h2>
                         <p class="py-2 px-4 my-6 border-2 border-purple rounded-xl">
@@ -104,6 +106,7 @@
                             <input type="submit" value="Verzenden" class="block text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 mx-auto uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border border-black/15 border-t-white/20 duration-300 cursor-pointer">
 
                         </form>
+                        <x-close-button class="absolute top-4 right-4 light:text-mainDark" target="ai-chat"/>
                     </div>
                 </div>
             </section>
