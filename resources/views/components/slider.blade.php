@@ -1,4 +1,4 @@
-<div class="w-3xl col-span-2 mx-auto">
+<div class="w-full max-w-3xl xl:col-span-2 mx-auto">
     <h4 class="text-2xl text-center py-4 mb-4">Bekend met:</h4>
     <div class="relative flex h-24 overflow-hidden">
         <div class="absolute z-20 left-0 w-16 h-full bg-linear-to-r from-mainLight dark:from-mainDark to-transparent"></div>

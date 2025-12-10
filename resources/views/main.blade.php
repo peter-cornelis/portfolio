@@ -35,7 +35,7 @@
                     Peter Cornelis
                 </h1>
                 <nav class="flex relative justify-center">
-                    <ul class="flex gap-2 w-fit">
+                    <ul class="hidden lg:flex gap-2 w-fit">
                         <x-nav-link href="#">Over mij</x-nav-link>
                         <x-nav-link href="#skills">Vaardigheden</x-nav-link>
                         <x-nav-link href="#experience">Ervaring</x-nav-link>
@@ -43,14 +43,27 @@
                         <x-nav-link href="#contact">Contact</x-nav-link>
                         <x-theme-toggle/> 
                     </ul> 
+                    <button popovertarget="mobile-menu" class="flex lg:hidden! rounded-lg border bg-red text-black/50 hover:text-black/70 border-black/20 shadow cursor-pointer">
+                        Menu
+                    </button>
+                    <div id="mobile-menu" popover class="lg:hidden">
+                        <ul class="flex gap-2 w-fit bg-transparent">
+                            <x-nav-link href="#">Over mij</x-nav-link>
+                            <x-nav-link href="#skills">Vaardigheden</x-nav-link>
+                            <x-nav-link href="#experience">Ervaring</x-nav-link>
+                            <x-nav-link href="#projects">Projecten</x-nav-link>
+                            <x-nav-link href="#contact">Contact</x-nav-link>
+                            <x-theme-toggle/> 
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </header>
 
         <main class="max-w-7xl mx-auto">
-            <section class="grid grid-cols-[auto_1fr] grid-rows-3 gap-6 p-4 mt-28">
+            <section class="grid grid-rows-5 lg:grid-cols-[auto_1fr] lg:grid-rows-3 gap-6 p-4 mt-28">
                 <img src="images/profiel-15.avif" loading="lazy" alt="Peter Cornelis" class="rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/30 row-span-3 mr-12">
-                <h2 class="mt-14">Hey, ik ben Peter!</h2>
+                <h2 class="lg:mt-14">Hey, <span class="max-lg:block">ik ben Peter!</span></h2>
                 <p  class="text-lg">
                     Full-stack PHP ontwikkelaar en sinds kleins af fervent IT enthousiast.
                     Verder mag ik me ook een fiere vader noemen van twee jonge spruiten.
@@ -67,7 +80,7 @@
                         </a>
                     </li>
                 </ul>
-                <span class="col-span-2 text-mainDark/90 mx-auto">
+                <div class="lg:col-span-2 text-mainDark/90 mx-auto">
                     <a href="assets/test.pdf" target="_blank" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 mx-2 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
                         <x-svgs.download/>
                         <span>Curriculum Vitae</span>
@@ -76,11 +89,11 @@
                         <x-svgs.conversation/>
                         <span>Chat</span>
                     </button>
-                </span>
+                </div>
             </section>
 
-            <section id="skills" class="grid grid-cols-[45%_55%] mt-8 p-4 gap-16 scroll-mt-16">
-                <h2 class="text-center col-span-2 p-8">Vaardigheden</h2>
+            <section id="skills" class="grid grid-cols-1 xl:grid-cols-[35%_55%] mt-8 p-4 gap-16 scroll-mt-16">
+                <h2 class="text-center xl:col-span-2 p-8">Vaardigheden</h2>
                 <article class="w-fit ml-auto mr-10">
                     <h3 class="text-center">Computer Vaardigheden</h3>
                     <ul class="w-fit">
@@ -91,7 +104,7 @@
                         <x-star-rating :filled='3'>PHP</x-star-rating>
                     </ul>
                 </article>
-                <article class="grid grid-cols-2 w-fit gap-8 ml-auto ">
+                <article class="grid grid-cols-1 xl:grid-cols-2 w-fit gap-8 ml-auto ">
                     <div>
                         <h3>Kwaliteitsgericht</h3>
                         <p>Werk afleveren om trots op te zijn, daar streef ik elke dag voor.</p>
@@ -314,9 +327,9 @@
                     </x-project>
                 </div>
             </section>
-            <section id="contact" class="grid grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
-                <h2 class="text-center col-span-2 mb-10 p-8">Contact</h2>
-                <form action="/mail" method="POST" class="w-xl mx-auto my-6">
+            <section id="contact" class="grid grid-cols-1 lg:grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
+                <h2 class="text-center lg:col-span-2 mb-10 p-8">Contact</h2>
+                <form action="/mail" method="POST" class="w-full lg:max-w-2xl xl:max-w-3xl my-6">
                     @csrf
                     <x-forms-label for="name">Naam</x-forms-label>
                     <x-forms-input name="name" id="name"/>
@@ -326,14 +339,14 @@
                     <x-forms-textarea name="message" id="message" />
                     <input type="submit" value="Verzenden" class="block w-full text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border-t border-white/20 duration-300 cursor-pointer">
                 </form>
-                <article class="text-mainLight bg-red py-4 px-6 mt-14 mb-auto rounded-xl shadow shadow-black/40 border-t border-white/20">
-                    <h3>Contactgegevens</h3>
-                    <address>
-                        Honoré Borgersstraat 16, <br>
-                        8400 Oostende <br>
+                <article class="grid max-lg:row-start-2 max-lg:grid-cols-2 text-mainLight bg-red w-full max-lg:mx-auto py-4 px-6 mt-6 lg:mt-14 mb-auto rounded-xl shadow shadow-black/40 border-t border-white/20">
+                    <h3 class="max-lg: col-start-1">Contactgegevens</h3>
+                    <address class="lg:w-48 col-start-1">
+                        Honoré Borgersstraat 16,
+                        <span class="lg:block">8400 Oostende</span>
                         BELGIË
                     </address>
-                    <ul class="flex w-fit gap-4 mt-6 mx-auto">
+                    <ul class="grid max-lg:row-start-1 max-lg:col-start-2 max-lg:row-span-2 lg:grid-cols-2 w-fit gap-4 mt-6 ml-auto lg:mx-auto my-auto">
                         <li>
                             <a href="https://www.linkedin.com/in/peter-cornelis-b4086237a/" aria-label="LinkedIn" target="_blank">
                                 <x-svgs.linkedin class="opacity-75 hover:opacity-100 duration-300"/>
