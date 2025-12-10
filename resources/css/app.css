@@ -30,12 +30,12 @@
         --waves-bg: url('/images/dark-waves.svg');
     }
     h1 {
-        @apply text-red text-2xl font-bold text-shadow-xs text-shadow-black/90 my-auto;
+        @apply text-red text-3xl font-bold text-shadow-xs text-shadow-black/90 my-auto;
     }
     h2 {
-        @apply text-5xl md:text-6xl;
+        @apply text-5xl lg:text-6xl;
     }
     h3 {
-        @apply text-2xl md:text-3xl pb-4;
+        @apply text-3xl pb-4;
     }
 }

@@ -31,9 +31,7 @@
                 class="fixed z-100 left-0 top-0 grid grid-cols-[auto_1fr] w-full px-8 py-1 mx-auto"
                 :class=" onTop ? '' : 'bg-mainDark/95 shadow-lg/40'"
             >
-                <h1>
-                    Peter Cornelis
-                </h1>
+                <h1>Peter Cornelis</h1>
                 <nav class="flex relative justify-center">
                     <ul class="hidden lg:flex gap-2 w-fit">
                         <x-nav-link href="#">Over mij</x-nav-link>
@@ -41,19 +39,24 @@
                         <x-nav-link href="#experience">Ervaring</x-nav-link>
                         <x-nav-link href="#projects">Projecten</x-nav-link>
                         <x-nav-link href="#contact">Contact</x-nav-link>
-                        <x-theme-toggle/> 
-                    </ul> 
-                    <button popovertarget="mobile-menu" class="flex lg:hidden! rounded-lg border bg-red text-black/50 hover:text-black/70 border-black/20 shadow cursor-pointer">
-                        Menu
-                    </button>
-                    <div id="mobile-menu" popover class="lg:hidden">
-                        <ul class="flex gap-2 w-fit bg-transparent">
-                            <x-nav-link href="#">Over mij</x-nav-link>
-                            <x-nav-link href="#skills">Vaardigheden</x-nav-link>
-                            <x-nav-link href="#experience">Ervaring</x-nav-link>
-                            <x-nav-link href="#projects">Projecten</x-nav-link>
-                            <x-nav-link href="#contact">Contact</x-nav-link>
+                        <li class="absolute top-1.5 right-0">
                             <x-theme-toggle/> 
+                        </li> 
+                    </ul> 
+                    <!--Mobile Navigation-->
+                    <button popovertarget="mobile-menu" class="lg:hidden text-lg text-mainLight/80 hover:text-mainLight my-auto px-2 ml-auto rounded cursor-pointer transition-colors duration-200">
+                        <x-svgs.menu class="w-12"/>
+                    </button>
+                    <div id="mobile-menu" popover class="lg:hidden top-14 sm:right-4 bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30">
+                        <ul class="border-t border-t-black/10">
+                            <x-mobile-nav-link href="#">Over mij</x-mobile-nav-link>
+                            <x-mobile-nav-link href="#skills">Vaardigheden</x-mobile-nav-link>
+                            <x-mobile-nav-link href="#experience">Ervaring</x-mobile-nav-link>
+                            <x-mobile-nav-link href="#projects">Projecten</x-mobile-nav-link>
+                            <x-mobile-nav-link href="#contact">Contact</x-mobile-nav-link>
+                            <li class="flex justify-center py-3 px-8 border-t border-t-white/10">
+                                <x-theme-toggle/> 
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -61,8 +64,8 @@
         </header>
 
         <main class="max-w-7xl mx-auto">
-            <section class="grid grid-rows-5 lg:grid-cols-[auto_1fr] lg:grid-rows-3 gap-6 p-4 mt-28">
-                <img src="images/profiel-15.avif" loading="lazy" alt="Peter Cornelis" class="rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/30 row-span-3 mr-12">
+            <section class="grid grid-rows-5 lg:grid-cols-[auto_1fr] lg:grid-rows-3 gap-6 p-4 mt-12 lg:mt-28">
+                <img src="images/profiel-15.avif" loading="lazy" alt="Peter Cornelis" class="mx-auto rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/30 row-span-3 lg:mr-12">
                 <h2 class="lg:mt-14">Hey, <span class="max-lg:block">ik ben Peter!</span></h2>
                 <p  class="text-lg">
                     Full-stack PHP ontwikkelaar en sinds kleins af fervent IT enthousiast.
@@ -156,7 +159,7 @@
 
             <section id="projects" class="mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center col-span-2 mb-16 p-8">Projecten</h2>
-                <div class="grid grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-12">
+                <div class="grid grid-cols-[repeat(auto-fit,minmax(24rem,1fr))] gap-12">
 
                     <x-project header="Portfolio 2.0" src="images/reisbureau.webp" alt="Latest porfolio">
                         <p class="px-4 line-clamp-5">

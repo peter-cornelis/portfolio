@@ -1,4 +1,4 @@
-@props(['href', 'active' => false, 'color' => 'bg-green-2'])
+@props(['href', 'active' => false])
 
 <li 
     class="group relative overflow-hidden py-2 px-5 rounded-full"
