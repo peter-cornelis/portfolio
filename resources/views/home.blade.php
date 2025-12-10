@@ -94,20 +94,27 @@
                         <x-svgs.conversation/>
                         <span>Chat</span>
                     </button>
-                    <div id="ai-chat" popover class="relative dark:text-mainLight top-1/4 sm:left-1/2 sm:-translate-x-1/2 sm:max-w-xl dark:bg-grey w-full py-4 px-6 sm:rounded-xl shadow/40 border-t border-t-white/10">
+                    <section id="ai-chat" popover class="fixed {{ session('answer') ? 'block':'' }} dark:text-mainLight z-40 top-1/4 sm:left-1/2 sm:-translate-x-1/2 sm:max-w-xl dark:bg-grey w-full py-4 px-6 sm:rounded-xl shadow/40 border-t border-t-white/10">
                         <!--Typing effect to be added-->
                         <h2>Ai Chat</h2>
+                        @if(session('answer'))
+                            <p class="py-2 px-4 my-6 border-2 border-purple rounded-xl">
+                                {{ session('answer') }}
+                            </p>
+                        @else
                         <p class="py-2 px-4 my-6 border-2 border-purple rounded-xl">
                             Hey, ik ben hier om al je vragen over Peter zo goed mogelijk te beantwoorden.
                         </p>
-                        <form action="/chat">
+                        @endif
+                        <form action="/ai-chat" method="POST">
+                            @csrf
                             <x-forms-label for="question">Stel een vraag</x-forms-label>
                             <x-forms-input name="question" id="question"/>
                             <input type="submit" value="Verzenden" class="block text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 mx-auto uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border border-black/15 border-t-white/20 duration-300 cursor-pointer">
 
                         </form>
                         <x-close-button class="absolute top-4 right-4 light:text-mainDark" target="ai-chat"/>
-                    </div>
+                    </section>
                 </div>
             </section>
 
@@ -175,7 +182,7 @@
 
             <section id="projects" class="mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center col-span-2 mb-16 p-8">Projecten</h2>
-                <div class="grid grid-cols-[repeat(auto-fit,minmax(24rem,1fr))] gap-12">
+                <div class="grid grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-12">
 
                     <x-project header="Portfolio 2.0" src="images/reisbureau.webp" alt="Latest porfolio">
                         <p class="px-4 line-clamp-5">
