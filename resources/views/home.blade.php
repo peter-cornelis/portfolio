@@ -68,7 +68,7 @@
         <main class="max-w-7xl mx-auto px-4">
             <section class="grid grid-rows-5 lg:grid-cols-[auto_1fr] lg:grid-rows-3 gap-6 p-4 mt-12 lg:mt-28">
                 <img src="images/profiel-15.avif" loading="lazy" alt="Peter Cornelis" class="mx-auto rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/30 row-span-3 lg:mr-12">
-                <h2 class="lg:mt-14 lg:pr-0">Hey, <span class="max-lg:block">ik ben Peter!</span></h2>
+                <h2 class="lg:mt-8 lg:pr-0">Hey, <span class="block">ik ben Peter!</span></h2>
                 <p  class="text-lg lg:pr-0">
                     Full-stack PHP ontwikkelaar en sinds kleins af fervent IT enthousiast.
                     Verder mag ik me ook een fiere vader noemen van twee jonge spruiten.
@@ -85,14 +85,13 @@
                         </a>
                     </li>
                 </ul>
-                <div class="lg:col-span-2 text-mainDark/90 mx-auto">
-                    <a href="assets/test.pdf" target="_blank" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 mx-2 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
+                <div class=" lg:col-span-2 grid grid-cols-[1fr_auto] gap-4 text-mainDark/90 mx-auto">
+                    <a href="assets/test.pdf" target="_blank" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
                         <x-svgs.download/>
                         <span>Curriculum Vitae</span>
                     </a>
-                    <button popovertarget="ai-chat" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 mx-2 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300">
-                        <x-svgs.conversation/>
-                        <span>Chat</span>
+                    <button popovertarget="ai-chat" class="font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 px-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300">
+                        <x-svgs.conversation class="h-6"/>
                     </button>
                     <section id="ai-chat" popover class="fixed {{ session('answer') ? 'block':'' }} dark:text-mainLight z-40 top-1/4 sm:left-1/2 sm:-translate-x-1/2 sm:max-w-xl dark:bg-grey w-full py-4 px-6 sm:rounded-xl shadow/40 border-t border-t-white/10">
                         <!--Typing effect to be added-->
@@ -119,7 +118,7 @@
             </section>
 
             <section id="skills" class="grid grid-cols-1 xl:grid-cols-[35%_55%] mt-8 p-4 gap-16 scroll-mt-16">
-                <h2 class="text-center xl:col-span-2 p-8">Vaardigheden</h2>
+                <h2 class="text-center xl:col-span-2 py-8">Vaardigheden</h2>
                 <article class="w-fit mx-auto">
                     <h3 class="text-center">Computer Vaardigheden</h3>
                     <ul class="w-fit">
@@ -182,7 +181,7 @@
 
             <section id="projects" class="mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center col-span-2 mb-16 p-8">Projecten</h2>
-                <div class="grid grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-12">
+                <div class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-8 justify-items-center">
 
                     <x-project header="Portfolio 2.0" src="images/reisbureau.webp" alt="Latest porfolio">
                         <p class="px-4 line-clamp-5">
@@ -387,8 +386,8 @@
                 </article>
             </section>
         </main>
-        <footer class="text-center p-6 mt-10 inset-shadow-sm inset-shadow-black/10 dark:inset-shadow-white/5 border-t border-mainDark/20 dark:border-mainLight/20">
-            <span class="opacity-60">&copy; 2025 Peter Cornelis</span>
+        <footer class="text-center p-6 mt-10 dark:bg-grey inset-shadow-sm inset-shadow-black/10 dark:inset-shadow-black/30  border-t border-mainDark/20 dark:border-black">
+            <span class="opacity-60">&copy; Peter Cornelis | 2025</span>
         </footer>
         <!--Initiate Animation Scripts-->
         @livewireScripts

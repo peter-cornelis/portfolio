@@ -27,7 +27,7 @@ class PortfolioController extends Controller
                 ->generateContent($validated['question']);
             return back()->with('answer', $answer->text());
         } catch(\Exception $e) {
-            return back()->with('answer', 'Helaas kan ik je momenteel enkel vertellen dat Peter zijn dagelijks AI limiet is bereikt, probeer het later opnieuw.');
+            return back()->with('answer', 'Helaas kan ik u momenteel enkel vertellen dat Peter zijn dagelijks AI limiet is bereikt, probeer het later opnieuw.');
         }
     }
 
