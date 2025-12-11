@@ -183,99 +183,53 @@
                 <h2 class="text-center col-span-2 mb-16 p-8">Projecten</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-8 justify-items-center">
 
-                    <x-project header="Portfolio 2.0" src="images/reisbureau.webp" alt="Latest porfolio">
-                        <p class="px-4 line-clamp-5">
-                            Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
-                        </p>
-                        <ul class="flex justify-evenly mt-2">
-                            <li>
-                                <x-tooltip tip="HTML" :arrow="true"><x-svgs.html class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="laravel" :arrow="true"><x-svgs.laravel class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="Tailwind" :arrow="true"><x-svgs.tailwind class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="Alpine.JS" :arrow="true"><x-svgs.alpine class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="Livewire" :arrow="true"><x-svgs.livewire class="w-6"/></x-tooltip>
-                            </li>
-                        </ul>
-                        <nav>
-                            <ul class="mt-4">
-                                <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
-                                    <x-tooltip tip="Link naar github repository" class="block py-2">
-                                        <x-svgs.github class="relative -top-0.5 inline h-8 "/>
-                                    </x-tooltip>
-                                </x-projects-link>
-                            </ul>                        
-                        </nav>
+                    <x-project 
+                        header="Portfolio 2.0" 
+                        src="images/reisbureau.webp" 
+                        alt="{{ __('messages.projects.sub_1_alt') }}"
+                        info="{{ __('messages.projects.sub_1_info') }}"
+                        :technologies="['html', 'laravel', 'tailwind', 'alpine', 'livewire']"
+                    >
+                        
+                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
+                            <x-tooltip tip="{{ __('messages.general.github_repo') }}" class="block py-2">
+                                <x-svgs.github class="relative -top-0.5 inline h-8 "/>
+                            </x-tooltip>
+                        </x-projects-link>
+
                     </x-project>
 
-                    <x-project header="Stock Market Rally" src="images/rally.webp" alt="Stock Market Rally">
-                        <p class="text-md px-4 line-clamp-5">
-                            Eenvoudig beursspel, met dagelijkse koers & statistiek updates via de FMP API.
-                            Verder wordt AI gebruikt om zoekacties te verslimmen en elk aandeel van een up to date koop of verkoop advies te voorzien. 
-                        </p>
-                        <ul class="flex justify-evenly mt-2">
-                            <li>
-                                <x-tooltip tip="HTML" :arrow="true"><x-svgs.html class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="laravel" :arrow="true"><x-svgs.laravel class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="Tailwind" :arrow="true"><x-svgs.tailwind class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="JavaScript" :arrow="true"><x-svgs.javascript class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="MySQL" :arrow="true"><x-svgs.mysql class="w-10"/></x-tooltip>
-                            </li>
-                        </ul>
-                        <nav>
-                            <ul class="grid grid-cols-2 mt-4">
-                                <x-projects-link href="https://rally.petercornelis.be/">Live Demo</x-projects-link>
-                                <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
-                                    <x-tooltip tip="Link naar github repository" class="block py-2">
-                                        <x-svgs.github class="relative -top-0.5 inline h-8 "/>
-                                    </x-tooltip>
-                                </x-projects-link>
-                            </ul>
-                        </nav>
+                    <x-project 
+                        header="Stock Market Rally" 
+                        src="images/rally.webp" 
+                        alt="{{ __('messages.projects.sub_2_alt') }}"
+                        info="{{ __('messages.projects.sub_2_info') }}"
+                        :technologies="['html', 'laravel', 'tailwind', 'javaScript', 'mysql']"
+                    >
+
+                        <x-projects-link href="https://rally.petercornelis.be/">Live Demo</x-projects-link>
+                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
+                            <x-tooltip tip="{{ __('messages.general.github_repo') }}" class="block py-2">
+                                <x-svgs.github class="relative -top-0.5 inline h-8 "/>
+                            </x-tooltip>
+                        </x-projects-link>
+
                     </x-project>
 
-                    <x-project header="Movie Maxx" src="images/movie.webp" alt="illustratie film inventaris">
-                        <p class="px-4">
-                            Lorem ipsum dolor sit amet, consectetur adip iscing elit. Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. Pellentesque semper ac sem eu euismod.
-                        </p>
-                        <ul class="flex justify-evenly mt-2">
-                            <li>
-                                <x-tooltip tip="HTML" :arrow="true"><x-svgs.html class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="laravel" :arrow="true"><x-svgs.laravel class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="CSS" :arrow="true"><x-svgs.css class="w-6"/></x-tooltip>
-                            </li>
-                            <li>
-                                <x-tooltip tip="MySQL" :arrow="true"><x-svgs.mysql class="w-10"/></x-tooltip>
-                            </li>
-                        </ul>
-                        <nav>
-                            <ul class="mt-4">
-                                <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
-                                    <x-tooltip tip="Link naar github repository" class="block py-2">
-                                        <x-svgs.github class="relative -top-0.5 inline h-8 "/>
-                                    </x-tooltip>
-                                </x-projects-link>
-                            </ul>
-                        </nav>
+                    <x-project 
+                        header="Movie Maxx" 
+                        src="images/movie.webp" 
+                        alt="{{ __('messages.projects.sub_3_alt') }}"
+                        info="{{ __('messages.projects.sub_3_info') }}"
+                        :technologies="['html', 'laravel', 'css', 'mysql']"
+                    >
+
+                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
+                            <x-tooltip tip="{{ __('messages.general.github_repo') }}" class="block py-2">
+                                <x-svgs.github class="relative -top-0.5 inline h-8 "/>
+                            </x-tooltip>
+                        </x-projects-link>
+
                     </x-project>
                     
                     <x-project header="Portfolio 1.0" src="images/portfolio1.webp" alt="illustratie vorige portfolio">
