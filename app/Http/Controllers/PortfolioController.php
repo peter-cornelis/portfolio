@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Gemini\Data\Content;
 use Gemini\Laravel\Facades\Gemini;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactFormMail;
 
 class PortfolioController extends Controller
 {
@@ -38,5 +39,10 @@ class PortfolioController extends Controller
             'email' => 'required|email|max:150',
             'message' => 'required|string|max:500'
         ]);
+
+        Mail::to(config('mail.from.address'))
+            ->send(new ContactFormMail($validated));
+
+        return back()->with('success', 'Your message has been sent successfully!');
     }
 }

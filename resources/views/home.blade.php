@@ -354,7 +354,7 @@
             </section>
             <section id="contact" class="grid grid-cols-1 lg:grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center lg:col-span-2 mb-10 p-8">Contact</h2>
-                <form action="/mail" method="POST" class="w-full lg:max-w-2xl xl:max-w-3xl my-6">
+                <form action="/contact" method="POST" class="w-full lg:max-w-2xl xl:max-w-3xl my-6">
                     @csrf
                     <x-forms-label for="name">Naam</x-forms-label>
                     <x-forms-input name="name" id="name"/>
