@@ -58,7 +58,7 @@
                         </ul>
                         <div class="flex justify-center py-3 px-8 border-t border-t-white/10">
                             <x-theme-toggle/>
-                            <x-close-button class="text-mainLight" aria-label="{{ __('messages.general.close_nav') }}<" target="mobile-menu"/>
+                            <x-close-button class="text-mainLight" aria-label="{{ __('messages.general.close_nav') }}" target="mobile-menu"/>
                         </div>
                     </div>
                 </nav>
@@ -148,7 +148,7 @@
                         <ul class="w-fit">
                             <li class="grid grid-cols-2 gap-8 text-left">
                                 <span class="font-bold text-right">{{ __('messages.skills.sub_5_nl') }}</span>
-                                {{ __('messages.skills.sub_4_nl_state') }}
+                                {{ __('messages.skills.sub_5_nl_state') }}
                             </li>
                             <li class="grid grid-cols-2 gap-8 text-left">
                                 <span class="font-bold text-right">{{ __('messages.skills.sub_5_eng') }}</span>
@@ -192,10 +192,9 @@
                         :technologies="['html', 'laravel', 'tailwind', 'alpine', 'livewire']"
                     >
                         
-                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
-                            <x-tooltip tip="{{ __('messages.general.github_repo') }}" class="block py-2">
-                                <x-svgs.github class="relative -top-0.5 inline h-8 "/>
-                            </x-tooltip>
+                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                            <x-svgs.github class="-mt-1.25 inline h-7 "/>
+                            Code
                         </x-projects-link>
 
                     </x-project>
@@ -209,10 +208,9 @@
                     >
 
                         <x-projects-link href="https://rally.petercornelis.be/">Live Demo</x-projects-link>
-                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
-                            <x-tooltip tip="{{ __('messages.general.github_repo') }}" class="block py-2">
-                                <x-svgs.github class="relative -top-0.5 inline h-8 "/>
-                            </x-tooltip>
+                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                            <x-svgs.github class="-mt-1.25 inline h-7 "/>
+                            Code
                         </x-projects-link>
 
                     </x-project>
@@ -225,10 +223,9 @@
                         :technologies="['html', 'laravel', 'css', 'mysql']"
                     >
 
-                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
-                            <x-tooltip tip="{{ __('messages.general.github_repo') }}" class="block py-2">
-                                <x-svgs.github class="relative -top-0.5 inline h-8 "/>
-                            </x-tooltip>
+                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                            <x-svgs.github class="-mt-1.25 inline h-7 "/>
+                            Code
                         </x-projects-link>
 
                     </x-project>
@@ -242,10 +239,9 @@
                     >
 
                         <x-projects-link href="https://rally.petercornelis.be/">Live Demo</x-projects-link>
-                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
-                            <x-tooltip tip="{{ __('messages.general.github_repo') }}" class="block py-2">
-                                <x-svgs.github class="relative -top-0.5 inline h-8 "/>
-                            </x-tooltip>
+                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                            <x-svgs.github class="-mt-1.25 inline h-7 "/>
+                            Code
                         </x-projects-link>
 
                     </x-project>
@@ -255,7 +251,7 @@
                         src="images/pizza.webp" 
                         alt="{{ __('messages.projects.sub_5_alt') }}"
                         info="{{ __('messages.projects.sub_5_info') }}"
-                        :technologies="['html', 'css', 'php', 'mysql']"
+                        :technologies="['html', 'css', 'php', 'twig', 'mysql']"
                     >
                         
                         <x-projects-onreq/>
@@ -266,13 +262,12 @@
                         src="images/soda.webp" 
                         alt="{{ __('messages.projects.sub_6_alt') }}"
                         info="{{ __('messages.projects.sub_6_info') }}"
-                        :technologies="['html', 'css', 'php', 'mysql']"
+                        :technologies="['html', 'css', 'php', 'twig', 'mysql']"
                     >
 
-                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" :list="true">
-                            <x-tooltip tip="{{ __('messages.general.github_repo') }}" class="block py-2">
-                                <x-svgs.github class="relative -top-0.5 inline h-8 "/>
-                            </x-tooltip>
+                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                            <x-svgs.github class="-mt-1.25 inline h-7 "/>
+                            Code
                         </x-projects-link>
 
                     </x-project>
@@ -284,9 +279,9 @@
                 <form action="/contact" method="POST" class="w-full lg:max-w-2xl xl:max-w-3xl my-6">
                     @csrf
                     <x-forms-label for="name">{{ __('messages.contact.form.name') }}</x-forms-label>
-                    <x-forms-input name="name" id="name"/>
+                    <x-forms-input name="name" id="name" autocomplete="name"/>
                     <x-forms-label for="email">{{ __('messages.contact.form.email') }}</x-forms-label>
-                    <x-forms-input type="email" name="email" id="email"/>
+                    <x-forms-input type="email" name="email" id="email" autocomplete="email"/>
                     <x-forms-label for="message">{{ __('messages.contact.form.message') }}</x-forms-label>
                     <x-forms-textarea name="message" id="message" />
                     <input type="submit" value="{{ __('messages.contact.form.send') }}" class="block w-full text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border border-black/15 border-t-white/20 duration-300 cursor-pointer">

@@ -29,6 +29,10 @@
                 <x-slider-label>PHP</x-slider-label>
             </li>
             <li class="group relative">
+                <x-svgs.twig class="hover:scale-125 transition-transform duration-300"/>
+                <x-slider-label>Twig</x-slider-label>
+            </li>
+            <li class="group relative">
                 <x-svgs.laravel class="hover:scale-125 transition-transform duration-300"/>
                 <x-slider-label>Laravel</x-slider-label>
             </li>
@@ -73,6 +77,10 @@
             <li class="group relative">
                 <x-svgs.php class="hover:scale-125 transition-transform duration-300"/>
                 <x-slider-label>PHP</x-slider-label>
+            </li>
+            <li class="group relative">
+                <x-svgs.twig class="hover:scale-125 transition-transform duration-300"/>
+                <x-slider-label>Twig</x-slider-label>
             </li>
             <li class="group relative">
                 <x-svgs.laravel class="hover:scale-125 transition-transform duration-300"/>
