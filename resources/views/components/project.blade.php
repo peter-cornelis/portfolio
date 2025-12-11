@@ -20,7 +20,7 @@
     @endforeach
     </ul>
     <nav>
-        <ul class="mt-4">
+        <ul class="grid grid-cols-2 has-[>:only-child]:grid-cols-1 mt-4">
             {{ $slot }}
         </ul>                        
     </nav>

@@ -14,10 +14,11 @@ return [
         'toggle_dark' => 'Gebruik donker theme',
         'toggle_light' => 'Gebruik licht theme',
         'close_menu' => 'Sluit menu',
-        'linkedin' => 'LinkedIn profiel van Peter',
+        'linkedin_profile' => 'LinkedIn profiel van Peter',
         'github_profile' => 'Github profiel van Peter',
         'github_repo' => 'Link naar github repository',
         'download_cv' => 'CV downloaden',
+        'cv' => 'Curriculum Vitae',
         'chat' => 'Open AI chat die vragen over Peter beantwoord',
         'close_chat' => 'Chat sluiten',
         'html' => 'HTML',
@@ -41,6 +42,7 @@ return [
             Verder mag ik me ook een fiere vader noemen van twee jonge spruiten.',
     ],
     'chat' => [
+        'title' => 'Ai Chat',
         'introduction' => 'Hey, ik ben hier om al je vragen over Peter zo goed mogelijk te beantwoorden.',
         'ask' => 'Stel een vraag',
         'submit' => 'Stel vraag'
@@ -76,10 +78,44 @@ return [
             'Lorem ipsum dolor sit amet, consectetur adipisc ing elit. 
             Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. 
             Pellentesque semper ac sem eu euismod.',
-        'sub_2_alt' => 'Screenshot van Stock Market Rally website',
+        'sub_2_alt' => 'Screenshot van beursspel website',
         'sub_2_info' => 
             'Eenvoudig beursspel, met dagelijkse koers & statistiek updates via de FMP API.
             Verder wordt AI gebruikt om zoekacties te verslimmen en elk aandeel van een up to date koop of verkoop advies te voorzien.',
         'used' => 'Gebruikte technologieën',
+        'sub_3_alt' => 'Screenshot van videotheek website',
+        'sub_3_info' => 
+            'Lorem ipsum dolor sit amet, consectetur adipisc ing elit. 
+            Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. 
+            Pellentesque semper ac sem eu euismod.',
+        'sub_4_alt' => 'Screenshot van Portfolio 1.0 website',
+        'sub_4_info' => 
+            'Lorem ipsum dolor sit amet, consectetur adipisc ing elit. 
+            Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. 
+            Pellentesque semper ac sem eu euismod.',
+        'sub_5_alt' => 'Screenshot van pizzeria website',
+        'sub_5_info' => 
+            'Lorem ipsum dolor sit amet, consectetur adipisc ing elit. 
+            Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. 
+            Pellentesque semper ac sem eu euismod.',
+        'sub_6_alt' => 'Screenshot van drankautomaat website',
+        'sub_6_info' => 
+            'Lorem ipsum dolor sit amet, consectetur adipisc ing elit. 
+            Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. 
+            Pellentesque semper ac sem eu euismod.',
+        'onreq' => 'Code op aanvraag'
+    ],
+    'contact' => [
+        'title' => 'Contact',
+        'contact_details' => 'Contactgegevens',
+        'street' => 'Honoré Borgerstraat 16',
+        'city' => '8400 Oostende',
+        'country' => 'BELGIË',
+        'form' => [
+            'name' => 'Naam',
+            'email' => 'E-mailadres',
+            'message' => 'Bericht',
+            'send' => 'Verstuur',
+        ],
     ],
 ];
