@@ -66,8 +66,8 @@
         </header>
 
         <main class="max-w-7xl mx-auto px-4">
-            <section class="grid grid-rows-5 lg:grid-cols-[auto_1fr] lg:grid-rows-3 gap-6 p-4 mt-12 lg:mt-28">
-                <img src="images/profiel-15.avif" loading="lazy" alt="Peter Cornelis" class="mx-auto rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/30 row-span-3 lg:mr-12">
+            <section id="about" class="grid grid-rows-5 lg:grid-cols-[auto_1fr] lg:grid-rows-3 gap-6 p-4 mt-12 lg:mt-28">
+                <img src="images/profiel-15.avif" loading="lazy" alt="Foto van Peter Cornelis, full-stack PHP-ontwikkelaar" class="mx-auto rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/30 row-span-3 lg:mr-12">
                 <h2 class="lg:mt-8 lg:pr-0">Hey, <span class="block">ik ben Peter!</span></h2>
                 <p  class="text-lg lg:pr-0">
                     Full-stack PHP ontwikkelaar en sinds kleins af fervent IT enthousiast.
