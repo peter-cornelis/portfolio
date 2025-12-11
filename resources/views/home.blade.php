@@ -67,7 +67,9 @@
 
         <main class="max-w-7xl mx-auto px-4">
             <section id="about" class="grid grid-rows-5 lg:grid-cols-[auto_1fr] lg:grid-rows-3 gap-6 p-4 mt-12 lg:mt-28">
-                <img src="images/profiel-15.avif" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="mx-auto rounded-[60%_40%_60%_40%] border-6 border-red shadow-lg/30 row-span-3 lg:mr-12">
+                <span class="mx-auto p-2 bg-red rounded-[60%_40%_60%_40%] row-span-3 lg:mr-12 mb-auto shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20">
+                    <img src="images/profiel-15.avif" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="rounded-[60%_40%_60%_40%] shadow/30">
+                </span>
                 <h2 class="lg:mt-8 lg:pr-0">{{ __('messages.about.hey') }} <span class="block">{{ __('messages.about.hey_2') }}</span></h2>
                 <p  class="text-lg lg:pr-0">
                     {{ __('messages.about.introduction') }}
@@ -80,7 +82,7 @@
                     </li>
                     <li>
                         <a href="https://github.com/peter-cornelis" aria-label="{{ __('messages.general.github_profile') }}" target="_blank">
-                            <x-svgs.github class="opacity-75 hover:opacity-100 duration-300"/>                      
+                            <x-svgs.github class=" w-8 opacity-75 hover:opacity-100 duration-300"/>                      
                         </a>
                     </li>
                 </ul>
