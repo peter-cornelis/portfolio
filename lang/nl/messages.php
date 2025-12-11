@@ -29,7 +29,7 @@ return [
         'laravel' => 'Laravel',
         'git' => 'Git',
         'tailwind' => 'Tailwind',
-        'alpinejs' => 'Alpine.JS',
+        'alpine' => 'Alpine.JS',
         'sqlite' => 'SQLite',
         'livewire' => 'Livewire'
     ],
