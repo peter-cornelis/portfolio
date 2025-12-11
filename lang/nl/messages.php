@@ -85,24 +85,20 @@ return [
         'used' => 'Gebruikte technologieën',
         'sub_3_alt' => 'Screenshot van videotheek website',
         'sub_3_info' => 
-            'Lorem ipsum dolor sit amet, consectetur adipisc ing elit. 
-            Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. 
-            Pellentesque semper ac sem eu euismod.',
+            'Webapplicatie die de filmcollectie van een videotheek beheert.
+            Medewerkers dienen aan te melden met de nodige verificatie. 
+            Dit was mijn eerste Laravel project.',
         'sub_4_alt' => 'Screenshot van Portfolio 1.0 website',
         'sub_4_info' => 
-            'Lorem ipsum dolor sit amet, consectetur adipisc ing elit. 
-            Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. 
-            Pellentesque semper ac sem eu euismod.',
+            'Eerste portfolio website, met meertaligheid aan de hand van JSON en Javascript. Als leuke extra werden enkele Project Euler oefeningen geïmplementeerd.',
         'sub_5_alt' => 'Screenshot van pizzeria website',
         'sub_5_info' => 
-            'Lorem ipsum dolor sit amet, consectetur adipisc ing elit. 
-            Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. 
-            Pellentesque semper ac sem eu euismod.',
+            'Pizzeria webshop met een eenvoudige implementatie van de Mollie API. 
+            Dit betreft een test voor PHP Advanced.
+            Neem gerust contact om de code in te kijken.',
         'sub_6_alt' => 'Screenshot van drankautomaat website',
         'sub_6_info' => 
-            'Lorem ipsum dolor sit amet, consectetur adipisc ing elit. 
-            Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. 
-            Pellentesque semper ac sem eu euismod.',
+            'Interface voor een frisdrank automaat met bijhorend adminpaneel, waar de frisdranken en munten kunnen aangevuld worden of geleegd worden.',
         'onreq' => 'Code op aanvraag'
     ],
     'contact' => [
