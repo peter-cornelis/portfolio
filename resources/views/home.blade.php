@@ -276,16 +276,7 @@
             </section>
             <section id="contact" class="grid grid-cols-1 lg:grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
                 <h2 class="text-center lg:col-span-2 mb-10 p-8">{{ __('messages.contact.title') }}</h2>
-                <form action="/contact" method="POST" class="w-full lg:max-w-2xl xl:max-w-3xl my-6">
-                    @csrf
-                    <x-forms-label for="name">{{ __('messages.contact.form.name') }}</x-forms-label>
-                    <x-forms-input name="name" id="name" autocomplete="name"/>
-                    <x-forms-label for="email">{{ __('messages.contact.form.email') }}</x-forms-label>
-                    <x-forms-input type="email" name="email" id="email" autocomplete="email"/>
-                    <x-forms-label for="message">{{ __('messages.contact.form.message') }}</x-forms-label>
-                    <x-forms-textarea name="message" id="message" />
-                    <input type="submit" value="{{ __('messages.contact.form.send') }}" class="block w-full text-mainLight bg-red hover:bg-red/80 py-2 px-3 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border border-black/15 border-t-white/20 duration-300 cursor-pointer">
-                </form>
+                <livewire:contact-form />
                 <article class="grid max-lg:row-start-2 max-lg:grid-cols-2 text-mainLight bg-red w-full max-lg:mx-auto py-4 px-6 mt-6 lg:mt-14 mb-auto rounded-xl shadow shadow-black/40 border border-black/15 border-t-white/20">
                     <h3 class="max-lg: col-start-1">{{ __('messages.contact.contact_details') }}</h3>
                     <address class="lg:w-48 col-start-1">

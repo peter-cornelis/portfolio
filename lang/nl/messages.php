@@ -34,6 +34,18 @@ return [
         'twig' => 'Twig',
         'livewire' => 'Livewire'
     ],
+    'error' => [
+        'name_required' => 'Naam is verplicht.',
+        'name_string' => 'Ongeldige waarde voor naam.',
+        'name_max' => 'Naam mag maximaal 100 karakters bevatten.',
+        'email_required' => 'E-mailadres is verplicht.',
+        'email_max' => 'E-mailadres mag maximaal 150 karakters bevatten.',
+        'email_email' => 'Voer een geldig e-mailadres in.',
+        'message_required' => 'Bericht is verplicht.',
+        'message_string' => 'Ongeldige waarde voor bericht.',
+        'message_min' => 'Bericht moet minstens 30 karakters bevatten.',
+        'message_max' => 'Bericht mag maximaal 500 karakters bevatten.',
+    ],
     'about' => [
         'img_alt' => 'Foto van Peter Cornelis, full-stack PHP-ontwikkelaar',
         'hey' => 'Hey,',
@@ -114,5 +126,6 @@ return [
             'message' => 'Bericht',
             'send' => 'Verstuur',
         ],
+        'success' => 'Bericht succesvol verstuurd!'
     ],
 ];

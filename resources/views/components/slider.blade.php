@@ -1,6 +1,6 @@
 <div class="w-full max-w-3xl xl:col-span-2 mx-auto">
     <h4 class="text-2xl text-center py-4 mb-4">Bekend met:</h4>
-    <div class="relative flex h-24 overflow-hidden">
+    <div class="relative flex h-26 overflow-hidden">
         <div class="absolute z-20 left-0 w-16 h-full bg-linear-to-r from-mainLight dark:from-mainDark to-transparent"></div>
         <div class="absolute z-20 right-0 w-16 h-full bg-linear-to-l from-mainLight dark:from-mainDark to-transparent"></div>
         <ul class="flex animate-scroll px-3 my-auto gap-6">
