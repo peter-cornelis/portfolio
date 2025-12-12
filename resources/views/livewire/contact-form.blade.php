@@ -18,7 +18,7 @@
         <x-forms-textarea wire:model="message" name="message" id="message" />
         @if ($success)
             <span class="flex justify-center items-center w-full h-12 text-mainLight bg-green mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 border border-black/15 border-t-white/20">
-                {{ __('messages.contact.form.send') }}
+                {{ __('messages.contact.form.success') }}
             </span>
         
         @endif
