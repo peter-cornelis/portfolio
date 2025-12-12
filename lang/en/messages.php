@@ -89,8 +89,8 @@ return [
         'title' => 'Projects',
         'sub_1_alt' => 'Screenshot of Portfolio 2.0 website',
         'sub_1_info' => 
-            'Modern portfolio website built with Laravel, Livewire, and Tailwind CSS. 
-            Features an AI-powered chatbot using Google Gemini API and a reactive contact form with real-time validation.',
+            'Modern portfolio,
+            Featuring an AI-powered chatbot using Google Gemini API and a reactive contact form with real-time validation.',
         'sub_2_alt' => 'Screenshot of stock market game website',
         'sub_2_info' => 
             'Simple stock market game with daily price and statistics updates through the FMP API. 

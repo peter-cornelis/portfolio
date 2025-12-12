@@ -89,9 +89,7 @@ return [
         'title' => 'Projecten',
         'sub_1_alt' => 'Screenshot van Portfolio 2.0 website',
         'sub_1_info' => 
-            'Lorem ipsum dolor sit amet, consectetur adipisc ing elit. 
-            Nulla et facilisis libero, vel accumsan nibh. Duis vitae iaculis nisl. 
-            Pellentesque semper ac sem eu euismod.',
+            'Moderne portfolio, met een AI-gestuurde chatbot die gebruikt maakt van de Google Gemini API en een responsief contact formulier met real-time validatie.',
         'sub_2_alt' => 'Screenshot van beursspel website',
         'sub_2_info' => 
             'Eenvoudig beursspel, met dagelijkse koers & statistiek updates via de FMP API.
@@ -104,7 +102,8 @@ return [
             Dit was mijn eerste Laravel project.',
         'sub_4_alt' => 'Screenshot van Portfolio 1.0 website',
         'sub_4_info' => 
-            'Eerste portfolio website, met meertaligheid aan de hand van JSON en Javascript. Als leuke extra werden enkele Project Euler oefeningen geïmplementeerd.',
+            'Eerste portfolio website, met meertaligheid aan de hand van JSON en Javascript. 
+            Als leuke extra werden enkele Project Euler oefeningen geïmplementeerd.',
         'sub_5_alt' => 'Screenshot van pizzeria website',
         'sub_5_info' => 
             'Pizzeria webshop met een eenvoudige implementatie van de Mollie API. 
@@ -112,7 +111,8 @@ return [
             Neem gerust contact om de code in te kijken.',
         'sub_6_alt' => 'Screenshot van drankautomaat website',
         'sub_6_info' => 
-            'Interface voor een frisdrank automaat met bijhorend adminpaneel, waar de frisdranken en munten kunnen aangevuld worden of geleegd worden.',
+            'Interface voor een frisdrank automaat met bijhorend adminpaneel, 
+            waar de frisdranken en munten kunnen aangevuld worden of geleegd worden.',
         'onreq' => 'Code op aanvraag'
     ],
     'contact' => [

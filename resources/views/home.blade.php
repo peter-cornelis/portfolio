@@ -167,7 +167,7 @@
 
                     <x-project 
                         header="Portfolio 2.0" 
-                        src="images/reisbureau.webp" 
+                        src="images/portfolio2.webp" 
                         alt="{{ __('messages.projects.sub_1_alt') }}"
                         info="{{ __('messages.projects.sub_1_info') }}"
                         :technologies="['html', 'laravel', 'tailwind', 'alpine', 'livewire']"
