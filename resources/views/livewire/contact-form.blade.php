@@ -12,22 +12,25 @@
         @enderror                    
         <x-forms-input wire:model="email" type="email" name="email" id="email" autocomplete="email"/>
         <x-forms-label for="letter">{{ __('messages.contact.form.message') }}</x-forms-label>
-        @error('content')
+        @error('message')
             <x-forms-error>{{ $message }}</x-forms-error>
         @enderror
         <x-forms-textarea wire:model="message" name="message" id="message" />
-        @if ($success)
-            <span class="flex justify-center items-center w-full h-12 text-mainLight bg-green mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 border border-black/15 border-t-white/20">
-                {{ __('messages.contact.form.success') }}
-            </span>
-        
-        @endif
         <button 
             type="submit"
             wire:loading.attr="disabled"
-            class="flex justify-center items-center w-full h-12 text-mainLight bg-red hover:bg-red/80 mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border border-black/15 border-t-white/20 cursor-pointer disabled:opacity-80 transition-all duration-300"
+            x-data="{success: @entangle('success')}"
+            x-init="$watch('success', value => { if(value) setTimeout(() => success = false, 4000) })"
+            class="flex justify-center items-center w-full h-12 text-mainLight mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border border-black/15 border-t-white/20 cursor-pointer disabled:opacity-80 transition-colors ease-in-out duration-500"
+            :class="success ? 'bg-green' : 'bg-red hover:bg-red/80'"
         >
-            <span wire:loading.remove>{{ __('messages.contact.form.send') }}</span>
+            <span x-show="success">
+                {{ __('messages.contact.form.success') }}
+                <x-svgs.checkmark class="ml-1 inline"/>
+            </span>
+            <span x-show="!success" wire:loading.remove>
+                {{ __('messages.contact.form.send') }}
+            </span>
             <x-svgs.spinner wire:loading.class.remove="hidden" class="hidden"/>
         </button>
     </form>
