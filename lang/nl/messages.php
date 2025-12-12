@@ -125,6 +125,7 @@ return [
             'email' => 'E-mailadres',
             'message' => 'Bericht',
             'send' => 'Verstuur',
+            'success' => 'Succesvol verstuurd',
         ],
         'success' => 'Bericht succesvol verstuurd!'
     ],

@@ -18,6 +18,7 @@
 
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @livewireScripts
 
     </head>
     <body class="min-h-screen text-mainDark dark:text-mainLight bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_320px] transition-all duration-500"
@@ -302,7 +303,5 @@
         <footer class="text-center p-6 mt-10 dark:bg-grey inset-shadow-sm inset-shadow-black/10 dark:inset-shadow-black/30  border-t border-mainDark/20 dark:border-black">
             <span class="opacity-60">&copy; Peter Cornelis | 2025</span>
         </footer>
-        <!--Initiate Animation Scripts-->
-        @livewireScripts
     </body>
 </html>
