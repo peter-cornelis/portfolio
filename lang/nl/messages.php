@@ -128,6 +128,5 @@ return [
             'send' => 'Verstuur',
             'success' => 'Bericht verstuurd',
         ],
-        'success' => 'Bericht succesvol verstuurd!'
     ],
 ];

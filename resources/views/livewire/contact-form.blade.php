@@ -11,7 +11,7 @@
             <x-forms-error>{{ $message }}</x-forms-error>
         @enderror                    
         <x-forms-input wire:model="email" type="email" name="email" id="email" autocomplete="email"/>
-        <x-forms-label for="letter">{{ __('messages.contact.form.message') }}</x-forms-label>
+        <x-forms-label for="message">{{ __('messages.contact.form.message') }}</x-forms-label>
         @error('message')
             <x-forms-error>{{ $message }}</x-forms-error>
         @enderror
