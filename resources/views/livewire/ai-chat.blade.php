@@ -1,5 +1,5 @@
 <div>
-    <section id="ai-chat" popover class="fixed {{ session('answer') ? 'block':'' }} dark:text-mainLight z-40 top-1/4 sm:left-1/2 sm:-translate-x-1/2 sm:max-w-xl dark:bg-grey w-full py-4 px-6 sm:rounded-xl shadow/40 border-t border-t-white/10">
+    <section id="ai-chat" popover class="fixed dark:text-mainLight z-40 top-1/4 sm:left-1/2 sm:-translate-x-1/2 sm:max-w-xl bg-mainLight dark:bg-grey w-full py-4 px-6 sm:rounded-xl shadow/40 border-t border-t-white/10">
         <!--Typing effect to be added-->
         <h2>{{ __('messages.chat.title') }}</h2>
         <x-close-button class="absolute top-4 right-4 light:text-mainDark" aria-label="{{ __('messages.general.close_chat') }}" target="ai-chat"/>
