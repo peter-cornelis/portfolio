@@ -205,7 +205,7 @@
                         src="images/rally.webp" 
                         alt="{{ __('messages.projects.sub_2_alt') }}"
                         info="{{ __('messages.projects.sub_2_info') }}"
-                        :technologies="['html', 'laravel', 'tailwind', 'javaScript', 'mysql']"
+                        :technologies="['html', 'laravel', 'tailwind', 'javascript', 'mysql']"
                     >
 
                         <x-projects-link href="https://rally.petercornelis.be/">Live Demo</x-projects-link>
