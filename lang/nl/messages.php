@@ -58,7 +58,8 @@ return [
         'title' => 'Ai Chat',
         'introduction' => 'Hey, ik ben hier om al je vragen over Peter zo goed mogelijk te beantwoorden.',
         'ask' => 'Stel een vraag',
-        'submit' => 'Stel vraag'
+        'submit' => 'Stel vraag',
+        'failed' => 'Helaas kan ik u momenteel enkel vertellen dat Peter zijn dagelijks AI limiet is bereikt, probeer het later opnieuw.',
     ],
     'skills' => [
         'title' => 'Vaardigheden',

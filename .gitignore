@@ -5,6 +5,7 @@
 /public/storage
 /storage/*.key
 /storage/pail
+/config/gemini.php
 /vendor
 .env
 .env.backup
