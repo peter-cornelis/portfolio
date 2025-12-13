@@ -1,4 +1,4 @@
-<ul class="grid grid-flow-col text-mainLight/80 justify-self-end underline underline-offset-4">
+<ul class="grid grid-flow-col text-mainLight/70 justify-self-end underline underline-offset-4">
     <li>
         <a 
             href="{{ route('language.switch', 'nl') }}"

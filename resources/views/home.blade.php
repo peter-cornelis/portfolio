@@ -28,7 +28,7 @@
             <div 
                 x-data="{ onTop: true }"
                 @scroll.window= "onTop = window.pageYOffset < 1"
-                class="fixed z-100 left-0 top-0 grid grid-cols-[auto_1fr] w-full px-8 py-1 mx-auto"
+                class="fixed z-100 left-0 top-0 grid grid-cols-[auto_1fr] w-full px-8 py-1 mx-auto h-14"
                 x-bind:class=" onTop ? '' : 'bg-mainDark/95 shadow-lg/40'"
             >
                 <h1 class="pr-2">Peter Cornelis</h1>
@@ -49,13 +49,13 @@
                         </li> 
                     </ul>
                     <!--Mobile Navigation-->
-                    <button popovertarget="mobile-menu" class="lg:hidden text-mainLight/80 bg-mainLight/10 hover:bg-mainLight/20 font-semibold px-2 py-1 ml-auto my-1 rounded shadow/90 hover:shadow-lg/70 cursor-pointer transition-colors duration-200">
+                    <button popovertarget="mobile-menu" class="lg:hidden text-mainLight/80 bg-mainLight/10 hover:bg-mainLight/20 font-semibold px-2 py-1 ml-auto my-auto rounded shadow/90 hover:shadow-lg/70 cursor-pointer transition-colors duration-200">
                         Menu
                         <x-svgs.menu class="w-6 inline"/>
                     </button>
                     <div 
                         id="mobile-menu" popover 
-                        class="lg:hidden top-14.5 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30"
+                        class="lg:hidden top-12.5 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30"
                     >
                         <div class="grid grid-cols-[auto_1fr_auto] items-center py-3 px-8 border-t border-t-black/10 border-b border-b-white/10">
                             <x-theme-toggle/>
