@@ -4,7 +4,7 @@
     <img src="{{ $src }}" alt="{{ $alt }}" class="w-full rounded-t-xl mask-b-from-20% border border-mainDark/10 border-t border-t-white/10">
     <h3 class="text-center py-4">{{ $header }}</h3>
     <p class="px-4 line-clamp-5">
-        {{ $info }}
+        {!! $info !!} <!-- Outputs the raw data, otherwise double decoded since prop -->
     </p>
     <hr class="m-2 border-black/30">
     <h4 class="text-lg font-semibold text-center">

@@ -89,6 +89,7 @@ return [
     ],
     'projects' => [
         'title' => 'Projecten',
+        'used' => 'Gebruikte technologieën',
         'sub_1_alt' => 'Screenshot van Portfolio 2.0 website',
         'sub_1_info' => 
             'Moderne portfolio, met een AI-gestuurde chatbot die gebruikt maakt van de Google Gemini API en een responsief contact formulier met real-time validatie.',
@@ -96,7 +97,6 @@ return [
         'sub_2_info' => 
             'Eenvoudig beursspel, met dagelijkse koers & statistiek updates via de FMP API.
             Verder wordt AI gebruikt om zoekacties te verslimmen en elk aandeel van een up to date koop of verkoop advies te voorzien.',
-        'used' => 'Gebruikte technologieën',
         'sub_3_alt' => 'Screenshot van videotheek website',
         'sub_3_info' => 
             'Webapplicatie die de filmcollectie van een videotheek beheert.

@@ -89,6 +89,7 @@ return [
     ],
     'projects' => [
         'title' => 'Projects',
+        'used' => 'Used technologies',
         'sub_1_alt' => 'Screenshot of Portfolio 2.0 website',
         'sub_1_info' => 
             'Modern portfolio,
@@ -97,8 +98,7 @@ return [
         'sub_2_info' => 
             'Simple stock market game with daily price and statistics updates through the FMP API. 
             AI integration enhances search functionality and provides up-to-date buy or sell recommendations for each stock.',
-        'used' => 'Gebruikte technologieën',
-        'sub_3_alt' => 'Screenshot van videotheek website',
+        'sub_3_alt' => 'Screenshot of video store website',
         'sub_3_info' => 
             'Web application for managing a video rental store\'s movie collection. 
             Staff members must log in with proper authentication. This was my first Laravel project.',

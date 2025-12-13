@@ -3,7 +3,7 @@
         <!--Typing effect to be added-->
         <h2>{{ __('messages.chat.title') }}</h2>
         <x-close-button class="absolute top-4 right-4 light:text-mainDark" aria-label="{{ __('messages.general.close_chat') }}" target="ai-chat"/>
-        <p class="bg-mainLight py-2 px-4 my-6 border-2 border-purple rounded-xl">
+        <p class="text-mainLight font-semibold bg-purple py-2 px-4 my-6 rounded-xl inset-shadow-sm/20">
             {{ $answer ? $answer : __('messages.chat.introduction') }}
         </p>
         <form wire:submit="chat">

@@ -2,7 +2,7 @@
     <li>
         <a 
             href="{{ route('language.toggle', 'nl') }}"
-            class="px-2 hover:text-mainLight transition-colors duration-200"
+            class="px-2 font-bold text-mainLight/90 transition-colors duration-200"
             title="{{ __('messages.general.nl') }}"
         > 
             {{ __('messages.general.toggle_nl')}} 
