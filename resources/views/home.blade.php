@@ -31,20 +31,25 @@
                 class="fixed z-100 left-0 top-0 grid grid-cols-[auto_1fr] w-full px-8 py-1 mx-auto"
                 x-bind:class=" onTop ? '' : 'bg-mainDark/95 shadow-lg/40'"
             >
-                <h1>Peter Cornelis</h1>
-                <nav class="flex relative justify-center">
-                    <ul class="hidden lg:flex gap-2 w-fit">
+                <h1 class="pr-2">Peter Cornelis</h1>
+                <nav class="flex justify-center">
+                    <ul class="hidden lg:flex gap-2 mx-auto items-center justify-between">
                         <x-nav-link href="#">{{ __('messages.nav.about') }}</x-nav-link>
                         <x-nav-link href="#skills">{{ __('messages.nav.skills') }}</x-nav-link>
                         <x-nav-link href="#experience">{{ __('messages.nav.experience') }}</x-nav-link>
                         <x-nav-link href="#projects">{{ __('messages.nav.projects') }}</x-nav-link>
                         <x-nav-link href="#contact">{{ __('messages.nav.contact') }}</x-nav-link>
-                        <li class="absolute top-1.5 right-0">
+                    </ul> 
+                    <ul class="hidden lg:flex gap-2 ml-auto items-center justify-between">
+                        <li class="px-4">
+                            <x-language-switcher/>
+                        </li>
+                        <li class="self-center">
                             <x-theme-toggle/> 
                         </li> 
-                    </ul> 
+                    </ul>
                     <!--Mobile Navigation-->
-                    <button popovertarget="mobile-menu" class="lg:hidden text-mainLight/80 bg-mainLight/10 hover:bg-mainLight/20 font-semibold px-2 py-1 ml-auto my-2 rounded shadow/90 hover:shadow-lg/70 cursor-pointer transition-colors duration-200">
+                    <button popovertarget="mobile-menu" class="lg:hidden text-mainLight/80 bg-mainLight/10 hover:bg-mainLight/20 font-semibold px-2 py-1 ml-auto my-1 rounded shadow/90 hover:shadow-lg/70 cursor-pointer transition-colors duration-200">
                         Menu
                         <x-svgs.menu class="w-6 inline"/>
                     </button>
@@ -54,7 +59,7 @@
                     >
                         <div class="grid grid-cols-[auto_1fr_auto] items-center py-3 px-8 border-t border-t-black/10 border-b border-b-white/10">
                             <x-theme-toggle/>
-                            <x-language-switcher/>
+                            <x-mobile-language-switcher/>
                             <x-close-button class="text-mainLight" aria-label="{{ __('messages.general.close_nav') }}" target="mobile-menu"/>
                         </div>
                         <ul>
