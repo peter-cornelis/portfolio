@@ -43,7 +43,7 @@
                     </ul> 
                     <ul class="hidden lg:flex gap-2 ml-auto items-center justify-between">
                         <li class="px-4">
-                            <x-language-switcher/>
+                            <x-language-toggle/>
                         </li>
                         <li class="self-center">
                             <x-theme-toggle/> 
@@ -60,7 +60,7 @@
                     >
                         <div class="grid grid-cols-[auto_1fr_auto] items-center py-3 px-8 border-t border-t-black/10 border-b border-b-white/10">
                             <x-theme-toggle/>
-                            <x-mobile-language-switcher/>
+                            <x-mobile-language-toggle/>
                             <x-close-button class="text-mainLight" aria-label="{{ __('messages.general.close_nav') }}" target="mobile-menu"/>
                         </div>
                         <ul>

@@ -133,7 +133,7 @@ return [
     ],
     'banner' => [
         'title' => 'Cookie-informatie',
-        'info' => 'Deze website gebruikt functionele cookies om jouw voorkeuren voor thema en taal te onthouden.
+        'info' => 'Deze website gebruikt functionele cookies om jouw voorkeur van taal te onthouden.
                 Deze cookies zijn noodzakelijk voor de basisfunctionaliteit en vereisen geen toestemming.',
         'understood' => 'Begrepen'
     ]

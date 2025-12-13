@@ -1,7 +1,7 @@
 <ul class="grid grid-flow-col text-mainLight/70 justify-self-end underline underline-offset-4">
     <li>
         <a 
-            href="{{ route('language.switch', 'nl') }}"
+            href="{{ route('language.toggle', 'nl') }}"
             class="px-2 hover:text-mainLight transition-colors duration-200"
             title="{{ __('messages.general.nl') }}"
         > 
@@ -10,7 +10,7 @@
     </li>
     <li>
         <a 
-            href="{{ route('language.switch', 'en') }}"
+            href="{{ route('language.toggle', 'en') }}"
             class="px-2 hover:text-mainLight transition-colors duration-200"
             title="{{ __('messages.general.eng') }}"
         > 

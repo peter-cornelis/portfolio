@@ -133,7 +133,7 @@ return [
     ],
     'banner' => [
         'title' => 'Cookie-information',
-        'info' => 'This website uses functional cookies to remember your preferences for theme and language.
+        'info' => 'This website uses functional cookies to remember your prefered language.
                 These cookies are necessary for basic functionality and do not require consent.',
         'understood' => 'Understood'
     ]
