@@ -212,7 +212,7 @@
                         :technologies="['html', 'laravel', 'css', 'mysql']"
                     >
 
-                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                        <x-projects-link href="https://github.com/peter-cornelis/Videotheek" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
                         </x-projects-link>
