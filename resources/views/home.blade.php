@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,26 +49,29 @@
                         <x-svgs.menu class="w-6 inline"/>
                     </button>
                     <div 
-                        id="mobile-menu" popover class="lg:hidden top-14.5 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30">
-                        <ul class="border-t border-t-black/10">
+                        id="mobile-menu" popover 
+                        class="lg:hidden top-14.5 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30"
+                    >
+                        <div class="grid grid-cols-[auto_1fr_auto] items-center py-3 px-8 border-t border-t-black/10 border-b border-b-white/10">
+                            <x-theme-toggle/>
+                            <x-language-switcher/>
+                            <x-close-button class="text-mainLight" aria-label="{{ __('messages.general.close_nav') }}" target="mobile-menu"/>
+                        </div>
+                        <ul>
                             <x-mobile-nav-link href="#">{{ __('messages.nav.about') }}</x-mobile-nav-link>
                             <x-mobile-nav-link href="#skills">{{ __('messages.nav.skills') }}</x-mobile-nav-link>
                             <x-mobile-nav-link href="#experience">{{ __('messages.nav.experience') }}</x-mobile-nav-link>
                             <x-mobile-nav-link href="#projects">{{ __('messages.nav.projects') }}</x-mobile-nav-link>
                             <x-mobile-nav-link href="#contact">{{ __('messages.nav.contact') }}</x-mobile-nav-link>
                         </ul>
-                        <div class="flex justify-center py-3 px-8 border-t border-t-white/10">
-                            <x-theme-toggle/>
-                            <x-close-button class="text-mainLight" aria-label="{{ __('messages.general.close_nav') }}" target="mobile-menu"/>
-                        </div>
                     </div>
                 </nav>
             </div>
         </header>
 
         <main class="max-w-7xl mx-auto px-4">
-            <section id="about" class="grid grid-rows-5 lg:grid-cols-[auto_1fr] lg:grid-rows-3 gap-6 p-4 mt-12 lg:mt-28">
-                <span class="mx-auto p-2 bg-red rounded-[60%_40%_60%_40%] row-span-3 lg:mr-12 mb-auto shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20">
+            <section id="about" class="grid lg:grid-rows-2 lg:grid-cols-[auto_1fr] gap-6 p-4 mt-12 lg:mt-28">
+                <span class="mx-auto p-2 bg-red rounded-[60%_40%_60%_40%] lg:row-span-3 lg:mr-12 mb-auto shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20">
                     <img src="images/profiel-15.avif" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="rounded-[60%_40%_60%_40%] shadow/30">
                 </span>
                 <h2 class="lg:mt-8 lg:pr-0">{{ __('messages.about.hey') }} <span class="block">{{ __('messages.about.hey_2') }}</span></h2>
@@ -87,7 +90,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class=" lg:col-span-2 grid grid-cols-[1fr_auto] gap-4 text-mainDark/90 mx-auto">
+                <div class="lg:col-span-2 grid grid-cols-[1fr_auto] gap-4 text-mainDark/90 mt-12 mx-auto">
                     <a href="assets/test.pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
                         <x-svgs.download/>
                         <span>{{ __('messages.general.cv') }}</span>

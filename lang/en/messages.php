@@ -9,8 +9,10 @@ return [
         'contact' => 'Contact',
     ],
     'general' => [
-        'toggle_nl' => 'Nederlands',
-        'toggle_eng' => 'English',
+        'nl' => 'Nederlands',
+        'eng' => 'English',
+        'toggle_nl' => 'NL',
+        'toggle_eng' => 'ENG',
         'toggle_dark' => 'Use dark theme',
         'toggle_light' => 'Use light theme',
         'close_menu' => 'Close menu',
@@ -51,8 +53,8 @@ return [
         'hey' => 'Hey,',
         'hey_2' => 'I\'m Peter!',
         'introduction' => 
-            'Full-stack PHP-ontwikkelaar met een passie voor elegante code en innovatieve oplossingen. Van kinds af aan gefascineerd door technologie, zet ik die drive nu in om uitdagende projecten tot leven te brengen.
-            Problemen oplossen en nieuwe dingen leren, daar word ik enthousiast van. Die mindset neem ik mee in elk project. Verder mag ik me ook een fiere vader noemen van twee jonge spruiten.',
+            'Full-stack PHP developer with a passion for elegant code and innovative solutions. Fascinated by technology since childhood, I now channel that drive into bringing challenging projects to life.
+            Solving problems and learning new things is what excites me. I bring that mindset to every project. Furthermore, I\'m also the proud father of two little rascals.',
     ],
     'chat' => [
         'title' => 'Ai Chat',
@@ -119,7 +121,7 @@ return [
         'title' => 'Contact',
         'contact_details' => 'Contact details',
         'street' => 'Honoré Borgerstraat 16',
-        'city' => '8400 Oostend',
+        'city' => '8400 Ostend',
         'country' => 'BELGIUM',
         'form' => [
             'name' => 'name',

@@ -9,8 +9,10 @@ return [
         'contact' => 'Contact',
     ],
     'general' => [
-        'toggle_nl' => 'Nederlands',
-        'toggle_eng' => 'English',
+        'nl' => 'Nederlands',
+        'eng' => 'English',
+        'toggle_nl' => 'NL',
+        'toggle_eng' => 'ENG',
         'toggle_dark' => 'Gebruik donker theme',
         'toggle_light' => 'Gebruik licht theme',
         'close_menu' => 'Sluit menu',
