@@ -21,7 +21,8 @@
         @livewireScripts
 
     </head>
-    <body class="min-h-screen text-mainDark dark:text-mainLight bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_320px] transition-all duration-500"
+    <body 
+        class="min-h-screen text-mainDark dark:text-mainLight bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_320px] transition-all duration-500"
         style="background-image: var(--waves-bg)"
     >
         <header class="px-8 py-4">
@@ -72,6 +73,7 @@
                     </div>
                 </nav>
             </div>
+            <livewire:cookie-banner/>
         </header>
 
         <main class="max-w-7xl mx-auto px-4">
