@@ -56,7 +56,7 @@
                     </button>
                     <div 
                         id="mobile-menu" popover 
-                        class="lg:hidden top-12.5 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30"
+                        class="lg:hidden top-14 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30"
                     >
                         <div class="grid grid-cols-[auto_1fr_auto] items-center py-3 px-8 border-t border-t-black/10 border-b border-b-white/10">
                             <x-toggles.theme/>
@@ -102,7 +102,7 @@
                         <x-svgs.download/>
                         <span>{{ __('messages.general.cv') }}</span>
                     </a>
-                    <button popovertarget="ai-chat" aria-label="{{ __('messages.general.chat') }}" class="font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 px-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300">
+                    <button popovertarget="ai-chat" aria-label="{{ __('messages.general.chat') }}" class="font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 px-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300 cursor-pointer">
                         <x-svgs.conversation class="h-6"/>
                     </button>
                     <livewire:ai-chat/>
