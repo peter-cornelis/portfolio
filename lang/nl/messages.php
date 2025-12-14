@@ -77,7 +77,7 @@ return [
         'sub_5_nl_state' => 'moedertaal',
         'sub_5_eng' => 'Engels',
         'sub_5_eng_state' => 'goed',
-        'slider_title' => 'Bekend met:'
+        'carousel_title' => 'Bekend met:'
     ],
     'experience' => [
         'title' => 'Ervaring',

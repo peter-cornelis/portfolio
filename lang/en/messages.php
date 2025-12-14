@@ -77,7 +77,7 @@ return [
         'sub_5_nl_state' => 'native',
         'sub_5_eng' => 'English',
         'sub_5_eng_state' => 'advanced',
-        'slider_title' => 'Familiar with:'
+        'carousel_title' => 'Familiar with:'
     ],
     'experience' => [
         'title' => 'Experience',
