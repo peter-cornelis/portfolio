@@ -50,26 +50,42 @@
                         </li> 
                     </ul>
                     <!--Mobile Navigation-->
-                    <button popovertarget="mobile-menu" class="lg:hidden text-mainLight/80 bg-mainLight/10 hover:bg-mainLight/20 font-semibold px-2 py-1 ml-auto my-auto rounded shadow/90 hover:shadow-lg/70 cursor-pointer transition-colors duration-200">
-                        Menu
-                        <x-svgs.menu class="w-6 inline"/>
-                    </button>
                     <div 
-                        id="mobile-menu" popover 
-                        class="lg:hidden top-14 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30"
+                        x-data="{ openMenu: false }"
+                        class="ml-auto flex"
                     >
-                        <div class="grid grid-cols-[auto_1fr_auto] items-center py-3 px-8 border-t border-t-black/10 border-b border-b-white/10">
-                            <x-toggles.theme/>
-                            <x-toggles.mobile-language/>
-                            <x-close-button class="text-mainLight" aria-label="{{ __('messages.general.close_nav') }}" target="mobile-menu"/>
+                        <button 
+                            class="lg:hidden text-mainLight/80 bg-mainLight/10 hover:bg-mainLight/20 font-semibold px-2 py-1 ml-auto my-auto rounded shadow/90 hover:shadow-lg/70 cursor-pointer transition-colors duration-200"
+                            @click="openMenu = !openMenu"
+                        >
+                            Menu
+                            <x-svgs.menu class="w-6 inline"/>
+                        </button>
+                        <div 
+                            class="absolute lg:hidden top-14 left-0 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30 transition ease-in duration-300"
+                            x-show="openMenu"
+                            x-transition:enter-start="transform translate-x-full opacity-0"
+                            x-transition:enter-end="transform translate-x-0 opacity-100"
+                            x-transition:leave-start="transform translate-x-0 opacity-100"
+                            x-transition:leave-end="transform translate-x-full opacity-0"
+                        >
+                            <div class="grid grid-cols-[auto_1fr_auto] items-center py-3 px-8 border-t border-t-black/10 border-b border-b-white/10">
+                                <x-toggles.theme/>
+                                <x-toggles.mobile-language/>
+                                <x-close-button 
+                                    class="text-mainLight" 
+                                    aria-label="{{ __('messages.general.close_nav') }}" 
+                                    @click="openMenu = false"
+                                />
+                            </div>
+                            <ul>
+                                <x-mobile-nav-link href="#">{{ __('messages.nav.about') }}</x-mobile-nav-link>
+                                <x-mobile-nav-link href="#skills">{{ __('messages.nav.skills') }}</x-mobile-nav-link>
+                                <x-mobile-nav-link href="#experience">{{ __('messages.nav.experience') }}</x-mobile-nav-link>
+                                <x-mobile-nav-link href="#projects">{{ __('messages.nav.projects') }}</x-mobile-nav-link>
+                                <x-mobile-nav-link href="#contact">{{ __('messages.nav.contact') }}</x-mobile-nav-link>
+                            </ul>
                         </div>
-                        <ul>
-                            <x-mobile-nav-link href="#">{{ __('messages.nav.about') }}</x-mobile-nav-link>
-                            <x-mobile-nav-link href="#skills">{{ __('messages.nav.skills') }}</x-mobile-nav-link>
-                            <x-mobile-nav-link href="#experience">{{ __('messages.nav.experience') }}</x-mobile-nav-link>
-                            <x-mobile-nav-link href="#projects">{{ __('messages.nav.projects') }}</x-mobile-nav-link>
-                            <x-mobile-nav-link href="#contact">{{ __('messages.nav.contact') }}</x-mobile-nav-link>
-                        </ul>
                     </div>
                 </nav>
             </div>
@@ -102,9 +118,6 @@
                         <x-svgs.download/>
                         <span>{{ __('messages.general.cv') }}</span>
                     </a>
-                    <button popovertarget="ai-chat" aria-label="{{ __('messages.general.chat') }}" class="font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 px-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300 cursor-pointer">
-                        <x-svgs.conversation class="h-6"/>
-                    </button>
                     <livewire:ai-chat/>
                 </div>
             </section>
