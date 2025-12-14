@@ -43,10 +43,10 @@
                     </ul> 
                     <ul class="hidden lg:flex gap-2 ml-auto items-center justify-between">
                         <li class="px-4">
-                            <x-language-toggle/>
+                            <x-toggles.language/>
                         </li>
                         <li class="self-center">
-                            <x-theme-toggle/> 
+                            <x-toggles.theme/> 
                         </li> 
                     </ul>
                     <!--Mobile Navigation-->
@@ -59,8 +59,8 @@
                         class="lg:hidden top-12.5 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30"
                     >
                         <div class="grid grid-cols-[auto_1fr_auto] items-center py-3 px-8 border-t border-t-black/10 border-b border-b-white/10">
-                            <x-theme-toggle/>
-                            <x-mobile-language-toggle/>
+                            <x-toggles.theme/>
+                            <x-toggles.mobile-language/>
                             <x-close-button class="text-mainLight" aria-label="{{ __('messages.general.close_nav') }}" target="mobile-menu"/>
                         </div>
                         <ul>
@@ -148,7 +148,7 @@
                         </ul>
                     </div>
                 </article>
-                <x-slider/>
+                <x-carousel.layout/>
             </section>
 
             <section id="experience" class="mt-16 px-4 scroll-mt-16">
@@ -175,7 +175,7 @@
                 <h2 class="text-center col-span-2 mb-16 p-8">Projecten</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-8 justify-items-center">
 
-                    <x-project 
+                    <x-projects.layout
                         header="Portfolio 2.0" 
                         src="images/portfolio2.webp" 
                         alt="{{ __('messages.projects.sub_1_alt') }}"
@@ -183,14 +183,14 @@
                         :technologies="['html', 'laravel', 'tailwind', 'alpine', 'livewire']"
                     >
                         
-                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                        <x-projects.link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
-                        </x-projects-link>
+                        </x-projects.link>
 
-                    </x-project>
+                    </x-projects.layout>
 
-                    <x-project 
+                    <x-projects.layout
                         header="Stock Market Rally" 
                         src="images/rally.webp" 
                         alt="{{ __('messages.projects.sub_2_alt') }}"
@@ -198,15 +198,15 @@
                         :technologies="['html', 'laravel', 'tailwind', 'javascript', 'mysql']"
                     >
 
-                        <x-projects-link href="https://rally.petercornelis.be/">Live Demo</x-projects-link>
-                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                        <x-projects.link href="https://rally.petercornelis.be/">Live Demo</x-projects.link>
+                        <x-projects.link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
-                        </x-projects-link>
+                        </x-projects.link>
 
-                    </x-project>
+                    </x-projects.layout>
 
-                    <x-project 
+                    <x-projects.layout
                         header="Movie Maxx" 
                         src="images/movie.webp" 
                         alt="{{ __('messages.projects.sub_3_alt') }}"
@@ -214,14 +214,14 @@
                         :technologies="['html', 'laravel', 'css', 'mysql']"
                     >
 
-                        <x-projects-link href="https://github.com/peter-cornelis/Videotheek" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                        <x-projects.link href="https://github.com/peter-cornelis/Videotheek" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
-                        </x-projects-link>
+                        </x-projects.link>
 
-                    </x-project>
+                    </x-projects.layout>
 
-                    <x-project 
+                    <x-projects.layout
                         header="Portfolio 1.0" 
                         src="images/portfolio1.webp" 
                         alt="{{ __('messages.projects.sub_4_alt') }}"
@@ -229,15 +229,15 @@
                         :technologies="['html', 'css', 'javascript']"
                     >
 
-                        <x-projects-link href="https://rally.petercornelis.be/">Live Demo</x-projects-link>
-                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                        <x-projects.link href="https://rally.petercornelis.be/">Live Demo</x-projects.link>
+                        <x-projects.link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
-                        </x-projects-link>
+                        </x-projects.link>
 
-                    </x-project>
+                    </x-projects.layout>
 
-                    <x-project 
+                    <x-projects.layout
                         header="Pizzeria Gepetto" 
                         src="images/pizza.webp" 
                         alt="{{ __('messages.projects.sub_5_alt') }}"
@@ -245,10 +245,10 @@
                         :technologies="['html', 'css', 'php', 'twig', 'mysql']"
                     >
                         
-                        <x-projects-onreq/>
-                    </x-project>
+                        <x-projects.onreq/>
+                    </x-projects.layout>
 
-                    <x-project 
+                    <x-projects.layout
                         header="Soda Delight" 
                         src="images/soda.webp" 
                         alt="{{ __('messages.projects.sub_6_alt') }}"
@@ -256,12 +256,12 @@
                         :technologies="['html', 'css', 'php', 'twig', 'mysql']"
                     >
 
-                        <x-projects-link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                        <x-projects.link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
-                        </x-projects-link>
+                        </x-projects.link>
 
-                    </x-project>
+                    </x-projects.layout>
 
                 </div>
             </section>

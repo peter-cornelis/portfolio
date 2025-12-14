@@ -1,21 +1,21 @@
 <div>
     <form wire:submit="submit" class="w-full lg:max-w-2xl xl:max-w-3xl my-6">
         <!-- csrf handled automatic in Livewire -->
-        <x-forms-label for="name">{{ __('messages.contact.form.name') }}</x-forms-label>
+        <x-forms.label for="name">{{ __('messages.contact.form.name') }}</x-forms.label>
         @error('name')
-            <x-forms-error>{{ $message }}</x-forms-error>
+            <x-forms.error>{{ $message }}</x-forms.error>
         @enderror
-        <x-forms-input wire:model="name" name="name" id="name" autocomplete="name"/>
-        <x-forms-label for="email">{{ __('messages.contact.form.email') }}</x-forms-label>
+        <x-forms.input wire:model="name" name="name" id="name" autocomplete="name"/>
+        <x-forms.label for="email">{{ __('messages.contact.form.email') }}</x-forms.label>
         @error('email')
-            <x-forms-error>{{ $message }}</x-forms-error>
+            <x-forms.error>{{ $message }}</x-forms.error>
         @enderror                    
-        <x-forms-input wire:model="email" type="email" name="email" id="email" autocomplete="email"/>
-        <x-forms-label for="message">{{ __('messages.contact.form.message') }}</x-forms-label>
+        <x-forms.input wire:model="email" type="email" name="email" id="email" autocomplete="email"/>
+        <x-forms.label for="message">{{ __('messages.contact.form.message') }}</x-forms.label>
         @error('message')
-            <x-forms-error>{{ $message }}</x-forms-error>
+            <x-forms.error>{{ $message }}</x-forms.error>
         @enderror
-        <x-forms-textarea wire:model="message" name="message" id="message" />
+        <x-forms.textarea wire:model="message" name="message" id="message" />
         <button 
             type="submit"
             wire:loading.attr="disabled"
