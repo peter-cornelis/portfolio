@@ -2,7 +2,7 @@
 
 <li {{ $attributes->merge(['class' => 'group']) }}>
                 
-    <span class="absolute left-0 group-odd:top-23 group-even:-top-14 flex items-center justify-center w-10 h-10 bg-mainLight dark:bg-mainDark rounded-full -start-5 ring hover:ring-2 ring-red">
+    <span class="absolute left-0 group-odd:top-21 group-even:-top-12 flex items-center justify-center w-10 h-10 bg-mainLight dark:bg-mainDark rounded-full -start-5 ring hover:ring-2 ring-red">
         @if($work)
             <x-svgs.work />
         @else

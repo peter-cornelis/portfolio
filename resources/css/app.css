@@ -36,6 +36,10 @@
     .running { 
         animation-play-state: running !important; 
     }
+    .print-color {
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+    }
     h1 {
         @apply text-red text-3xl font-bold text-shadow-xs text-shadow-black/90 my-auto;
     }
