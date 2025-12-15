@@ -14,7 +14,7 @@
 
     </head>
     <body 
-        class="bg-white text-mainDark w-[186mm] mx-auto"
+        class="bg-white text-mainDark w-[186mm] mx-auto py-1"
     >
         <header class="grid grid-cols-[1fr_auto] gap-6 mt-1 print-color">
             <div>
@@ -57,7 +57,7 @@
                 </address>
             </div>
             <img 
-                src="images/profiel-15.avif" 
+                src="{{ asset('images/profiel-15.avif') }}" 
                 loading="lazy" 
                 alt="{{ __('messages.about.img_alt') }}" 
                 class="rounded-[60%_40%_60%_40%] shadow/30 h-48 my-auto"

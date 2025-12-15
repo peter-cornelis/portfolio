@@ -7,8 +7,6 @@
         <title>Peter Cornelis - Portfolio</title>
 
         <link rel="icon" href="/favicon.ico" sizes="any">
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,7 +112,7 @@
                     </li>
                 </ul>
                 <div class="lg:col-span-2 grid grid-cols-[1fr_auto] gap-4 text-mainDark/90 mt-12 mx-auto">
-                    <a href="assets/test.pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
+                    <a href="/pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
                         <x-svgs.download/>
                         <span>{{ __('messages.general.cv') }}</span>
                     </a>

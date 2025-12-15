@@ -4,7 +4,7 @@
 >
     <li>
         <a 
-            href="{{ route('language.toggle', 'nl') }}"
+            href="language/nl"
             title="{{ __('messages.general.nl') }}"
             class="px-2 font-semibold transition-colors duration-200"
             :class="active === 'nl' ? 'cursor-default' : 'text-mainLight/70 hover:text-mainLight'"
@@ -15,7 +15,7 @@
     </li>
     <li>
         <a 
-            href="{{ route('language.toggle', 'en') }}"
+            href="language/en"
             title="{{ __('messages.general.eng') }}"
             class="px-2 font-semibold transition-colors duration-200"
             :class="active === 'en' ? 'cursor-default' : 'text-mainLight/70 hover:text-mainLight/90'"

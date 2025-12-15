@@ -13,11 +13,9 @@
         "google-gemini-php/laravel": "^2.0",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "livewire/volt": "^1.7.0",
-        "spatie/browsershot": "^5.1"
+        "livewire/volt": "^1.7.0"
     },
     "require-dev": {
-        "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.24",
         "nunomaduro/collision": "^8.6"
     },

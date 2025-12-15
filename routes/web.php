@@ -1,19 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Cookie;
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/language/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'nl'])) {
-        Cookie::queue('language', $locale, 525600);
-    }
-    return redirect()->back();
-})->name('language.toggle');
-
-Route::get('/print', function() {
-    return view('print');
-});
+Route::get('/', [PortfolioController::class, 'index']);
+Route::get('/language/{locale}', [PortfolioController::class, 'toggleLanguage']);
+Route::get('/print', [PortfolioController::class, 'printView']);
+Route::get('/pdf', [PortfolioController::class, 'downloadPdf']);
