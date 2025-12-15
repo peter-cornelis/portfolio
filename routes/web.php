@@ -13,3 +13,7 @@ Route::get('/language/{locale}', function ($locale) {
     }
     return redirect()->back();
 })->name('language.toggle');
+
+Route::get('/print', function() {
+    return view('print');
+});

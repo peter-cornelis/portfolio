@@ -11,8 +11,8 @@
         <x-svgs.play x-show="paused" class="h-3"/>
     </button>
     <div class="relative flex h-26 overflow-hidden">
-        <div class="absolute z-20 left-0 w-16 h-full bg-linear-to-r from-mainLight dark:from-mainDark to-transparent"></div>
-        <div class="absolute z-20 right-0 w-16 h-full bg-linear-to-l from-mainLight dark:from-mainDark to-transparent"></div>
+        <div class="absolute z-20 left-0 w-6 h-full bg-linear-to-r from-mainLight dark:from-mainDark to-transparent"></div>
+        <div class="absolute z-20 right-0 w-6 h-full bg-linear-to-l from-mainLight dark:from-mainDark to-transparent"></div>
         <ul 
             class="flex px-3 my-auto gap-6 animate-scroll"
             :class="paused ? 'paused' : 'running'"
