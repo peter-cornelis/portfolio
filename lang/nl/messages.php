@@ -54,7 +54,7 @@ return [
         'hey_2' => 'ik ben Peter!',
         'introduction' => 
             'Full-stack PHP-ontwikkelaar met een passie voor elegante code en innovatieve oplossingen. Van kinds af aan gefascineerd door technologie, zet ik die drive nu in om uitdagende projecten tot leven te brengen.
-            Problemen oplossen en nieuwe dingen leren, daar word ik enthousiast van. Die mindset neem ik mee in elk project. Verder mag ik me ook een fiere vader noemen van twee jonge spruiten.',
+            Problemen oplossen en nieuwe dingen leren, daar word ik enthousiast van. Die mindset neem ik mee in elk project. Verder mag ik me ook fiere vader noemen van twee jonge spruiten.',
     ],
     'chat' => [
         'title' => 'Ai Chat',
