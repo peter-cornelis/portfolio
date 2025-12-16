@@ -6,7 +6,7 @@
 
         <title>Peter Cornelis - Portfolio</title>
 
-        <link rel="icon" href="/favicon.ico" sizes="any">
+        <link rel="icon" href="/favicon.svg" sizes="any">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -342,7 +342,7 @@
             class="text-center p-6 mt-10 dark:bg-grey inset-shadow-sm inset-shadow-black/10 dark:inset-shadow-black/30  border-t border-mainDark/20 dark:border-black"
             @keydown.window.ctrl.p.prevent="openPrintView()"
             @keydown.window.meta.p.prevent="openPrintView()"
-            x-init="window.addEventListener('beforeprint', () => openPrintView())"
+            x-init="window.addEventListener('beforeprint',() => openPrintView())"
         >
             <!-- @keydown prevent default and use openPrintView() (meta for mac), init for other print requests -->
             <span class="opacity-60">&copy; Peter Cornelis | 2025</span>

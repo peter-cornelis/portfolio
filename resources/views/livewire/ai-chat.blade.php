@@ -1,14 +1,14 @@
 <div x-data="{showChat: false}" class="fixed z-40 right-4 bottom-8">
     <span 
-        class="fixed right-4 bottom-17 animate-bounce"
+        class="fixed right-4 bottom-17 animate-bounce duration 500"
         x-show="!showChat"
-        x-transition:enter="transition transform ease-out duration-[300ms]"
+        x-transition:enter="transition transform ease-out"
         x-transition:enter-start="opacity-0 scale-75"
-        x-transition:leave="transition transform ease-in duration-[200ms]"
+        x-transition:leave="transition transform ease-in"
         x-transition:leave-end="opacity-0 scale-75" 
     >
         <div class="bg-purple/90 text-mainLight rounded-2xl py-2 px-3 w-42 shadow-lg/20 border border-black/10 border-t-white/10">
-            Hey, Ik kan je meer vertellen over Peter!
+            {{ __('messages.chat.bouncer') }}
         </div>
         <div class="ml-auto mr-8 w-0 border-8 border-transparent border-t-purple"></div>
     </span>
@@ -21,7 +21,7 @@
         Chat
     </button>
     <section 
-        class="fixed dark:text-mainLight top-1/4 right-0 sm:max-w-sm bg-lightGrey dark:bg-grey w-full py-4 px-6 sm:rounded-l-xl shadow-lg/30 border-t border-t-white/10 transition duration-300"
+        class="fixed dark:text-mainLight bottom-24 right-0 sm:max-w-sm bg-lightGrey dark:bg-grey w-full py-4 px-6 sm:rounded-l-xl shadow-lg/30 border-t border-t-white/10 transition duration-300"
         x-show="showChat"
         x-transition:enter-start="transform translate-x-full ease-in opacity-0"
         x-transition:enter-end="transform translate-x-0 opacity-100"
@@ -44,7 +44,7 @@
                     <span class="block pt-4 text-sm font-normal">{{ __('messages.chat.q_title') }}</span>
                 </p>
                 <ul class="list-disc text-sm font-normal ml-6">
-                    <li class="py-1">Is Peter een goede kandidaat voor deze vacature (vacature-link)?</li>
+                    <li class="py-1">{{ __('messages.chat.q_1') }}</li>
                     <li>{{ __('messages.chat.q_2') }}</li>
                 </ul>
             @endif
