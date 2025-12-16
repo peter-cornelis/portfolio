@@ -25,19 +25,38 @@
     >
         <header class="px-8 py-4">
             <div 
-                x-data="{ onTop: true }"
+                x-data="{ 
+                    onTop: true
+                }"
                 @scroll.window= "onTop = window.pageYOffset < 1"
                 class="fixed z-100 left-0 top-0 grid grid-cols-[auto_1fr] w-full px-8 py-1 mx-auto h-14"
                 x-bind:class=" onTop ? '' : 'bg-mainDark/95 shadow-lg/40'"
             >
                 <h1 class="pr-2">Peter Cornelis</h1>
-                <nav class="flex justify-center">
+                <nav 
+                    class="flex justify-center"
+                    x-data="{
+                        currentSection: '',
+                        updateCurrentSection() {
+                            const sections = document.querySelectorAll('main>section');
+                            sections.forEach((section) => {
+                                const sectionTop = section.offsetTop;
+                                if (window.pageYOffset >= sectionTop - 220) {
+                                    this.currentSection = section.getAttribute('id');
+                                }
+                            });
+                            console.log('Current section:', this.currentSection);
+                        }
+                    }"
+                    @scroll.window="updateCurrentSection()"
+                    x-init="updateCurrentSection()"
+                >
                     <ul class="hidden lg:flex gap-2 mx-auto items-center justify-between">
-                        <x-nav-link href="#">{{ __('messages.nav.about') }}</x-nav-link>
-                        <x-nav-link href="#skills">{{ __('messages.nav.skills') }}</x-nav-link>
-                        <x-nav-link href="#experience">{{ __('messages.nav.experience') }}</x-nav-link>
-                        <x-nav-link href="#projects">{{ __('messages.nav.projects') }}</x-nav-link>
-                        <x-nav-link href="#contact">{{ __('messages.nav.contact') }}</x-nav-link>
+                        <x-nav-link href="#" section="about">{{ __('messages.nav.about') }}</x-nav-link>
+                        <x-nav-link href="#skills" section="skills">{{ __('messages.nav.skills') }}</x-nav-link>
+                        <x-nav-link href="#experience" section="experience">{{ __('messages.nav.experience') }}</x-nav-link>
+                        <x-nav-link href="#projects" section="projects">{{ __('messages.nav.projects') }}</x-nav-link>
+                        <x-nav-link href="#contact" section="contact">{{ __('messages.nav.contact') }}</x-nav-link>
                     </ul> 
                     <ul class="hidden lg:flex gap-2 ml-auto items-center justify-between">
                         <li class="px-4">

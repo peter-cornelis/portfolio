@@ -18,9 +18,18 @@ class PortfolioController extends Controller
         }
         return redirect()->back();
     }
+    
+    public function printView()
+    {
+        return view('print');
+    }
 
-    /*
-    private function makePdf()
+    public function downloadPdf()
+    {
+        return response()->download('assets/cv.pdf', 'CV_Peter_Cornelis.pdf');
+    }
+
+    /* private function makePdf()
     {
         $html = view('print')->render();
     
@@ -34,16 +43,5 @@ class PortfolioController extends Controller
             'Content-Type' => 'application/pdf',
             'Content-Disposition' => 'attachment; filename="portfolio.pdf"'
         ]);
-    }
-    */
-    
-    public function printView()
-    {
-        return view('print');
-    }
-
-    public function downloadPdf()
-    {
-        return response()->download('assets/cv.pdf', 'CV_Peter_Cornelis.pdf');
-    }
+    } */
 }
