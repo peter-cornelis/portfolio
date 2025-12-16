@@ -59,6 +59,9 @@ return [
     'chat' => [
         'title' => 'Ai Chat',
         'introduction' => 'Hey, ik ben hier om al je vragen over Peter zo goed mogelijk te beantwoorden.',
+        'q_title' => 'Enkele van de vragen die je me kan stellen:',
+        'q_1' => 'Zou Peter goed passen bij de vacuture op deze (url / vacature-link) ?',
+        'q_2' => 'Vanaf wanneer is Peter beschikbaar?',
         'ask' => 'Stel een vraag',
         'submit' => 'Stel vraag',
         'failed' => 'Helaas kan ik u momenteel enkel vertellen dat Peter zijn dagelijks AI limiet is bereikt, probeer het later opnieuw.',

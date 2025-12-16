@@ -41,7 +41,7 @@
         print-color-adjust:exact !important;
     }
     h1 {
-        @apply text-red text-3xl font-bold text-shadow-xs text-shadow-black/90 my-auto;
+        @apply text-[#C21D5E] text-3xl font-bold text-shadow-xs text-shadow-black/90 my-auto;
     }
     h2 {
         @apply text-5xl lg:text-6xl;

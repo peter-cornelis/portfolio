@@ -1,16 +1,16 @@
 <div x-data="{showChat: false}" class="fixed z-40 right-8 bottom-8">
     <span 
-        class="fixed right-8 bottom-17"
+        class="fixed right-8 bottom-17 animate-bounce"
         x-show="!showChat"
         x-transition:enter="transition transform ease-out duration-[300ms]"
         x-transition:enter-start="opacity-0 scale-75"
         x-transition:leave="transition transform ease-in duration-[200ms]"
         x-transition:leave-end="opacity-0 scale-75" 
     >
-        <div class="bg-purple/90 text-mainLight rounded-2xl py-2 px-3 w-45 shadow-lg/20 border border-black/10 border-t-white/10">
+        <div class="bg-purple/90 text-mainLight rounded-2xl py-2 px-3 w-42 shadow-lg/20 border border-black/10 border-t-white/10">
             Hey, Ik kan je meer vertellen over Peter!
         </div>
-        <div class="ml-auto mr-8 w-0 border-8 border-transparent border-t-purple/90"></div>
+        <div class="ml-auto mr-8 w-0 border-8 border-transparent border-t-purple"></div>
     </span>
 
     <button 
@@ -21,12 +21,12 @@
         Chat
     </button>
     <section 
-        class="fixed dark:text-mainLight top-1/4 right-0 sm:max-w-sm bg-lightGrey dark:bg-grey w-full py-4 px-6 sm:rounded-l-xl shadow-lg/30 border-t border-t-white/10"
+        class="fixed dark:text-mainLight top-1/4 right-0 sm:max-w-sm bg-lightGrey dark:bg-grey w-full py-4 px-6 sm:rounded-l-xl shadow-lg/30 border-t border-t-white/10 transition duration-300"
         x-show="showChat"
-        x-transition:enter="transition transform ease-out duration-[300ms]"
-        x-transition:enter-start="opacity-0 scale-75"
-        x-transition:leave="transition transform ease-in duration-[200ms]"
-        x-transition:leave-end="opacity-0 scale-75"    
+        x-transition:enter-start="transform translate-x-full ease-in opacity-0"
+        x-transition:enter-end="transform translate-x-0 opacity-100"
+        x-transition:leave-start="transform translate-x-0 ease-out opacity-100 "
+        x-transition:leave-end="transform translate-x-full opacity-0"
     >
         <!--Typing effect to be added-->
         <h2>{{ __('messages.chat.title') }}</h2>
@@ -41,6 +41,8 @@
         <form wire:submit="chat">
             <x-forms.label for="question">{{ __('messages.chat.ask') }}</x-forms.label>
             <x-forms.input wire:model="question" name="question" id="question"/>
+            <x-forms.label for="link">{{ __('messages.chat.ask') }}</x-forms.label>
+            <x-forms.input wire:model="link" name="link" id="link"/>
             <button 
                 type="submit"
                 wire:loading.attr="disabled"

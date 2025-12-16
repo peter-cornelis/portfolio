@@ -110,7 +110,7 @@
         </header>
 
         <main class="max-w-7xl mx-auto px-4">
-            <section id="about" class="grid lg:grid-rows-2 lg:grid-cols-[auto_1fr] gap-6 p-4 mt-12 lg:mt-28">
+            <section id="about" class="grid lg:grid-rows-2 lg:grid-cols-[auto_1fr] gap-6 p-4 mt-6 lg:mt-28">
                 <span class="mx-auto p-2 bg-red rounded-[60%_40%_60%_40%] lg:row-span-3 lg:mr-12 mb-auto shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20">
                     <img src="images/profiel-15.avif" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="rounded-[60%_40%_60%_40%] shadow/30">
                 </span>
