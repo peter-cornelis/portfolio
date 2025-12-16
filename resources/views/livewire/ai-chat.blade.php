@@ -1,6 +1,6 @@
-<div x-data="{showChat: false}" class="fixed z-40 right-8 bottom-8">
+<div x-data="{showChat: false}" class="fixed z-40 right-4 bottom-8">
     <span 
-        class="fixed right-8 bottom-17 animate-bounce"
+        class="fixed right-4 bottom-17 animate-bounce"
         x-show="!showChat"
         x-transition:enter="transition transform ease-out duration-[300ms]"
         x-transition:enter-start="opacity-0 scale-75"
@@ -34,15 +34,24 @@
             class="absolute top-4 right-4 light:text-mainDark" 
             aria-label="{{ __('messages.general.close_chat') }}" 
             @click="showChat = false"
-            />
-        <p class="text-mainLight font-semibold bg-purple py-2 px-4 my-6 rounded-xl inset-shadow-sm/20 border border-mainDark/40 dark:border-mainDark/70">
-            {{ $answer ? $answer : __('messages.chat.introduction') }}
-        </p>
+        />
+        <div class="text-mainLight font-semibold bg-purple py-2 px-4 my-6 rounded-xl inset-shadow-sm/20 border border-mainDark/40 dark:border-mainDark/70">
+            @if ($answer)
+                    <p>{{$answer}}</p>
+            @else
+                <p>
+                    {{ __('messages.chat.introduction') }}
+                    <span class="block pt-4 text-sm font-normal">{{ __('messages.chat.q_title') }}</span>
+                </p>
+                <ul class="list-disc text-sm font-normal ml-6">
+                    <li class="py-1">Is Peter een goede kandidaat voor deze vacature (vacature-link)?</li>
+                    <li>{{ __('messages.chat.q_2') }}</li>
+                </ul>
+            @endif
+        </div>
         <form wire:submit="chat">
             <x-forms.label for="question">{{ __('messages.chat.ask') }}</x-forms.label>
             <x-forms.input wire:model="question" name="question" id="question"/>
-            <x-forms.label for="link">{{ __('messages.chat.ask') }}</x-forms.label>
-            <x-forms.input wire:model="link" name="link" id="link"/>
             <button 
                 type="submit"
                 wire:loading.attr="disabled"

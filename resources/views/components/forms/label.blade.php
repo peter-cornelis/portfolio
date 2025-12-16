@@ -2,8 +2,8 @@
 
 <label 
     for="{{ $for }}" 
-    class="my-2"
+    class="my-2 text-sm"
 >
     {{ $slot }}
-    <span class="text-red">*</span>
+    <span class="text-sm text-red">*</span>
 </label>

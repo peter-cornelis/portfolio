@@ -34,7 +34,7 @@
             >
                 <h1 class="pr-2">Peter Cornelis</h1>
                 <nav 
-                    class="flex justify-center"
+                    class="flex justify-between"
                     x-data="{
                         currentSection: '',
                         updateCurrentSection() {
@@ -51,14 +51,14 @@
                     @scroll.window="updateCurrentSection()"
                     x-init="updateCurrentSection()"
                 >
-                    <ul class="hidden lg:flex gap-2 mx-auto items-center justify-between">
+                    <ul class="hidden lg:flex gap-2 ml-auto justify-center items-center grow">
                         <x-nav-link href="#" section="about">{{ __('messages.nav.about') }}</x-nav-link>
                         <x-nav-link href="#skills" section="skills">{{ __('messages.nav.skills') }}</x-nav-link>
                         <x-nav-link href="#experience" section="experience">{{ __('messages.nav.experience') }}</x-nav-link>
                         <x-nav-link href="#projects" section="projects">{{ __('messages.nav.projects') }}</x-nav-link>
                         <x-nav-link href="#contact" section="contact">{{ __('messages.nav.contact') }}</x-nav-link>
                     </ul> 
-                    <ul class="hidden lg:flex gap-2 ml-auto items-center justify-between">
+                    <ul class="hidden lg:flex gap-2 ml-auto items-center">
                         <li class="px-4">
                             <x-toggles.language/>
                         </li>
@@ -146,9 +146,9 @@
                     <ul class="w-fit">
                         <x-star-rating :filled='3'>{{ __('messages.general.html') }}</x-star-rating>
                         <x-star-rating :filled='3'>{{ __('messages.general.css') }}</x-star-rating>
-                        <x-star-rating :filled='3'>{{ __('messages.general.mysql') }}</x-star-rating>
-                        <x-star-rating :filled='3'>{{ __('messages.general.javascript') }}</x-star-rating>
-                        <x-star-rating :filled='3'>{{ __('messages.general.php') }}</x-star-rating>
+                        <x-star-rating :filled='2'>{{ __('messages.general.mysql') }}</x-star-rating>
+                        <x-star-rating :filled='4'>{{ __('messages.general.javascript') }}</x-star-rating>
+                        <x-star-rating :filled='4'>{{ __('messages.general.php') }}</x-star-rating>
                     </ul>
                 </article>
                 <article class="grid grid-cols-1 sm:grid-cols-2 w-fit gap-8 ml-auto ">
