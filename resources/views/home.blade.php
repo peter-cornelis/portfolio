@@ -79,7 +79,7 @@
                             <x-svgs.menu class="w-6 inline"/>
                         </button>
                         <div 
-                            class="absolute lg:hidden top-14 left-0 sm:right-4 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-b-xl shadow-lg/40 border-t border-t-black/30 transition ease-in duration-300"
+                            class="absolute lg:hidden top-14 left-0 sm:right-0 text-white bg-red w-full sm:w-xs ml-auto sm:rounded-bl-xl shadow-lg/40 border-t border-t-black/30 transition ease-in duration-300"
                             x-show="openMenu"
                             x-transition:enter-start="transform translate-x-full opacity-0"
                             x-transition:enter-end="transform translate-x-0 opacity-100"

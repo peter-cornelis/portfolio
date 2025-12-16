@@ -1,6 +1,13 @@
 <div x-data="{showChat: false}" class="fixed z-40 right-8 bottom-8">
-    <span class="fixed right-8 bottom-17">
-        <div class="bg-purple/90 text-mainLight rounded-2xl py-2 px-3 w-45">
+    <span 
+        class="fixed right-8 bottom-17"
+        x-show="!showChat"
+        x-transition:enter="transition transform ease-out duration-[300ms]"
+        x-transition:enter-start="opacity-0 scale-75"
+        x-transition:leave="transition transform ease-in duration-[200ms]"
+        x-transition:leave-end="opacity-0 scale-75" 
+    >
+        <div class="bg-purple/90 text-mainLight rounded-2xl py-2 px-3 w-45 shadow-lg/20 border border-black/10 border-t-white/10">
             Hey, Ik kan je meer vertellen over Peter!
         </div>
         <div class="ml-auto mr-8 w-0 border-8 border-transparent border-t-purple/90"></div>
@@ -14,7 +21,7 @@
         Chat
     </button>
     <section 
-        class="fixed dark:text-mainLight top-1/4 sm:left-1/2 sm:-translate-x-1/2 sm:max-w-xl bg-lightGrey dark:bg-grey w-full py-4 px-6 sm:rounded-xl shadow-lg/30 border-t border-t-white/10"
+        class="fixed dark:text-mainLight top-1/4 right-0 sm:max-w-sm bg-lightGrey dark:bg-grey w-full py-4 px-6 sm:rounded-l-xl shadow-lg/30 border-t border-t-white/10"
         x-show="showChat"
         x-transition:enter="transition transform ease-out duration-[300ms]"
         x-transition:enter-start="opacity-0 scale-75"
