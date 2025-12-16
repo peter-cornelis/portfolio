@@ -77,6 +77,8 @@ return [
         'sub_5_nl_state' => 'moedertaal',
         'sub_5_eng' => 'Engels',
         'sub_5_eng_state' => 'goed',
+        'sub_6_fr' => 'Frans',
+        'sub_6_fr_state' => 'beperkt',
         'carousel_title' => 'Bekend met:'
     ],
     'experience' => [
@@ -86,6 +88,7 @@ return [
         'sub_2_title' => 'pc-technicus',
         'sub_3_title' => 'winkelbediende',
         'sub_4_title' => '7e kantooradministratie en gegevensbeheer',
+        'sub_5_title' => 'Technicus netwerkinfrastructuur',
     ],
     'projects' => [
         'title' => 'Projecten',

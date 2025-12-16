@@ -92,6 +92,10 @@
                                 <span class="font-bold text-right">{{ __('messages.skills.sub_5_eng') }}</span>
                                 {{ __('messages.skills.sub_5_eng_state') }} 
                             </li>
+                            <li class="grid grid-cols-2 gap-8 text-left">
+                                <span class="font-bold text-right">{{ __('messages.skills.sub_6_fr') }}</span>
+                                {{ __('messages.skills.sub_6_fr_state') }} 
+                            </li>
                         </ul>
                     </div>
                 </article>
@@ -114,29 +118,35 @@
             <section>
                 <h2 class="text-3xl pb-3">{{ __('messages.experience.title') }}</h2>
                 <div class="w-fit">
-                    <ol class="relative flex w-fit mt-26 ml-6 border-t border-mainDark/20 dark:border-mainLight/20">                  
+                    <ol class="relative flex w-fit mt-26 ml-6 border-t border-mainDark/20 dark:border-mainLight/20">
                         <x-timeline-vert-item 
-                            start="2025" end="{{ __('messages.experience.present') }} " at="vdab"
-                            class="relative -top-26 w-45"
+                            end="2006" at="Sint-Vincentius Deinze"
+                            class="absolute top-7 w-50"
                         >
-                            {{ __('messages.experience.sub_1_title') }} 
+                            {{ __('messages.experience.sub_4_title') }} 
                         </x-timeline-vert-item>
+                        <x-timeline-vert-item 
+                            start="2007" end="2012" at="Colora Gent" :work="true"
+                            class="relative -top-26 left-35 w-50"
+                        >
+                            {{ __('messages.experience.sub_3_title') }}  
+                        </x-timeline-vert-item>
+                        <x-timeline-vert-item start="2014" end="2015" at="vdab"
+                        class="relative top-7 left-20 w-30"
+                        >
+                            {{ __('messages.experience.sub_5_title') }}  
+                        </x-timeline-vert-item>           
                         <x-timeline-vert-item start="2015" end="2024" at="Codima BV" :work="true"
-                        class="relative top-7 w-30"
+                        class="relative -top-26 left-30 w-30"
                         >
                             {{ __('messages.experience.sub_2_title') }}  
                         </x-timeline-vert-item>
                         <x-timeline-vert-item 
-                            start="2007" end="2012" at="Colora Gent" :work="true"
-                            class="relative -top-26 w-50"
+                            start="2025" end="{{ __('messages.experience.present') }} " at="vdab"
+                            class="relative top-7 left-10 w-45 text-right"
+                            lastIconLeft="35"
                         >
-                            {{ __('messages.experience.sub_3_title') }}  
-                        </x-timeline-vert-item>
-                        <x-timeline-vert-item 
-                            end="2006" at="Sint-Vincentius Deinze"
-                            class="absolute top-7 left-115 w-50"
-                        >
-                            {{ __('messages.experience.sub_4_title') }} 
+                            {{ __('messages.experience.sub_1_title') }} 
                         </x-timeline-vert-item>
                     </ol>
                 </div>

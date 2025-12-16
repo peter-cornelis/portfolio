@@ -96,11 +96,11 @@
                                 />
                             </div>
                             <ul>
-                                <x-mobile-nav-link href="#">{{ __('messages.nav.about') }}</x-mobile-nav-link>
-                                <x-mobile-nav-link href="#skills">{{ __('messages.nav.skills') }}</x-mobile-nav-link>
-                                <x-mobile-nav-link href="#experience">{{ __('messages.nav.experience') }}</x-mobile-nav-link>
-                                <x-mobile-nav-link href="#projects">{{ __('messages.nav.projects') }}</x-mobile-nav-link>
-                                <x-mobile-nav-link href="#contact">{{ __('messages.nav.contact') }}</x-mobile-nav-link>
+                                <x-mobile-nav-link href="#" section="about">{{ __('messages.nav.about') }}</x-mobile-nav-link>
+                                <x-mobile-nav-link href="#skills" section="skills">{{ __('messages.nav.skills') }}</x-mobile-nav-link>
+                                <x-mobile-nav-link href="#experience" section="experience">{{ __('messages.nav.experience') }}</x-mobile-nav-link>
+                                <x-mobile-nav-link href="#projects" section="projects">{{ __('messages.nav.projects') }}</x-mobile-nav-link>
+                                <x-mobile-nav-link href="#contact" section="contact">{{ __('messages.nav.contact') }}</x-mobile-nav-link>
                             </ul>
                         </div>
                     </div>
@@ -175,6 +175,10 @@
                                 <span class="font-bold text-right">{{ __('messages.skills.sub_5_eng') }}</span>
                                 {{ __('messages.skills.sub_5_eng_state') }} 
                             </li>
+                            <li class="grid grid-cols-2 gap-8 text-left">
+                                <span class="font-bold text-right">{{ __('messages.skills.sub_6_fr') }}</span>
+                                {{ __('messages.skills.sub_6_fr_state') }} 
+                            </li>
                         </ul>
                     </div>
                 </article>
@@ -191,6 +195,9 @@
                         <x-timeline-item start="2015" end="2024" at="Codima BV" :work="true">
                             {{ __('messages.experience.sub_2_title') }}  
                         </x-timeline-item>
+                        <x-timeline-item start="2014" end="2015" at="vdab">
+                            {{ __('messages.experience.sub_5_title') }}  
+                        </x-timeline-item>  
                         <x-timeline-item start="2007" end="2012" at="Colora Gent" :work="true">
                             {{ __('messages.experience.sub_3_title') }}  
                         </x-timeline-item>

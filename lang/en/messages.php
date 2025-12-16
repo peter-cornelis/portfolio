@@ -77,6 +77,8 @@ return [
         'sub_5_nl_state' => 'native',
         'sub_5_eng' => 'English',
         'sub_5_eng_state' => 'advanced',
+        'sub_6_fr' => 'French',
+        'sub_6_fr_state' => 'limited',
         'carousel_title' => 'Familiar with:'
     ],
     'experience' => [
@@ -86,6 +88,7 @@ return [
         'sub_2_title' => 'computer technician',
         'sub_3_title' => 'sales',
         'sub_4_title' => 'Office administration and data managment',
+        'sub_5_title' => 'Technician NetworkInfrastructure',
     ],
     'projects' => [
         'title' => 'Projects',
