@@ -155,7 +155,7 @@
                     </address>
                 </div>
                 <span class="mx-auto p-2 bg-red rounded-[60%_40%_60%_40%] lg:row-span-3 lg:mr-12 mb-auto not-print:shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20 print:border-0">
-                    <img src="images/profiel-15.avif" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="rounded-[60%_40%_60%_40%] shadow/30 print:h-54">
+                    <img src="{{ asset('images/profiel-15.avif') }}" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="rounded-[60%_40%_60%_40%] shadow/30 print:h-54">
                 </span>
                 <h2 class="lg:mt-8 lg:pr-0 print:hidden">{{ __('messages.about.hey') }} <span class="block">{{ __('messages.about.hey_2') }}</span></h2>
                 <p  class="text-lg lg:pr-0 print:col-span-2">
@@ -185,7 +185,7 @@
             <section id="skills" class="grid grid-cols-1 xl:grid-cols-[35%_55%] print:grid-cols-[35%_55%] not-print:mt-8 p-4 gap-16 scroll-mt-16 print:gap-4">
                 <h2 class="text-center xl:col-span-2 print:col-span-2 py-8 ">{{ __('messages.skills.title') }}</h2>
                 <article class="w-fit mx-auto print:col-start-1">
-                    <h3 class="text-center">{{ __('messages.skills.sub_1_title') }}</h3>
+                    <h3 class="text-center print:mb-2">{{ __('messages.skills.sub_1_title') }}</h3>
                     <ul class="w-fit">
                         <x-star-rating :filled='3'>{{ __('messages.general.html') }}</x-star-rating>
                         <x-star-rating :filled='3'>{{ __('messages.general.css') }}</x-star-rating>

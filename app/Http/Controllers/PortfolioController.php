@@ -18,30 +18,26 @@ class PortfolioController extends Controller
         }
         return redirect()->back();
     }
-    
-    public function printView()
-    {
-        return view('print');
-    }
 
     public function downloadPdf()
     {
-        return response()->download('assets/cv.pdf', 'CV_Peter_Cornelis.pdf');
+        if (app()->environment('local')) {
+            $html = view('home')->render();
+            
+            $pdf = Browsershot::html($html)
+                ->setBasePath(public_path())
+                ->emulateMedia('print')
+                ->waitUntilNetworkIdle()
+                ->format('A4')
+                ->margins(10, 10, 10, 10)
+                ->pdf();
+
+            return response($pdf, 200, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename="CV_Peter_Cornelis.pdf"',
+            ]);
+        }
+
+        return response()->file(public_path('assets/cv.pdf'));
     }
-
-    /* private function makePdf()
-    {
-        $html = view('print')->render();
-    
-        $pdf = Browsershot::html($html)
-            ->waitUntilNetworkIdle() //Make sure everything is loaded (wait for image)
-            ->format('A4')
-            ->margins(10, 10, 10, 10)
-            ->pdf();
-
-        return response($pdf, 200, [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'attachment; filename="portfolio.pdf"'
-        ]);
-    } */
 }
