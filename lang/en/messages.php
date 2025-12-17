@@ -50,6 +50,10 @@ return [
         'message_string' => 'Invalid value for message.',
         'message_min' => 'Message must be at least 30 characters.',
         'message_max' => 'Message cannot exceed 500 characters.',
+        'question_required' => 'Please enter a question.',
+        'question_string' => 'Invalid value for question.',
+        'question_min' => 'Question must be at least 10 characters.',
+        'question_max' => 'Question cannot exceed 500 characters.',
     ],
     'about' => [
         'img_alt' => 'Picture of Peter Cornelis, full-stack PHP-developer',

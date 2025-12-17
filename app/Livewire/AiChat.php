@@ -14,7 +14,12 @@ class AiChat extends Component
     public function chat()
     {
         $this->validate([
-            'question' => 'required|string|max:500'
+            'question' => 'required|string|min:10|max:500'
+        ],[
+            'question.required' => __('messages.error.question_required'),
+            'question.string' => __('messages.error.question_string'),
+            'question.max' => __('messages.error.question_min'),
+            'question.max' => __('messages.error.question_max')
         ]);
 
         try {

@@ -37,7 +37,7 @@ return [
         'livewire' => 'Livewire'
     ],
     'error' => [
-        'name_required' => 'Naam is verplicht.',
+        'name_required' => 'Gelieve een naam in te geven.',
         'name_string' => 'Ongeldige waarde voor naam.',
         'name_max' => 'Naam mag maximaal 100 karakters bevatten.',
         'email_required' => 'E-mailadres is verplicht.',
@@ -47,6 +47,10 @@ return [
         'message_string' => 'Ongeldige waarde voor bericht.',
         'message_min' => 'Bericht moet minstens 30 karakters bevatten.',
         'message_max' => 'Bericht mag maximaal 500 karakters bevatten.',
+        'question_required' => 'Gelieve een vraag in te geven.',
+        'question_string' => 'Ongeldige waarde voor vraag.',
+        'question_min' => 'Vraag moet minstens 10 karakters bevatten.',
+        'question_max' => 'Vraag mag maximaal 500 karakters bevatten.',
     ],
     'about' => [
         'img_alt' => 'Foto van Peter Cornelis, full-stack PHP-ontwikkelaar',
@@ -64,7 +68,7 @@ return [
         'q_1' => 'Is Peter een goede kandidaat voor deze vacature (vacature-link)?',
         'q_2' => 'Vanaf wanneer is Peter beschikbaar?',
         'ask' => 'Stel een vraag',
-        'submit' => 'Stel vraag',
+        'submit' => 'Vraag',
         'failed' => 'Helaas kan ik u momenteel enkel vertellen dat Peter zijn dagelijks AI limiet is bereikt, probeer het later opnieuw.',
     ],
     'skills' => [

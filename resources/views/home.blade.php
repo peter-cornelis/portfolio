@@ -251,7 +251,6 @@
                         info="{{ __('messages.projects.sub_1_info') }}"
                         :technologies="['html', 'laravel', 'tailwind', 'alpine', 'livewire']"
                     >
-                        
                         <x-projects.link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
@@ -266,9 +265,8 @@
                         info="{{ __('messages.projects.sub_2_info') }}"
                         :technologies="['html', 'laravel', 'tailwind', 'javascript', 'mysql']"
                     >
-
                         <x-projects.link href="https://rally.petercornelis.be/">Live Demo</x-projects.link>
-                        <x-projects.link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                        <x-projects.link href="https://github.com/peter-cornelis/stock-market-rally" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
                         </x-projects.link>
@@ -282,7 +280,6 @@
                         info="{{ __('messages.projects.sub_3_info') }}"
                         :technologies="['html', 'laravel', 'css', 'mysql']"
                     >
-
                         <x-projects.link href="https://github.com/peter-cornelis/Videotheek" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
@@ -297,7 +294,6 @@
                         info="{{ __('messages.projects.sub_4_info') }}"
                         :technologies="['html', 'css', 'javascript']"
                     >
-
                         <x-projects.link href="https://rally.petercornelis.be/">Live Demo</x-projects.link>
                         <x-projects.link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
@@ -313,7 +309,6 @@
                         info="{{ __('messages.projects.sub_5_info') }}"
                         :technologies="['html', 'css', 'php', 'twig', 'mysql']"
                     >
-                        
                         <x-projects.onreq/>
                     </x-projects.layout>
 
@@ -324,7 +319,6 @@
                         info="{{ __('messages.projects.sub_6_info') }}"
                         :technologies="['html', 'css', 'php', 'twig', 'mysql']"
                     >
-
                         <x-projects.link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code

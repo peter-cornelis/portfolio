@@ -51,6 +51,9 @@
         </div>
         <form wire:submit="chat">
             <x-forms.label for="question">{{ __('messages.chat.ask') }}</x-forms.label>
+            @error('question')
+                <x-forms.error>{{ $message }}</x-forms.error>
+            @enderror 
             <x-forms.input wire:model="question" name="question" id="question"/>
             <button 
                 type="submit"
