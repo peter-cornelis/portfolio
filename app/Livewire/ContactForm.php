@@ -2,9 +2,10 @@
 
 namespace App\Livewire;
 
+use Livewire\Component;
+use Livewire\Attributes\RateLimit;
 use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\Mail;
-use Livewire\Component;
 
 class ContactForm extends Component
 {

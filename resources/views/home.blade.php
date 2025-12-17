@@ -111,49 +111,7 @@
 
         <main class="max-w-7xl mx-auto px-4">
             <section id="about" class="grid lg:grid-rows-2 lg:grid-cols-[auto_1fr] gap-6 p-4 not-print:mt-6 lg:mt-28 print:grid-cols-[1fr_auto]">
-                <div class="not-print:hidden">
-                    <h1 class="text-4xl font-semibold text-shadow-none pb-2">
-                        Peter Cornelis
-                    </h1>
-                    <address class="grid grid-cols-2 mt-2">
-                        <ul>
-                            <li class="flex items-start">
-                                <x-svgs.house class="inline mr-2 mt-1 w-5"/>
-                                <span class="inline-block">
-                                    {{ __('messages.contact.street') }}
-                                    <span class="block">{{ __('messages.contact.city') }},</span>
-                                    {{ __('messages.contact.country') }}
-                                </span>
-                            </li>
-                            <li>
-                                <x-svgs.phone class="inline mr-1 w-5"/>
-                                0451/06.08.82
-                            </li>
-                            <li>
-                                <x-svgs.mail class="inline mr-1 w-5"/>
-                                peter.cornelis86@gmail.com
-                            </li>
-                            <li class="mt-4">
-                                <x-svgs.car class="inline mr-1 w-5"/>
-                                Rijbewijs B
-                            </li>
-                        </ul>
-                        <ul class="ml-auto mb-auto text-right">
-                            <li>
-                                www.petercornelis.be
-                                <x-svgs.link class="inline mx-1.5 w-5"/>
-                            </li>
-                            <li>
-                                peter-cornelis-dev
-                                <x-svgs.linkedin class="inline h-6"/>
-                            </li>
-                            <li>
-                                peter-cornelis
-                                <x-svgs.github class="inline h-6 px-1"/>
-                            </li>
-                        </ul>
-                    </address>
-                </div>
+                <livewire:contact-info :showInPdf="$showContact ?? false"/>
                 <span class="mx-auto p-2 bg-red rounded-[60%_40%_60%_40%] lg:row-span-3 lg:mr-12 mb-auto not-print:shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20 print:border-0">
                     <img src="{{ asset('images/profiel-15.avif') }}" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="rounded-[60%_40%_60%_40%] shadow/30 print:h-54">
                 </span>
@@ -396,6 +354,11 @@
                             <a href="https://github.com/peter-cornelis" aria-label="{{ __('messages.general.github_profile') }}" target="_blank">
                                 <x-svgs.github class="opacity-75 hover:opacity-100 duration-300"/>                      
                             </a>
+                        </li>
+                        <li>
+                            <div x-data="{ phone: atob('{{ config('app.contact.phone') }}') }">
+                                <a :href="'tel:' + phone" x-text="phone"></a>
+                            </div>
                         </li>
                     </ul>
                 </article>

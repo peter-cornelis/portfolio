@@ -123,4 +123,18 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Contact information
+    |--------------------------------------------------------------------------
+    |
+    */
+
+    'contact' => [
+        'phone' => env('CONTACT_PHONE'),
+        'email' => env('MAIL_USERNAME'),
+        'github' => "https://github.com/peter-cornelis",
+        'linkedin' => "https://www.linkedin.com/in/peter-cornelis-b4086237a/"
+    ],
+
 ];

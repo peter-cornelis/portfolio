@@ -22,8 +22,8 @@ class PortfolioController extends Controller
     public function downloadPdf()
     {
         if (app()->environment('local')) {
-            $html = view('home')->render();
-            
+            $html = view('home', ['showContact' => true])->render();
+
             $pdf = Browsershot::html($html)
                 ->setBasePath(public_path())
                 ->emulateMedia('print')

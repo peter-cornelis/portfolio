@@ -8,6 +8,9 @@ return [
         'projects' => 'Projects',
         'contact' => 'Contact',
     ],
+    'address' => [
+        'tel_msg' => 'call me'
+    ],
     'general' => [
         'nl' => 'Nederlands',
         'eng' => 'English',
@@ -26,7 +29,7 @@ return [
         'html' => 'HTML',
         'css' => 'CSS',
         'javascript' => 'Javascript',
-        'mysql' => 'MySQL',
+        'mysql' => 'SQL',
         'php' => 'PHP',
         'laravel' => 'Laravel',
         'git' => 'Git',

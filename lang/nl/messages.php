@@ -26,7 +26,7 @@ return [
         'html' => 'HTML',
         'css' => 'CSS',
         'javascript' => 'Javascript',
-        'mysql' => 'MySQL',
+        'mysql' => 'SQL',
         'php' => 'PHP',
         'laravel' => 'Laravel',
         'git' => 'Git',
