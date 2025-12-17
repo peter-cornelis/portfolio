@@ -20,17 +20,17 @@
 
     </head>
     <body 
-        class="min-h-screen text-mainDark dark:text-mainLight bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_320px] transition-all duration-500"
+        class="min-h-screen text-mainDark dark:text-mainLight bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_320px] transition-all duration-500 print:text-mainDark print:w-4xl"
         style="background-image: var(--waves-bg)"
     >
-        <header class="px-8 py-4">
+        <header class="px-8 py-4 print:hidden">
             <div 
                 x-data="{ 
                     onTop: true
                 }"
                 @scroll.window= "onTop = window.pageYOffset < 1"
                 class="fixed z-100 left-0 top-0 grid grid-cols-[auto_1fr] w-full px-8 py-1 mx-auto h-14"
-                x-bind:class=" onTop ? '' : 'bg-mainDark/95 shadow-lg/40'"
+                x-bind:class=" onTop ? '' : 'bg-mainDark/95 not-print:shadow-lg/40'"
             >
                 <h1 class="pr-2">Peter Cornelis</h1>
                 <nav 
@@ -110,15 +110,58 @@
         </header>
 
         <main class="max-w-7xl mx-auto px-4">
-            <section id="about" class="grid lg:grid-rows-2 lg:grid-cols-[auto_1fr] gap-6 p-4 mt-6 lg:mt-28">
-                <span class="mx-auto p-2 bg-red rounded-[60%_40%_60%_40%] lg:row-span-3 lg:mr-12 mb-auto shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20">
-                    <img src="images/profiel-15.avif" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="rounded-[60%_40%_60%_40%] shadow/30">
+            <section id="about" class="grid lg:grid-rows-2 lg:grid-cols-[auto_1fr] gap-6 p-4 not-print:mt-6 lg:mt-28 print:grid-cols-[1fr_auto]">
+                <div class="not-print:hidden">
+                    <h1 class="text-4xl font-semibold text-shadow-none pb-2">
+                        Peter Cornelis
+                    </h1>
+                    <address class="grid grid-cols-2">
+                        <ul>
+                            <li class="flex items-start">
+                                <x-svgs.house class="inline mr-2 mt-1"/>
+                                <span class="inline-block">
+                                    {{ __('messages.contact.street') }}
+                                    <span class="block">{{ __('messages.contact.city') }},</span>
+                                    {{ __('messages.contact.country') }}
+                                </span>
+                            </li>
+                            <li>
+                                <x-svgs.phone class="inline mr-1"/>
+                                0451/06.08.82
+                            </li>
+                            <li>
+                                <x-svgs.mail class="inline mr-1"/>
+                                peter.cornelis86@gmail.com
+                            </li>
+                            <li>
+                                <x-svgs.link class="inline mr-1"/>
+                                www.petercornelis.be
+                            </li>
+                            <li>
+                                <x-svgs.link class="inline mr-1"/>
+                                Rijbewijs B
+                            </li>
+                        </ul>
+                        <ul class="ml-auto mb-auto text-right">
+                            <li>
+                                peter-cornelis-dev
+                                <x-svgs.linkedin class="inline h-6"/>
+                            </li>
+                            <li>
+                                peter-cornelis
+                                <x-svgs.github class="inline h-6 px-1"/>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <span class="mx-auto p-2 bg-red rounded-[60%_40%_60%_40%] lg:row-span-3 lg:mr-12 mb-auto not-print:shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20 print:border-0">
+                    <img src="images/profiel-15.avif" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="rounded-[60%_40%_60%_40%] shadow/30 print:h-54">
                 </span>
-                <h2 class="lg:mt-8 lg:pr-0">{{ __('messages.about.hey') }} <span class="block">{{ __('messages.about.hey_2') }}</span></h2>
-                <p  class="text-lg lg:pr-0">
+                <h2 class="lg:mt-8 lg:pr-0 print:hidden">{{ __('messages.about.hey') }} <span class="block">{{ __('messages.about.hey_2') }}</span></h2>
+                <p  class="text-lg lg:pr-0 print:col-span-2">
                     {{ __('messages.about.introduction') }}
                 </p>
-                <ul class="flex gap-4 ml-auto mr-10">
+                <ul class="flex gap-4 ml-auto mr-10 print:hidden">
                     <li>
                         <a href="https://www.linkedin.com/in/peter-cornelis-b4086237a/" aria-label="{{ __('messages.general.linkedin_profile') }}" target="_blank">
                             <x-svgs.linkedin class="opacity-75 hover:opacity-100 duration-300"/>
@@ -130,7 +173,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="lg:col-span-2 grid grid-cols-[1fr_auto] gap-4 text-mainDark/90 mt-12 mx-auto">
+                <div class="lg:col-span-2 grid grid-cols-[1fr_auto] gap-4 text-mainDark/90 mt-12 mx-auto print:hidden">
                     <a href="/pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
                         <x-svgs.download/>
                         <span>{{ __('messages.general.cv') }}</span>
@@ -139,9 +182,9 @@
                 </div>
             </section>
 
-            <section id="skills" class="grid grid-cols-1 xl:grid-cols-[35%_55%] mt-8 p-4 gap-16 scroll-mt-16">
-                <h2 class="text-center xl:col-span-2 py-8">{{ __('messages.skills.title') }}</h2>
-                <article class="w-fit mx-auto">
+            <section id="skills" class="grid grid-cols-1 xl:grid-cols-[35%_55%] print:grid-cols-[35%_55%] not-print:mt-8 p-4 gap-16 scroll-mt-16 print:gap-4">
+                <h2 class="text-center xl:col-span-2 print:col-span-2 py-8 ">{{ __('messages.skills.title') }}</h2>
+                <article class="w-fit mx-auto print:col-start-1">
                     <h3 class="text-center">{{ __('messages.skills.sub_1_title') }}</h3>
                     <ul class="w-fit">
                         <x-star-rating :filled='3'>{{ __('messages.general.html') }}</x-star-rating>
@@ -151,8 +194,8 @@
                         <x-star-rating :filled='4'>{{ __('messages.general.php') }}</x-star-rating>
                     </ul>
                 </article>
-                <article class="grid grid-cols-1 sm:grid-cols-2 w-fit gap-8 ml-auto ">
-                    <div>
+                <article class="grid grid-cols-1 sm:grid-cols-2 w-fit gap-8 ml-auto print:pl-8 print:border-l border-black/20">
+                    <div class="col-start-1 row-start-2">
                         <h3>{{ __('messages.skills.sub_2_title') }}</h3>
                         <p>{{ __('messages.skills.sub_2_info') }}</p>
                     </div>
@@ -185,10 +228,10 @@
                 <x-carousel.layout/>
             </section>
 
-            <section id="experience" class="mt-16 px-4 scroll-mt-16">
-                <h2 class="text-center mb-16 p-8">{{ __('messages.experience.title') }}</h2>
+            <section id="experience" class="not-print:mt-16 px-4 scroll-mt-16">
+                <h2 class="text-center not-print:mb-16 py-8">{{ __('messages.experience.title') }}</h2>
                 <div class="w-fit mx-auto">
-                    <ol class="relative w-fit ml-8 border-l border-mainDark/20 dark:border-mainLight/20">                  
+                    <ol class="relative w-fit ml-8 border-l border-mainDark/20 dark:border-mainLight/20 print:hidden">                  
                         <x-timeline-item start="2025" end="{{ __('messages.experience.present') }} " at="vdab">
                             {{ __('messages.experience.sub_1_title') }} 
                         </x-timeline-item>
@@ -205,10 +248,41 @@
                             {{ __('messages.experience.sub_4_title') }} 
                         </x-timeline-item>
                     </ol>
+                    <ol class="relative flex w-fit mt-28 border-t mx-auto mr-8 border-mainDark/20 dark:border-mainLight/20 dark:print:border-mainDark/20 not-print:hidden">
+                        <x-timeline-vert-item 
+                            end="2006" at="Sint-Vincentius Deinze"
+                            class="absolute top-7 w-50"
+                        >
+                            {{ __('messages.experience.sub_4_title') }} 
+                        </x-timeline-vert-item>
+                        <x-timeline-vert-item 
+                            start="2007" end="2012" at="Colora Gent" :work="true"
+                            class="relative -top-26 left-35 w-50"
+                        >
+                            {{ __('messages.experience.sub_3_title') }}  
+                        </x-timeline-vert-item>
+                        <x-timeline-vert-item start="2014" end="2015" at="vdab"
+                        class="relative top-7 left-20 w-30"
+                        >
+                            {{ __('messages.experience.sub_5_title') }}  
+                        </x-timeline-vert-item>           
+                        <x-timeline-vert-item start="2015" end="2024" at="Codima BV" :work="true"
+                        class="relative -top-26 left-30 w-30"
+                        >
+                            {{ __('messages.experience.sub_2_title') }}  
+                        </x-timeline-vert-item>
+                        <x-timeline-vert-item 
+                            start="2025" end="{{ __('messages.experience.present') }} " at="vdab"
+                            class="relative top-7 left-10 w-45 text-right"
+                            lastIconLeft="group-last:left-35"
+                        >
+                            {{ __('messages.experience.sub_1_title') }} 
+                        </x-timeline-vert-item>
+                    </ol>
                 </div>
             </section>
 
-            <section id="projects" class="mt-16 px-4 scroll-mt-16">
+            <section id="projects" class="mt-16 px-4 scroll-mt-16 print:hidden">
                 <h2 class="text-center col-span-2 mb-16 p-8">Projecten</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-8 justify-items-center">
 
@@ -302,7 +376,7 @@
 
                 </div>
             </section>
-            <section id="contact" class="grid grid-cols-1 lg:grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16">
+            <section id="contact" class="grid grid-cols-1 lg:grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16 print:hidden">
                 <h2 class="text-center lg:col-span-2 mb-10 p-8">{{ __('messages.contact.title') }}</h2>
                 <livewire:contact-form />
                 <article class="grid max-lg:row-start-2 max-lg:grid-cols-2 text-mainLight bg-red w-full max-lg:mx-auto py-4 px-6 mt-6 lg:mt-14 mb-auto rounded-xl shadow shadow-black/40 border border-black/15 border-t-white/20">
@@ -327,24 +401,7 @@
                 </article>
             </section>
         </main>
-        <footer
-            x-data="{
-                openPrintView() {
-                    const printWindow = window.open('/print', '_blank');
-                    printWindow.addEventListener('load', function() {
-                        printWindow.print();
-                        printWindow.addEventListener('afterprint', function() {
-                            printWindow.close();
-                        });
-                    });
-                }
-            }" 
-            class="text-center p-6 mt-10 dark:bg-grey inset-shadow-sm inset-shadow-black/10 dark:inset-shadow-black/30  border-t border-mainDark/20 dark:border-black"
-            @keydown.window.ctrl.p.prevent="openPrintView()"
-            @keydown.window.meta.p.prevent="openPrintView()"
-            x-init="window.addEventListener('beforeprint',() => openPrintView())"
-        >
-            <!-- @keydown prevent default and use openPrintView() (meta for mac), init for other print requests -->
+        <footer class="print:hidden">
             <span class="opacity-60">&copy; Peter Cornelis | 2025</span>
         </footer>
     </body>

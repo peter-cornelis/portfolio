@@ -1,6 +1,6 @@
 <div 
     x-data="{paused: false, clicked: false}"
-    class="relative w-full max-w-3xl xl:col-span-2 mx-auto px-4"
+    class="relative w-full max-w-3xl xl:col-span-2 mx-auto px-4 print:hidden"
 >
     <h4 class="text-2xl text-center py-4 mb-4">{{ __('messages.skills.carousel_title') }}</h4>
     <button

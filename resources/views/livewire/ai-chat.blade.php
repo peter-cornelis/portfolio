@@ -1,4 +1,4 @@
-<div x-data="{showChat: false}" class="fixed z-40 right-4 bottom-8">
+<div x-data="{showChat: false}" class="fixed z-40 right-4 bottom-8 print:hidden">
     <span 
         class="fixed right-4 bottom-17 animate-bounce duration 500"
         x-show="!showChat"

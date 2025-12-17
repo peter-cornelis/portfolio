@@ -41,13 +41,13 @@
         print-color-adjust:exact !important;
     }
     h1 {
-        @apply text-[#C21D5E] text-3xl font-bold text-shadow-xs text-shadow-black/90 my-auto;
+        @apply text-[#C21D5E] text-3xl font-bold not-print:text-shadow-xs text-shadow-black/90 my-auto;
     }
     h2 {
-        @apply text-5xl lg:text-6xl;
+        @apply text-5xl lg:text-6xl print:text-3xl;
     }
     h3 {
-        @apply text-3xl pb-4;
+        @apply text-3xl not-print:pb-4 print:text-2xl;
     }
 
     /* Maintain background color when autofill is used */
