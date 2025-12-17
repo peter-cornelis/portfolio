@@ -127,6 +127,7 @@ return [
     'contact' => [
         'title' => 'Contact',
         'contact_details' => 'Contactgegevens',
+        'download' => 'Download de CV voor meer informatie.',
         'street' => 'Honoré Borgerstraat 16',
         'city' => '8400 Oostende',
         'country' => 'BELGIË',

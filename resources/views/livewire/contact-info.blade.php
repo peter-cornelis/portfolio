@@ -43,11 +43,11 @@
                 <x-svgs.link class="inline mx-1.5 w-5"/>
             </li>
             <li>
-                peter-cornelis-dev
+                <a href="{{ config('app.contact.linkedin') }}">peter-cornelis-dev</a>
                 <x-svgs.linkedin class="inline h-6"/>
             </li>
             <li>
-                peter-cornelis
+                <a href="{{ config('app.contact.github') }}">peter-cornelis</a>
                 <x-svgs.github class="inline h-6 px-1"/>
             </li>
         </ul>

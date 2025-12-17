@@ -130,6 +130,7 @@ return [
     'contact' => [
         'title' => 'Contact',
         'contact_details' => 'Contact details',
+        'download' => 'Download the CV for more information.',
         'street' => 'Honoré Borgerstraat 16',
         'city' => '8400 Ostend',
         'country' => 'BELGIUM',

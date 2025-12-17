@@ -121,13 +121,13 @@
                 </p>
                 <ul class="flex gap-4 ml-auto mr-10 print:hidden">
                     <li>
-                        <a href="https://www.linkedin.com/in/peter-cornelis-b4086237a/" aria-label="{{ __('messages.general.linkedin_profile') }}" target="_blank">
-                            <x-svgs.linkedin class="opacity-75 hover:opacity-100 duration-300"/>
+                        <a href="{{ config('app.contact.linkedin') }}" aria-label="{{ __('messages.general.linkedin_profile') }}" target="_blank">
+                            <x-svgs.linkedin class="opacity-85 hover:opacity-100 duration-300"/>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/peter-cornelis" aria-label="{{ __('messages.general.github_profile') }}" target="_blank">
-                            <x-svgs.github class=" w-8 opacity-75 hover:opacity-100 duration-300"/>                      
+                        <a href="{{ config('app.contact.github') }}" aria-label="{{ __('messages.general.github_profile') }}" target="_blank">
+                            <x-svgs.github class=" w-8 opacity-85 hover:opacity-100 duration-300"/>                      
                         </a>
                     </li>
                 </ul>
@@ -339,26 +339,21 @@
                 <livewire:contact-form />
                 <article class="grid max-lg:row-start-2 max-lg:grid-cols-2 text-mainLight bg-red w-full max-lg:mx-auto py-4 px-6 mt-6 lg:mt-14 mb-auto rounded-xl shadow shadow-black/40 border border-black/15 border-t-white/20">
                     <h3 class="max-lg: col-start-1">{{ __('messages.contact.contact_details') }}</h3>
-                    <address class="lg:w-48 col-start-1">
-                        {{ __('messages.contact.street') }}
-                        <span class="lg:block">{{ __('messages.contact.city') }}</span>
-                        {{ __('messages.contact.country') }}
-                    </address>
-                    <ul class="grid max-lg:row-start-1 max-lg:col-start-2 max-lg:row-span-2 lg:grid-cols-2 w-fit gap-4 mt-6 ml-auto lg:mx-auto my-auto">
+                    <p class="text-center w-55 opacity-90">{{ __('messages.contact.download') }}</p>
+                    <a href="/pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold my-4 py-3 pl-12 pr-4 mx-auto rounded-full border-2 border-white/10 hover:border-white/50 duration-300">
+                        <x-svgs.download/>
+                        <span>{{ __('messages.general.cv') }}</span>
+                    </a>
+                    <ul class="grid max-lg:row-start-1 max-lg:col-start-2 max-lg:row-span-2 lg:grid-cols-2 w-fit gap-4 ml-auto lg:mx-auto my-auto">
                         <li>
-                            <a href="https://www.linkedin.com/in/peter-cornelis-b4086237a/" aria-label="{{ __('messages.general.linkedin_profile') }}" target="_blank">
-                                <x-svgs.linkedin class="opacity-75 hover:opacity-100 duration-300"/>
+                            <a href="{{ config('app.contact.github') }}" aria-label="{{ __('messages.general.linkedin_profile') }}" target="_blank">
+                                <x-svgs.linkedin class="opacity-85 hover:opacity-100 duration-300"/>
                             </a>
                         </li>
                         <li>
                             <a href="https://github.com/peter-cornelis" aria-label="{{ __('messages.general.github_profile') }}" target="_blank">
-                                <x-svgs.github class="opacity-75 hover:opacity-100 duration-300"/>                      
+                                <x-svgs.github class="opacity-85 hover:opacity-100 duration-300"/>                      
                             </a>
-                        </li>
-                        <li>
-                            <div x-data="{ phone: atob('{{ config('app.contact.phone') }}') }">
-                                <a :href="'tel:' + phone" x-text="phone"></a>
-                            </div>
                         </li>
                     </ul>
                 </article>
