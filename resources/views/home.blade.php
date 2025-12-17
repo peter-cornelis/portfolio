@@ -115,7 +115,7 @@
                     <h1 class="text-4xl font-semibold text-shadow-none pb-2">
                         Peter Cornelis
                     </h1>
-                    <address class="grid grid-cols-2">
+                    <address class="grid grid-cols-2 mt-2">
                         <ul>
                             <li class="flex items-start">
                                 <x-svgs.house class="inline mr-2 mt-1 w-5"/>
@@ -133,7 +133,7 @@
                                 <x-svgs.mail class="inline mr-1 w-5"/>
                                 peter.cornelis86@gmail.com
                             </li>
-                            <li class="mt-8">
+                            <li class="mt-4">
                                 <x-svgs.car class="inline mr-1 w-5"/>
                                 Rijbewijs B
                             </li>
