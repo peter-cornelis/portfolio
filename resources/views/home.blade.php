@@ -118,7 +118,7 @@
                     <address class="grid grid-cols-2">
                         <ul>
                             <li class="flex items-start">
-                                <x-svgs.house class="inline mr-2 mt-1"/>
+                                <x-svgs.house class="inline mr-2 mt-1 w-5"/>
                                 <span class="inline-block">
                                     {{ __('messages.contact.street') }}
                                     <span class="block">{{ __('messages.contact.city') }},</span>
@@ -126,23 +126,23 @@
                                 </span>
                             </li>
                             <li>
-                                <x-svgs.phone class="inline mr-1"/>
+                                <x-svgs.phone class="inline mr-1 w-5"/>
                                 0451/06.08.82
                             </li>
                             <li>
-                                <x-svgs.mail class="inline mr-1"/>
+                                <x-svgs.mail class="inline mr-1 w-5"/>
                                 peter.cornelis86@gmail.com
                             </li>
-                            <li>
-                                <x-svgs.link class="inline mr-1"/>
-                                www.petercornelis.be
-                            </li>
-                            <li>
-                                <x-svgs.link class="inline mr-1"/>
+                            <li class="mt-8">
+                                <x-svgs.car class="inline mr-1 w-5"/>
                                 Rijbewijs B
                             </li>
                         </ul>
                         <ul class="ml-auto mb-auto text-right">
+                            <li>
+                                www.petercornelis.be
+                                <x-svgs.link class="inline mx-1.5 w-5"/>
+                            </li>
                             <li>
                                 peter-cornelis-dev
                                 <x-svgs.linkedin class="inline h-6"/>
@@ -248,7 +248,7 @@
                             {{ __('messages.experience.sub_4_title') }} 
                         </x-timeline-item>
                     </ol>
-                    <ol class="relative flex w-fit mt-28 border-t mx-auto mr-8 border-mainDark/20 dark:border-mainLight/20 dark:print:border-mainDark/20 not-print:hidden">
+                    <ol class="relative flex w-fit mt-28 border-t mx-auto mr-8 border-black/20 not-print:hidden">
                         <x-timeline-vert-item 
                             end="2006" at="Sint-Vincentius Deinze"
                             class="absolute top-7 w-50"
