@@ -14,7 +14,8 @@
     @foreach ($technologies as $technology)
         <li>
             <x-tooltip tip="{{ __('messages.general.'.$technology) }}" :arrow="true">
-                <x-dynamic-component :component="'svgs.'.$technology" class="w-6" />
+                
+                <x-dynamic-component :component="'svgs.'.$technology" class="h-12 w-6" />
             </x-tooltip>
         </li>
     @endforeach

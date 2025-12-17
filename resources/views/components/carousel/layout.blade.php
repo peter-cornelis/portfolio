@@ -42,7 +42,7 @@
                 <x-carousel.label>JavaScript</x-carousel.label>
             </li>
             <li class="group relative">
-                <x-svgs.php class="hover:scale-125 transition-transform duration-300"/>
+                <x-svgs.php class="h-12 hover:scale-125 transition-transform duration-300"/>
                 <x-carousel.label>PHP</x-carousel.label>
             </li>
             <li class="group relative">
@@ -96,7 +96,7 @@
                 <x-carousel.label>JavaScript</x-carousel.label>
             </li>
             <li class="group relative">
-                <x-svgs.php class="hover:scale-125 transition-transform duration-300"/>
+                <x-svgs.php class="h-12 hover:scale-125 transition-transform duration-300"/>
                 <x-carousel.label>PHP</x-carousel.label>
             </li>
             <li class="group relative">
