@@ -23,7 +23,7 @@ class AiChat extends Component
         ]);
 
         try {
-            $this->answer = Gemini::generativeModel(model: 'gemini-2.5-flash-lite')
+            $this->answer = Gemini::generativeModel(model: 'gemini-2.5-flash')
                 ->withSystemInstruction(
                     Content::parse(config('gemini.system_instructions'))
                 )
