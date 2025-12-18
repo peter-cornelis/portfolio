@@ -69,6 +69,10 @@
                 <x-svgs.livewire class="hover:scale-125 transition-transform duration-300"/>
                 <x-carousel.label>Livewire</x-carousel.label>
             </li>
+            <li class="group relative">
+                <x-svgs.bootstrap class="hover:scale-125 transition-transform duration-300"/>
+                <x-carousel.label>Bootstrap</x-carousel.label>
+            </li>
         </ul>
         <ul 
             class="flex px-3 my-auto gap-6 animate-scroll"
@@ -122,6 +126,10 @@
             <li class="group relative">
                 <x-svgs.livewire class="hover:scale-125 transition-transform duration-300"/>
                 <x-carousel.label>Livewire</x-carousel.label>
+            </li>
+            <li class="group relative">
+                <x-svgs.bootstrap class="hover:scale-125 transition-transform duration-300"/>
+                <x-carousel.label>Bootstrap</x-carousel.label>
             </li>
         </ul>
     </div>
