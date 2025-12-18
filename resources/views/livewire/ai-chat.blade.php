@@ -1,12 +1,22 @@
-<div x-data="{showChat: false}" class="fixed z-40 right-4 bottom-8 print:hidden">
+<div 
+    x-data="{showChat: false, showBounce: false}" 
+    x-init="setTimeout(() => showBounce = true, 5000)"
+    class="fixed z-40 right-0 bottom-8 print:hidden"
+>
     <span 
-        class="fixed right-4 bottom-17 animate-bounce duration 500"
-        x-show="!showChat"
+        class="fixed right-4 bottom-18 animate-bounce hover:[animation-play-state:paused] transition-all duration-500"
+        x-show="!showChat && showBounce"
         x-transition:enter="transition transform ease-out"
         x-transition:enter-start="opacity-0 scale-75"
         x-transition:leave="transition transform ease-in"
         x-transition:leave-end="opacity-0 scale-75" 
     >
+        <div class="absolute inline-block -top-2 -right-1 bg-red text-mainLight border border-transparent hover:border-mainLight/50 p-1 rounded-full">
+            <x-svgs.close 
+                class=" h-4"
+                @click="showBounce = false"
+            />
+        </div>
         <div class="bg-purple/90 text-mainLight rounded-2xl py-2 px-3 w-42 shadow-lg/20 border border-black/10 border-t-white/10">
             {{ __('messages.chat.bouncer') }}
         </div>
@@ -15,8 +25,9 @@
 
     <button 
         aria-label="{{ __('messages.general.chat') }}" 
-        class="font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-2 px-3 rounded-full shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300 cursor-pointer"
-        @click="showChat = !showChat">
+        class="font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-2 px-3 rounded-l-full shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300 cursor-pointer"
+        @click="showChat = !showChat"
+    >
         <x-svgs.conversation class="h-6 inline"/>
         Chat
     </button>

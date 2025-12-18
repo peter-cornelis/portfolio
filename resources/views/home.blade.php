@@ -133,7 +133,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="lg:col-span-2 grid grid-cols-[1fr_auto] gap-4 text-mainDark/90 mt-12 mx-auto print:hidden">
+                <div class="col-span-2 flex justify-center text-mainDark/90 mt-12 w-full print:hidden">
                     <a href="/pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
                         <x-svgs.download/>
                         <span>{{ __('messages.general.cv') }}</span>
@@ -142,7 +142,7 @@
                 </div>
             </section>
 
-            <section id="skills" class="grid grid-cols-1 xl:grid-cols-[35%_55%] print:grid-cols-[35%_55%] not-print:mt-8 p-4 gap-16 scroll-mt-16 print:gap-4">
+            <section id="skills" class="grid grid-cols-1 xl:grid-cols-[38%_62%] print:grid-cols-[34%_66%] not-print:mt-8 p-4 gap-16 scroll-mt-16 print:gap-4">
                 <h2 class="text-center xl:col-span-2 print:col-span-2 py-8 ">{{ __('messages.skills.title') }}</h2>
                 <article class="w-fit mx-auto print:col-start-1">
                     <h3 class="text-center print:mb-2">{{ __('messages.skills.sub_1_title') }}</h3>
@@ -355,7 +355,7 @@
                 </article>
             </section>
         </main>
-        <footer class="print:hidden">
+        <footer class="text-center p-6 mt-10 dark:bg-grey inset-shadow-sm inset-shadow-black/10 dark:inset-shadow-black/30  border-t border-mainDark/20 dark:border-black print:hidden">
             <span class="opacity-60">&copy; Peter Cornelis | 2025</span>
         </footer>
     </body>
