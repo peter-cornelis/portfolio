@@ -23,5 +23,5 @@
 
     @click="switching = true; setTimeout(() => { theme = theme === 'dark' ? 'light' : 'dark'; switching = false; }, 200)"
     :class="switching ? 'opacity-0 scale-0 rotate-180' : 'opacity-100 scale-100 rotate-0'"
-    x-text="dark ? 'dark_mode' : 'brightness_empty'"
+    x-text="dark ? 'brightness_empty' : 'dark_mode'"
 ></button>
