@@ -297,10 +297,9 @@
                         info="{{ __('messages.projects.sub_4_info') }}"
                         :technologies="['html', 'css', 'javascript']"
                     >
-                        <x-projects.link href="https://rally.petercornelis.be/">Live Demo</x-projects.link>
-                        <x-projects.link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
-                            <x-svgs.github class="-mt-1.25 inline h-7 "/>
-                            Code
+                        <x-projects.link href="https://github.com/peter-cornelis/portfolio_old" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                                <x-svgs.github class="-mt-1.25 inline h-7 "/>
+                                Code
                         </x-projects.link>
 
                     </x-projects.layout>
@@ -322,7 +321,7 @@
                         info="{{ __('messages.projects.sub_6_info') }}"
                         :technologies="['html', 'css', 'php', 'twig', 'mysql']"
                     >
-                        <x-projects.link href="https://github.com/peter-cornelis/portfolio" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                        <x-projects.link href="https://github.com/peter-cornelis/Frisdrankautomaat" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
                         </x-projects.link>
