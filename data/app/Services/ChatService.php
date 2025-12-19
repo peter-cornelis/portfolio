@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Gemini\Data\Content;
 use Gemini\Laravel\Facades\Gemini;
+use Illuminate\Support\Facades\Log;
 use MillerPHP\LaravelBrowserless\Facades\Browserless;
 
 class ChatService
@@ -23,21 +24,29 @@ class ChatService
         return $question;
     }
 
-    private function getJobVacancyData(string $url)
-{
-        $result = Browserless::scrape()
-            ->url($url)
-            ->waitForTimeout(5000)
-            ->element('main', ['text' => true])
-            ->send();
+    private function getJobVacancyData(string $url): string
+    {
+        try {
+            $result = Browserless::scrape()
+                ->url($url)
+                ->waitForTimeout(8000)
+                ->element('main', ['text' => true])
+                ->send();
 
-        $content = $result->results('main');
-        $text = collect($content)->pluck('text')->implode("\n");
+            $content = $result->results('main');
+            $text = collect($content)->pluck('text')->implode("\n");
 
-        return trim(substr($text, 0, 5000));
-}
+            return trim(substr($text, 0, 5000));
+        } catch (\Throwable $e) {
+            Log::warning('Browserless scrape failed', [
+                'url' => $url,
+                'error' => $e->getMessage(),
+            ]);
+            return 'failed to collect job vacancy data for this url';
+        }
+    }
 
-    public function getGeminiAnswer(string $question)
+    public function getGeminiAnswer(string $question): string
     {
         
             $answer = Gemini::generativeModel(model: 'gemini-2.5-flash')
