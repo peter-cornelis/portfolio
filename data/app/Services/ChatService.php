@@ -2,10 +2,9 @@
 
 namespace App\Services;
 
-use Spatie\Browsershot\Browsershot;
-use Symfony\Component\DomCrawler\Crawler;
 use Gemini\Data\Content;
 use Gemini\Laravel\Facades\Gemini;
+use MillerPHP\LaravelBrowserless\Facades\Browserless;
 
 class ChatService
 {
@@ -25,16 +24,18 @@ class ChatService
     }
 
     private function getJobVacancyData(string $url)
-    {
-        $html = Browsershot::url($url)->bodyHtml();
-        $crawler = new Crawler($html);
-        $text = $crawler->filter('main, article, .job-description, .vacature, .job-content')->each(function ($node) {
-            return $node->text();
-        });
-        $text = implode("\n", $text);
+{
+        $result = Browserless::scrape()
+            ->url($url)
+            ->waitForTimeout(5000)
+            ->element('main', ['text' => true])
+            ->send();
+
+        $content = $result->results('main');
+        $text = collect($content)->pluck('text')->implode("\n");
 
         return trim(substr($text, 0, 5000));
-    }
+}
 
     public function getGeminiAnswer(string $question)
     {
