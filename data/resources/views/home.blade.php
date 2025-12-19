@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Peter Cornelis - Full-Stack PHP Developer specializing in modern web development.">
+        <meta name="keywords" content="Peter Cornelis, PHP Developer, Full-Stack Developer, Web Development, HTML, CSS, MySQL, Laravel, Tailwind CSS, Livewire, Alpine.js, Bootstrap, SQLite">
 
         <title>Peter Cornelis - Portfolio</title>
 
@@ -16,7 +18,6 @@
 
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @livewireScripts
 
     </head>
     <body 
