@@ -13,7 +13,6 @@ class AiChat extends Component
 {
     public string $question ='';
     public string $answer = '';
-    public string $vacancy = '';
 
     public function chat()
     {
@@ -26,22 +25,27 @@ class AiChat extends Component
             'question.max' => __('messages.error.question_max'),
         ]);
 
-        $url = 'https://www.vdab.be/vindeenjob/vacatures/72578946';
-        $html = Browsershot::url($url)->bodyHtml();
+        preg_match_all('/https?:\/\/[^\s"]+/i', $this->question, $matches);
+        $urls = $matches[0];
 
-        $crawler = new Crawler($html);
-        $text = $crawler->filter('main, article, .job-description, .vacature, .job-content')->each(function ($node) {
-            return $node->text();
-        });
-        $text = implode("\n", $text);
-        $text = trim(substr($text, 0, 5000));
-
+        if($urls) {
+            foreach($urls as $url) {
+                $html = Browsershot::url($url)->bodyHtml();
+                $crawler = new Crawler($html);
+                $text = $crawler->filter('main, article, .job-description, .vacature, .job-content')->each(function ($node) {
+                    return $node->text();
+                });
+                $text = implode("\n", $text);
+                $text = trim(substr($text, 0, 5000));
+                $this->question = $this->question.' Job vacancy: '.$text;
+            }
+        }
         try {
             $this->answer = Gemini::generativeModel(model: 'gemini-2.5-flash')
                 ->withSystemInstruction(
                     Content::parse(config('gemini.system_instructions'))
                 )
-                ->generateContent($this->question.' Job vacancy: '.$this->vacancy)
+                ->generateContent($this->question)
                 ->text();
             
             Log::info('AI Chat response generated', [
