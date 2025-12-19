@@ -133,7 +133,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="col-span-2 flex justify-center text-mainDark/90 mt-12 w-full print:hidden">
+                <div class="lg:col-span-2 flex justify-center text-mainDark/90 mt-12 w-full print:hidden">
                     <a href="/pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-3 pl-12 pr-4 rounded-xl shadow shadow-black/40 border-t border-white/20 hover:shadow-black/50 duration-300">
                         <x-svgs.download/>
                         <span>{{ __('messages.general.cv') }}</span>
@@ -333,14 +333,14 @@
             <section id="contact" class="grid grid-cols-1 lg:grid-cols-[1fr_auto] mt-16 px-4 scroll-mt-16 print:hidden">
                 <h2 class="text-center lg:col-span-2 mb-10 p-8">{{ __('messages.contact.title') }}</h2>
                 <livewire:contact-form />
-                <article class="grid max-lg:row-start-2 max-lg:grid-cols-2 text-mainLight bg-red w-full max-lg:mx-auto py-4 px-6 mt-6 lg:mt-14 mb-auto rounded-xl shadow shadow-black/40 border border-black/15 border-t-white/20">
-                    <h3 class="max-lg: col-start-1">{{ __('messages.contact.contact_details') }}</h3>
-                    <p class="text-center w-55 opacity-90">{{ __('messages.contact.download') }}</p>
-                    <a href="/pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold my-4 py-3 pl-12 pr-4 mx-auto rounded-full border-2 border-white/10 hover:border-white/50 duration-300">
+                <article class="grid max-lg:row-start-2 text-mainLight bg-red w-full max-lg:mx-auto py-4 px-6 mt-6 lg:mt-14 mb-auto rounded-xl shadow shadow-black/40 border border-black/15 border-t-white/20">
+                    <h3 class="mx-auto">{{ __('messages.contact.contact_details') }}</h3>
+                    <p class="text-center w-55 opacity-90 mx-auto">{{ __('messages.contact.download') }}</p>
+                    <a href="/pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold w-max mx-auto my-4 py-3 pl-12 pr-4 mx-auto rounded-full border-2 border-white/10 hover:border-white/50 duration-300">
                         <x-svgs.download/>
                         <span>{{ __('messages.general.cv') }}</span>
                     </a>
-                    <ul class="grid max-lg:row-start-1 max-lg:col-start-2 max-lg:row-span-2 lg:grid-cols-2 w-fit gap-4 ml-auto lg:mx-auto my-auto">
+                    <ul class="grid max-lg:row-start-4 grid-cols-2 w-fit gap-4 ml-auto mx-auto">
                         <li>
                             <a href="{{ config('app.contact.github') }}" aria-label="{{ __('messages.general.linkedin_profile') }}" target="_blank">
                                 <x-svgs.linkedin class="opacity-85 hover:opacity-100 duration-300"/>
