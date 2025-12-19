@@ -2,10 +2,7 @@
 
 namespace App\Livewire;
 
-use Gemini\Data\Content;
-use Gemini\Laravel\Facades\Gemini;
-use Spatie\Browsershot\Browsershot;
-use Symfony\Component\DomCrawler\Crawler;
+use App\Services\ChatService;
 use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 
@@ -25,34 +22,16 @@ class AiChat extends Component
             'question.max' => __('messages.error.question_max'),
         ]);
 
-        preg_match_all('/https?:\/\/[^\s"]+/i', $this->question, $matches);
-        $urls = $matches[0];
+        $chatService = new ChatService();
 
-        if($urls) {
-            foreach($urls as $url) {
-                $html = Browsershot::url($url)->bodyHtml();
-                $crawler = new Crawler($html);
-                $text = $crawler->filter('main, article, .job-description, .vacature, .job-content')->each(function ($node) {
-                    return $node->text();
-                });
-                $text = implode("\n", $text);
-                $text = trim(substr($text, 0, 5000));
-                $this->question = $this->question.' Job vacancy: '.$text;
-            }
-        }
+        $this->question = $chatService->addJobVacanciesData($this->question);
         try {
-            $this->answer = Gemini::generativeModel(model: 'gemini-2.5-flash')
-                ->withSystemInstruction(
-                    Content::parse(config('gemini.system_instructions'))
-                )
-                ->generateContent($this->question)
-                ->text();
-            
+            $this->answer = $chatService->getGeminiAnswer($this->question);
             Log::info('AI Chat response generated', [
                 'question' => $this->question,
                 'answer_length' => strlen($this->answer)
             ]);
-            
+
             $this->question = '';
         } catch(\Exception $e) {
             Log::error('AI Chat failed', [

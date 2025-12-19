@@ -46,7 +46,7 @@
             aria-label="{{ __('messages.general.close_chat') }}" 
             @click="showChat = false"
         />
-        <div class="text-mainLight font-semibold bg-purple py-2 px-4 my-6 rounded-xl inset-shadow-sm/20 border border-mainDark/40 dark:border-mainDark/70">
+        <div class="text-mainLight bg-purple py-2 px-4 my-6 rounded-xl inset-shadow-sm/20 border border-mainDark/40 dark:border-mainDark/70">
             @if ($answer)
                     <p>{{$answer}}</p>
             @else
