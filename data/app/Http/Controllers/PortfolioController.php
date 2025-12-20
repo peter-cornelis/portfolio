@@ -38,6 +38,6 @@ class PortfolioController extends Controller
             ]);
         }
 
-        return response()->file(public_path('assets/cv.pdf'));
+        return response()->file(public_path('assets/cv_'.app()->getLocale().'.pdf'),['Vary' => 'Cookie']);
     }
 }
