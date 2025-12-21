@@ -1,6 +1,6 @@
 <div 
     x-data="{showChat: false, showBounce: false}" 
-    x-init="setTimeout(() => showBounce = true, 5000)"
+    x-init="setTimeout(() => showBounce = !showChat ? true : false, 5000)"
     class="fixed z-40 right-0 bottom-8 print:hidden"
 >
     <span 
