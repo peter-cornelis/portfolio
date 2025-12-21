@@ -21,6 +21,9 @@ class AiChat extends Component
             'question.max' => __('messages.error.question_min'),
             'question.max' => __('messages.error.question_max'),
         ]);
+        Log::info('AI Chat request made', [
+            'question' => $this->question,
+        ]);
 
         $chatService = new ChatService();
 
@@ -28,7 +31,6 @@ class AiChat extends Component
         try {
             $this->answer = $chatService->getGeminiAnswer($this->question);
             Log::info('AI Chat response generated', [
-                'question' => substr($this->question,0,500),
                 'answer_length' => strlen($this->answer)
             ]);
 
