@@ -5,7 +5,7 @@
 >
     <span 
         class="fixed right-4 bottom-18 animate-bounce hover:[animation-play-state:paused] transition-all duration-500"
-        x-show="!showChat && showBounce"
+        x-show="showBounce"
         x-transition:enter="transition transform ease-out"
         x-transition:enter-start="opacity-0 scale-75"
         x-transition:leave="transition transform ease-in"
@@ -26,7 +26,7 @@
     <button 
         aria-label="{{ __('messages.general.chat') }}" 
         class="font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-2 px-3 rounded-l-full shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300 cursor-pointer"
-        @click="showChat = !showChat"
+        @click="showChat = !showChat, showBounce = false"
     >
         <x-svgs.conversation class="h-6 inline"/>
         Chat
