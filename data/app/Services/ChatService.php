@@ -29,7 +29,7 @@ class ChatService
         try {
             $result = Browserless::scrape()
                 ->url($url)
-                ->waitForTimeout(8000)
+                ->waitForTimeout(5000)
                 ->element('main', ['text' => true])
                 ->send();
 

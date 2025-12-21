@@ -28,7 +28,7 @@ class AiChat extends Component
         try {
             $this->answer = $chatService->getGeminiAnswer($this->question);
             Log::info('AI Chat response generated', [
-                'question' => $this->question,
+                'question' => substr($this->question,0,500),
                 'answer_length' => strlen($this->answer)
             ]);
 
