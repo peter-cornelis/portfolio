@@ -56,6 +56,7 @@ class ChatService
                 ->generateContent($question)
                 ->text();
             
+                $answer = preg_replace('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '<a href="$1" target="_blank" class="underline">$1</a>', $answer);
             return $answer;
     }
 }
