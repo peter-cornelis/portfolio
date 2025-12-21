@@ -32,7 +32,7 @@
         Chat
     </button>
     <section 
-        class="fixed dark:text-mainLight bottom-24 right-0 sm:max-w-sm bg-lightGrey dark:bg-grey w-full py-4 px-6 sm:rounded-l-xl shadow-lg/30 border-t border-t-white/10 transition duration-300"
+        class="fixed dark:text-mainLight bottom-24 right-0 sm:max-w-sm bg-lightGrey dark:bg-grey w-full p-4 sm:rounded-l-xl shadow-lg/30 border-t border-t-white/10 transition duration-300"
         x-show="showChat"
         x-transition:enter-start="transform translate-x-full ease-in opacity-0"
         x-transition:enter-end="transform translate-x-0 opacity-100"
