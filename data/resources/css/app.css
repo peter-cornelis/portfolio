@@ -25,10 +25,10 @@
 
 @layer base {
     :root {
-        --waves-bg: url('/images/light-waves.svg');
+        --waves-bg: url('images/light-waves.svg');
     }
     .dark {
-        --waves-bg: url('/images/dark-waves.svg');
+        --waves-bg: url('images/dark-waves.svg');
     }
     .paused { 
         animation-play-state: paused !important; 

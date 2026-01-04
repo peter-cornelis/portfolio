@@ -1,5 +1,5 @@
 <ul 
-    class="flex justify-center mx-auto rounded-full shadow"
+    class="flex justify-center mx-auto shadow"
 >
     <li>
         @if (app()->getLocale() === 'nl')

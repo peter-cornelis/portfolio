@@ -86,6 +86,7 @@
                             x-transition:enter-end="transform translate-x-0 opacity-100"
                             x-transition:leave-start="transform translate-x-0 opacity-100"
                             x-transition:leave-end="transform translate-x-full opacity-0"
+                            @click.outside="openMenu = false"
                         >
                             <div class="grid grid-cols-[auto_1fr_auto] items-center py-3 px-8 border-t border-t-black/10 border-b border-b-white/10">
                                 <x-toggles.theme/>
