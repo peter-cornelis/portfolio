@@ -104,10 +104,13 @@ return [
     'projects' => [
         'title' => 'Projects',
         'used' => 'Used technologies',
+        'sub_dropzoned_alt' => 'Screenshot of Dropzoned website',
+        'sub_dropzoned_info' => 
+            'Application enabling seamless file uploads by combining Livewire\'s WithFileUploads traits with a custom-built drag-and-drop interface. Built with a focus on user experience, validation, and security.',
         'sub_1_alt' => 'Screenshot of Portfolio 2.0 website',
         'sub_1_info' => 
             'Modern portfolio,
-            Featuring an AI-powered chatbot using Google Gemini API and a reactive contact form with real-time validation.',
+            Modern portfolio featuring an AI-powered chatbot that uses the Google Gemini API and Browserless API to compare my skills with those required by a given job vacancy link. Includes a responsive contact form with real-time validation.',
         'sub_2_alt' => 'Screenshot of stock market game website',
         'sub_2_info' => 
             'Simple stock market game with daily price and statistics updates through the FMP API. 
@@ -125,10 +128,6 @@ return [
             'Pizzeria webshop with a simple implementation of the Mollie API.
             This was a test for the PHP Advanced course.
             Feel free to contact me if you want to review the code.',
-        'sub_6_alt' => 'Screenshot of soft drink vending machine website',
-        'sub_6_info' => 
-            'Interface for a soft drink vending machine with an integrated administration panel, 
-            where soft drinks and coins can be refilled or emptied.',
         'onreq' => 'Code on request'
     ],
     'contact' => [
@@ -139,7 +138,7 @@ return [
         'city' => '8400 Ostend',
         'country' => 'BELGIUM',
         'form' => [
-            'name' => 'name',
+            'name' => 'Name',
             'email' => 'Email address',
             'message' => 'Message',
             'send' => 'Send',

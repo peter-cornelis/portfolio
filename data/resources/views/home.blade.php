@@ -278,6 +278,21 @@
                     </x-projects.layout>
 
                     <x-projects.layout
+                        header="Dropzoned" 
+                        src="images/dropzoned.webp" 
+                        alt="{{ __('messages.projects.sub_dropzoned_alt') }}"
+                        info="{{ __('messages.projects.sub_dropzoned_info') }}"
+                        :technologies="['html', 'laravel', 'css', 'alpine', 'livewire']"
+                    >
+                        <x-projects.link href="https://drop.petercornelis.be/">Live Demo</x-projects.link>
+                        <x-projects.link href="https://github.com/peter-cornelis/stock-market-rally" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                            <x-svgs.github class="-mt-1.25 inline h-7 "/>
+                            Code
+                        </x-projects.link>
+
+                    </x-projects.layout>
+
+                    <x-projects.layout
                         header="Movie Maxx" 
                         src="images/movie.webp" 
                         alt="{{ __('messages.projects.sub_3_alt') }}"
@@ -313,20 +328,6 @@
                         :technologies="['html', 'css', 'php', 'twig', 'mysql']"
                     >
                         <x-projects.onreq/>
-                    </x-projects.layout>
-
-                    <x-projects.layout
-                        header="Soda Delight" 
-                        src="images/soda.webp" 
-                        alt="{{ __('messages.projects.sub_6_alt') }}"
-                        info="{{ __('messages.projects.sub_6_info') }}"
-                        :technologies="['html', 'css', 'php', 'twig', 'mysql']"
-                    >
-                        <x-projects.link href="https://github.com/peter-cornelis/Frisdrankautomaat" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
-                            <x-svgs.github class="-mt-1.25 inline h-7 "/>
-                            Code
-                        </x-projects.link>
-
                     </x-projects.layout>
 
                 </div>

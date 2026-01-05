@@ -101,9 +101,12 @@ return [
     'projects' => [
         'title' => 'Projecten',
         'used' => 'Gebruikte technologieën',
+        'sub_dropzoned_alt' => 'Screenshot van Dropzoned website',
+        'sub_dropzoned_info' => 
+            'Applicatie die naadloze bestandsuploads mogelijk maakt door Livewire\'s WithFileUploads eigenschappen te combineren met een zelfgebouwde drag-and-drop interface. Gebouwd met focus op gebruikerservaring, validatie en security.',
         'sub_1_alt' => 'Screenshot van Portfolio 2.0 website',
         'sub_1_info' => 
-            'Moderne portfolio, met een AI-gestuurde chatbot die gebruikt maakt van de Google Gemini API en een responsief contact formulier met real-time validatie.',
+            'Moderne portfolio, met een AI-gestuurde chatbot die via de Google Gemini API en Browserless API mijn vaardigheden kan vergelijken met deze van een ingegeven vacature link. Inclusief een responsief contact formulier met real-time validatie.',
         'sub_2_alt' => 'Screenshot van beursspel website',
         'sub_2_info' => 
             'Eenvoudig beursspel, met dagelijkse koers & statistiek updates via de FMP API.
@@ -122,10 +125,6 @@ return [
             'Pizzeria webshop met een eenvoudige implementatie van de Mollie API. 
             Dit betreft een test voor PHP Advanced.
             Neem gerust contact om de code in te kijken.',
-        'sub_6_alt' => 'Screenshot van drankautomaat website',
-        'sub_6_info' => 
-            'Interface voor een frisdrank automaat met bijhorend adminpaneel, 
-            waar de frisdranken en munten kunnen aangevuld worden of geleegd worden.',
         'onreq' => 'Code op aanvraag'
     ],
     'contact' => [
