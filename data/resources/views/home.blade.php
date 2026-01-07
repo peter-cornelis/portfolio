@@ -285,7 +285,7 @@
                         :technologies="['html', 'laravel', 'css', 'alpine', 'livewire']"
                     >
                         <x-projects.link href="https://drop.petercornelis.be/">Live Demo</x-projects.link>
-                        <x-projects.link href="https://github.com/peter-cornelis/stock-market-rally" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
+                        <x-projects.link href="https://github.com/peter-cornelis/dropzoned" aria-label="{{ __('messages.general.github_repo') }}" :list="true">
                             <x-svgs.github class="-mt-1.25 inline h-7 "/>
                             Code
                         </x-projects.link>
