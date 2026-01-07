@@ -2,6 +2,7 @@
     x-data="{showChat: false, showBounce: false}" 
     x-init="setTimeout(() => showBounce = !showChat ? true : false, 5000)"
     class="fixed z-40 right-0 bottom-8 print:hidden"
+    @click.outside="showChat = false"
 >
     <span 
         class="fixed right-4 bottom-18 animate-bounce hover:[animation-play-state:paused] transition-all duration-500"
