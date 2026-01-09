@@ -27,7 +27,7 @@
     <button 
         aria-label="{{ __('messages.general.chat') }}" 
         class="font-semibold bg-mainLight/60 hover:bg-mainLight/80 py-2 px-3 rounded-l-full shadow shadow-black/40 border-t border-white/20 hover:shadow-black/60 duration-300 cursor-pointer"
-        @click="showChat = !showChat, showBounce = false"
+        @click="showChat = !showChat; showBounce = false; if(showChat) $nextTick(() => document.getElementById('question').focus())"
     >
         <x-svgs.conversation class="h-6 inline"/>
         Chat
@@ -66,12 +66,12 @@
             @error('question')
                 <x-forms.error>{{ $message }}</x-forms.error>
             @enderror 
-            <x-forms.input wire:model="question" name="question" id="question"/>
+            <x-forms.input wire:model="question" name="question" id="question" autofocus/>
             <button 
                 type="submit"
                 wire:loading.attr="disabled"
                 class="flex justify-center items-center px-4 mx-auto h-12 bg-red hover:bg-red/80 text-mainLight mt-6 uppercase font-bold rounded-xl shadow shadow-black/40 hover:shadow-black/50 border border-black/15 border-t-white/20 cursor-pointer disabled:opacity-80 transition-colors ease-in-out duration-500"
-            >
+                >
                 <span wire:loading.remove>
                     {{ __('messages.chat.submit') }}
                 </span>
