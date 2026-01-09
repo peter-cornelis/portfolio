@@ -12,6 +12,8 @@ data/.env.backup
 data/.env.production
 data/.phpactor.json
 data/.phpunit.result.cache
+data/composer.lock
+data/package-lock.json
 Homestead.json
 Homestead.yaml
 npm-debug.log
