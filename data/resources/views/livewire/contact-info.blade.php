@@ -26,11 +26,11 @@
             </li>
             <li class="hidden print:flex">
                 <x-svgs.phone class="mr-1 w-5"/>
-                {{ $phone }}
+                {{ is_string($phone) ? $phone : '' }}
             </li>
             <li class="hidden print:flex">
                 <x-svgs.mail class="mr-1 w-5"/>
-                {{ $email }}
+                {{ is_string($email) ? $email : '' }}
             </li>
             <li class="mt-4">
                 <x-svgs.car class="inline mr-1 w-5"/>

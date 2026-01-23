@@ -8,8 +8,8 @@ use Livewire\Component;
 
 class AiChat extends Component
 {
-    public string $question ='';
-    public string $answer = '';
+    public $question ='';
+    public $answer = '';
 
     public function chat()
     {
@@ -18,7 +18,7 @@ class AiChat extends Component
         ],[
             'question.required' => __('messages.error.question_required'),
             'question.string' => __('messages.error.question_string'),
-            'question.max' => __('messages.error.question_min'),
+            'question.min' => __('messages.error.question_min'),
             'question.max' => __('messages.error.question_max'),
         ]);
         Log::info('AI Chat request made', [
