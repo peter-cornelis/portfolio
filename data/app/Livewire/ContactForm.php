@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactForm extends Component
 {
-    public string $name = '';
-    public string $email = '';
-    public string $message = '';
-    public bool $success = false;
+    public $name = '';
+    public $email = '';
+    public $message = '';
+    public $success = false;
 
     public function submit()
     {
