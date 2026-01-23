@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Mail\ContactFormMail;
+use App\Mail\ContactFormConfirmation;
 use Illuminate\Support\Facades\Mail;
 
 class ContactForm extends Component
@@ -34,6 +35,9 @@ class ContactForm extends Component
 
         Mail::to(config('mail.from.address'))
             ->send(new ContactFormMail($validated));
+
+        Mail::to($validated['email'])
+        ->send(new ContactFormConfirmation($validated));
         
         $this->success = true;
         $this->reset(['name', 'email','message']);

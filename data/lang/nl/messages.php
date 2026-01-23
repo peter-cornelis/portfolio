@@ -147,5 +147,11 @@ return [
         'info' => 'Deze website gebruikt functionele cookies om jouw voorkeur van taal te onthouden.
                 Deze cookies zijn noodzakelijk voor de basisfunctionaliteit en vereisen geen toestemming.',
         'understood' => 'Begrepen'
-    ]
+    ],
+    'confirmation_mail' => [
+        'contact_form_confirmation_subject' => 'Portfolio: bevestiging contactformulier voor :name',
+        'contact_form_greeting' => 'Beste :name,',
+        'contact_form_thanks' => 'Bedankt om me te contacteren en interesse te tonen in mijn portfolio website. Uw bericht werd goed ontvangen en ik zal u zo spoedig mogelijk antwoorden.',
+        'contact_form_regards' => 'Met vriendelijke groeten,'
+    ],
 ];
