@@ -38,6 +38,9 @@ class PortfolioController extends Controller
             ]);
         }
 
-        return response()->file(public_path('assets/cv_'.app()->getLocale().'.pdf'),['Vary' => 'Cookie']);
+        return response()->file(public_path('assets/cv_'.app()->getLocale().'.pdf'),[
+            'Vary' => 'Cookie',
+            'Content-Disposition' => 'inline; filename="cv_peter_cornelis.pdf"'
+            ]);
     }
 }
