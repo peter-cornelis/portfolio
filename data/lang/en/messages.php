@@ -90,7 +90,9 @@ return [
         'sub_5_eng_state' => 'advanced',
         'sub_6_fr' => 'French',
         'sub_6_fr_state' => 'limited',
-        'carousel_title' => 'Familiar with:'
+        'carousel_title' => 'Familiar with:',
+        'resume_carousel' => 'Resume carousel',
+        'pause_carousel' => 'Pause carousel',
     ],
     'experience' => [
         'title' => 'Experience',

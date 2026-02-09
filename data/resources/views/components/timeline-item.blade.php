@@ -12,5 +12,5 @@
     </span>
     <span class="bg-pinkish/10 capitalize border text-heading text-xs dark:text-mainLight font-medium px-1.5 py-0.5 rounded">{{ $start == null ? $end : "$start, $end" }}</span>
     <h3 class="flex items-center capitalize text-lg font-semibold text-heading mt-2 p-0"> {{ $slot }}</h3>
-    <p class="uppercase text-mainDark/50 dark:text-mainLight/50 py-.5 mb-6">{{ $at }}</p>
+    <p class="uppercase text-mainDark/60 dark:text-mainLight/50 py-.5 mb-6">{{ $at }}</p>
 </li>

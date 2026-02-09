@@ -9,6 +9,7 @@
     >
         <x-svgs.pause x-show="!paused" class="h-3"/>
         <x-svgs.play x-show="paused" class="h-3"/>
+        <span class="sr-only" x-text="paused ? '{{ __('messages.skills.resume_carousel') }}' : '{{ __('messages.skills.pause_carousel') }}'"></span>
     </button>
     <div 
         class="relative flex h-26 overflow-hidden"

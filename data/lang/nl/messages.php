@@ -87,7 +87,9 @@ return [
         'sub_5_eng_state' => 'goed',
         'sub_6_fr' => 'Frans',
         'sub_6_fr_state' => 'beperkt',
-        'carousel_title' => 'Bekend met:'
+        'carousel_title' => 'Bekend met:',
+        'resume_carousel' => 'Carrousel hervatten',
+        'pause_carousel' => 'Carrousel pauzeren',
     ],
     'experience' => [
         'title' => 'Ervaring',
