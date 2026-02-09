@@ -16,6 +16,12 @@
     --color-lightGrey: #E4E1E8;
     
     --animate-scroll: scroll 30s linear infinite;
+    --animate-wave: wave 25s ease-in-out infinite;
+    --animate-wave2: wave2 18s ease-in-out infinite;
+    --animate-wave3: wave3 12s ease-in-out infinite;
+    --animate-sideWave: sideWave 18s ease-in-out infinite;
+    --animate-sideWave2: sideWave2 22s ease-in-out infinite;
+    --animate-sideWave3: sideWave 30s ease-in-out infinite;
 }
 
 @keyframes scroll {
@@ -23,13 +29,39 @@
     100% { transform: translateX(-100%) }
 }
 
+@keyframes wave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(7%) }
+    100% { transform: translateY(0) }
+}
+
+@keyframes wave2 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(4%) }
+    100% { transform: translateY(0) }
+}
+
+@keyframes wave3 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(2%) }
+    100% { transform: translateY(0) }
+}
+
+@keyframes sideWave {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5%) }
+    100% { transform: translateX(0); }
+}
+
+@keyframes sideWave2 {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-3%) }
+    100% { transform: translateX(0); }
+}
+
+
+
 @layer base {
-    :root {
-        --waves-bg: url('images/light-waves.svg');
-    }
-    .dark {
-        --waves-bg: url('images/dark-waves.svg');
-    }
     .paused { 
         animation-play-state: paused !important; 
     }
