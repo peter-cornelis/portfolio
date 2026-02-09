@@ -21,9 +21,9 @@
 
     </head>
     <body 
-        class="min-h-screen text-mainDark dark:text-mainLight bg-mainLight dark:bg-mainDark bg-top bg-no-repeat bg-size-[100vw_320px] transition-all duration-500 print:text-mainDark print:w-4xl"
-        style="background-image: var(--waves-bg)"
+        class="min-h-screen text-mainDark dark:text-mainLight bg-mainLight dark:bg-mainDark transition-all duration-500 print:text-mainDark print:w-4xl"
     >
+        <x-svgs.waves class="absolute top-0 left-0 w-full h-64 print:hidden -z-10"/>
         <header class="px-8 py-4 print:hidden">
             <div 
                 x-data="{ 
@@ -338,7 +338,7 @@
                 <article class="grid max-lg:row-start-2 text-mainLight bg-red w-full max-lg:mx-auto py-4 px-6 mt-6 lg:mt-14 mb-auto rounded-xl shadow shadow-black/40 border border-black/15 border-t-white/20">
                     <h3 class="mx-auto">{{ __('messages.contact.contact_details') }}</h3>
                     <p class="text-center w-55 opacity-90 mx-auto">{{ __('messages.contact.download') }}</p>
-                    <a href="/pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold w-max mx-auto my-4 py-3 pl-12 pr-4 mx-auto rounded-full border-2 border-white/10 hover:border-white/50 duration-300">
+                    <a href="/pdf" target="_blank" aria-label="{{ __('messages.general.download_cv') }}" class="relative font-semibold w-max my-4 py-3 pl-12 pr-4 mx-auto rounded-full border-2 border-white/10 hover:border-white/50 duration-300">
                         <x-svgs.download/>
                         <span>{{ __('messages.general.cv') }}</span>
                     </a>
