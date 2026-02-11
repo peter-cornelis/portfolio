@@ -41,7 +41,7 @@
         x-transition:leave-end="transform translate-x-full opacity-0"
     >
         <!--Typing effect to be added-->
-        <h2>{{ __('messages.chat.title') }}</h2>
+        <h2 class="text-3xl font-bold">{{ __('messages.chat.title') }}</h2>
         <x-close-button 
             class="absolute top-4 right-4 light:text-mainDark" 
             aria-label="{{ __('messages.general.close_chat') }}" 
