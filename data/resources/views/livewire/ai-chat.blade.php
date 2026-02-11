@@ -33,11 +33,11 @@
         Chat
     </button>
     <section 
-        class="fixed dark:text-mainLight bottom-24 right-0 sm:max-w-sm bg-lightGrey dark:bg-grey w-full p-4 sm:rounded-l-xl shadow-lg/30 border-t border-t-white/10 transition duration-300"
+        class="fixed dark:text-mainLight bottom-24 right-0 sm:max-w-100 bg-lightGrey dark:bg-grey w-full p-4 sm:rounded-l-xl shadow-lg/30 border-t border-t-white/10 transition duration-300"
         x-show="showChat"
         x-transition:enter-start="transform translate-x-full ease-in opacity-0"
         x-transition:enter-end="transform translate-x-0 opacity-100"
-        x-transition:leave-start="transform translate-x-0 ease-out opacity-100 "
+        x-transition:leave-start="transform translate-x-0 ease-out opacity-100"
         x-transition:leave-end="transform translate-x-full opacity-0"
     >
         <!--Typing effect to be added-->
@@ -49,7 +49,7 @@
         />
         <div class="text-mainLight bg-purple py-2 px-4 my-6 rounded-xl inset-shadow-sm/20 border border-mainDark/40 dark:border-mainDark/70">
             @if ($answer)
-                    <p>{!! strip_tags($answer, '<a>') !!}</p>
+                    <p class="max-h-[calc(100vh-30rem)] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white overflow-auto">{!! strip_tags($answer, '<a>') !!}</p>
             @else
                 <p>
                     {{ __('messages.chat.introduction') }}
