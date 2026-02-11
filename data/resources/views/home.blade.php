@@ -117,7 +117,7 @@
                 <livewire:contact-info :showInPdf="$showContact ?? false"/>
 
                 <span class="mx-auto p-2 bg-red rounded-[60%_40%_60%_40%] lg:row-span-3 lg:mr-12 mb-auto not-print:shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20 print:border-0">
-                    <img src="{{ asset('images/profiel-15.avif') }}" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="rounded-[60%_40%_60%_40%] shadow/30 print:h-54">
+                    <img src="{{ asset('images/profiel-15.avif') }}" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="not-print:rounded-[60%_40%_60%_40%] print:rounded-[50%_50%_10%_50%] shadow/30 print:h-54 print:scale-x-[-1]">
                 </span>
                 <h2 class="lg:mt-8 lg:pr-0 print:hidden">{{ __('messages.about.hey') }} <span class="block">{{ __('messages.about.hey_2') }}</span></h2>
                 <p  class="text-lg lg:pr-0 print:col-span-2">
