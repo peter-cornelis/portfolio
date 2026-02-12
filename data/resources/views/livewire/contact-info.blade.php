@@ -1,7 +1,7 @@
 <div class="not-print:hidden">
-    <h1 class="text-4xl font-semibold text-shadow-none pb-2">
+    <h2 class="text-4xl font-semibold text-shadow-none pb-2">
         Peter Cornelis
-    </h1>
+    </h2>
     <address class="grid grid-cols-2 mt-2">
         <ul
             x-data="{

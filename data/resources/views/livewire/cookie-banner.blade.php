@@ -7,9 +7,9 @@
     x-transition:leave-end="transform translate-y-full"
     >
     <section class="grid grid-cols-[1fr_auto] max-w-4xl mx-auto">
-            <h3 class="text-3xl col-span-2 pb-0">
+            <h2 class="text-3xl col-span-2 pb-0">
                 {{ __('messages.banner.title') }} 
-            </h3>    
+            </h2>    
             <p class="pt-2 pb-4 lg:pr-12 max-sm:text-balance">
                 {{ __('messages.banner.info') }}
             </p>

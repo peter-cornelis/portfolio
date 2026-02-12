@@ -116,8 +116,8 @@
             <section id="about" class="grid lg:grid-rows-2 lg:grid-cols-[auto_1fr] gap-6 p-4 not-print:mt-6 lg:mt-28 print:grid-cols-[1fr_auto]">
                 <livewire:contact-info :showInPdf="$showContact ?? false"/>
 
-                <span class="mx-auto p-2 bg-red rounded-[60%_40%_60%_40%] lg:row-span-3 lg:mr-12 mb-auto not-print:shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20 print:border-0">
-                    <img src="{{ asset('images/profiel-15.avif') }}" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="not-print:rounded-[60%_40%_60%_40%] print:rounded-[50%_50%_10%_50%] shadow/30 print:h-54 print:scale-x-[-1]">
+                <span class="mx-auto p-2 bg-red rounded-[50%_50%_12%_50%] lg:row-span-3 lg:mr-12 mb-auto not-print:shadow-lg/30 border-t border-b border-b-black/20 border-t-white/20 print:border-0">
+                    <img src="{{ asset('images/profiel-15.avif') }}" loading="lazy" alt="{{ __('messages.about.img_alt') }}" class="rounded-[50%_50%_10%_50%] shadow/30 print:h-54 print:scale-x-[-1]">
                 </span>
                 <h2 class="lg:mt-8 lg:pr-0 print:hidden">{{ __('messages.about.hey') }} <span class="block">{{ __('messages.about.hey_2') }}</span></h2>
                 <p  class="text-lg lg:pr-0 print:col-span-2">
@@ -358,7 +358,7 @@
             </section>
         </main>
         <footer class="text-center p-6 mt-10 dark:bg-grey inset-shadow-sm inset-shadow-black/10 dark:inset-shadow-black/30  border-t border-mainDark/20 dark:border-black print:hidden">
-            <span class="opacity-60">&copy; Peter Cornelis | 2025</span>
+            <span class="opacity-60">&copy; Peter Cornelis | 2026</span>
         </footer>
     </body>
 </html>

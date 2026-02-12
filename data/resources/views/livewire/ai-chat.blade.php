@@ -47,19 +47,22 @@
             aria-label="{{ __('messages.general.close_chat') }}" 
             @click="showChat = false"
         />
-        <div class="text-mainLight bg-purple py-2 px-4 my-6 rounded-xl inset-shadow-sm/20 border border-mainDark/40 dark:border-mainDark/70">
-            @if ($answer)
-                    <p class="max-h-[calc(100vh-30rem)] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/40 overflow-auto">{!! strip_tags($answer, '<a>') !!}</p>
-            @else
-                <p>
+        <div class="text-mainLight bg-purple py-3 pl-4 pr-2 mt-6 mb-2 rounded-xl inset-shadow-sm/20 border border-mainDark/40 dark:border-mainDark/70">
+            <!-- Overflow container -->
+            <div class="max-h-[calc(100vh-28rem)] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/40 overflow-y-auto">
+                <p class="pr-2">
+                @if ($answer)
+                    {!! strip_tags($answer, '<a>') !!}
+                    @else
                     {{ __('messages.chat.introduction') }}
                     <span class="block pt-4 text-sm font-normal">{{ __('messages.chat.q_title') }}</span>
+                    <ul class="list-disc text-sm font-normal ml-6">
+                        <li class="py-1">{{ __('messages.chat.q_1') }}</li>
+                        <li>{{ __('messages.chat.q_2') }}</li>
+                    </ul>
+                    @endif
                 </p>
-                <ul class="list-disc text-sm font-normal ml-6">
-                    <li class="py-1">{{ __('messages.chat.q_1') }}</li>
-                    <li>{{ __('messages.chat.q_2') }}</li>
-                </ul>
-            @endif
+            </div>
         </div>
         <form wire:submit="chat">
             <x-forms.label for="question">{{ __('messages.chat.ask') }}</x-forms.label>
