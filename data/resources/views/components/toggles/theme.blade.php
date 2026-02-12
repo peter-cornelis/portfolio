@@ -24,6 +24,6 @@
     @click="switching = true; setTimeout(() => { theme = theme === 'dark' ? 'light' : 'dark'; switching = false; }, 200)"
     :class="switching ? 'opacity-0 scale-0 rotate-180' : 'opacity-100 scale-100 rotate-0'"
     x-text="dark ? 'brightness_empty' : 'dark_mode'"
+    :aria-label="theme === 'dark' ? '{{ __('messages.general.toggle_dark') }}' : '{{ __('messages.general.toggle_light') }}'"
 >
-<span class="sr-only" x-text="dark ? '{{ __('messages.general.toggle_dark') }}' : '{{ __('messages.general.toggle_light') }}'"></span>
 </button>
