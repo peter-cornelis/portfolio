@@ -40,7 +40,6 @@
         x-transition:leave-start="transform translate-x-0 ease-out opacity-100"
         x-transition:leave-end="transform translate-x-full opacity-0"
     >
-        <!--Typing effect to be added-->
         <h2 class="text-3xl font-bold">{{ __('messages.chat.title') }}</h2>
         <x-close-button 
             class="absolute top-4 right-4 light:text-mainDark" 

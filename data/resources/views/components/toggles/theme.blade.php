@@ -1,5 +1,5 @@
 <button 
-    class="text-mainLight py-2 rounded-full self-center hover:scale-125 transition-all duration-300 cursor-pointer material-symbols-outlined"
+    class="text-mainLight py-2 rounded-full self-center hover:scale-115 transition-all duration-300 cursor-pointer material-symbols-outlined"
     x-data="{ 
         theme: localStorage.getItem('theme'),
         dark: false, 

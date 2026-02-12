@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Cookie;
 use Spatie\Browsershot\Browsershot;
+use App\Http\Controllers\Controller;
 
 class PortfolioController extends Controller
 {

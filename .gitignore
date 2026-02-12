@@ -3,6 +3,7 @@ data/node_modules
 www/build
 www/hot
 www/storage
+www/assets
 data/storage/*.key
 data/storage/pail
 data/config/gemini.php
